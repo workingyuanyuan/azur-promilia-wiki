@@ -1,0 +1,89 @@
+{
+ "about": "What readers ask about Azur Promilia (藍色星原：旅謠), from the site's question list (AGENTS.md), with the expected answer, the qualifier that is easy to miss, and the page that holds them. Answers were written by the author of the site from the sources (BWIKI game data of the test builds, the official card-pool images relayed on Bahamut, launch notices, Final Weapon), not from the site. Pass needs the answer AND the qualifier. At most 3 fetches per question.",
+ "questions": [
+  {
+   "id": "q1",
+   "q": "藍色星原：旅謠的限定角色池幾抽保底？會不會歪？",
+   "answer": "90 抽內必得當期限定五星角色，不會歪",
+   "qualifier": "抽數繼承到下一期限定角色池；常駐卡池的抽數不互通",
+   "page": "/systems/gacha/"
+  },
+  {
+   "id": "q2",
+   "q": "藍原新手池幾抽必出五星角色？",
+   "answer": "30 抽內必得五星角色",
+   "qualifier": "抽滿 30 抽後卡池關閉（十連八折、用常駐票）",
+   "page": "/systems/gacha/"
+  },
+  {
+   "id": "q3",
+   "q": "塗山小玉是什麼屬性、職業、武器？是常駐還是限定？",
+   "answer": "風、光雙屬性，猛攻，雙刀，限定五星",
+   "qualifier": "限定角色（非常駐），五星",
+   "page": "/characters/tushan-xiaoyu/"
+  },
+  {
+   "id": "q4",
+   "q": "卡塔露的星決技傷害是用攻擊力還是防禦力計算？倍率多少？",
+   "answer": "防禦力；技能等級 1 為 550%",
+   "qualifier": "星鳴技、星決技、星攜技按防禦力計，其他按攻擊力；550% 是技能等級 1 的值",
+   "page": "/characters/kataru/"
+  },
+  {
+   "id": "q5",
+   "q": "哪些奇波可以在家園澆水？有幾隻？",
+   "answer": "21 隻（例如布魯達、水靈仔、星鰩等）",
+   "qualifier": "進化前後是不同奇波，工作可能不同，各自列出",
+   "page": "/kibo/work/"
+  },
+  {
+   "id": "q6",
+   "q": "熾煌龍幾級進化？進化成什麼？",
+   "answer": "等級 60 進化為燎焰熾龍",
+   "qualifier": "進化後是另一隻奇波，有自己的技能與家園工作",
+   "page": "/kibo/chihuanglong/"
+  },
+  {
+   "id": "q7",
+   "q": "森彩靈蝶可以騎嗎？要用什麼鞍具？",
+   "answer": "可以；浮雲鞍具或森彩靈蝶鞍具（兩種）",
+   "qualifier": "要先捕捉到牠並做出牠專用的鞍具",
+   "page": "/kibo/riding/"
+  },
+  {
+   "id": "q8",
+   "q": "光屬性的奇波有幾隻？",
+   "answer": "22 隻（含雙屬性）",
+   "qualifier": "雙屬性奇波在兩個屬性都列出；只算第一屬性是光的是 10 隻",
+   "page": "/kibo/elements/light/"
+  },
+  {
+   "id": "q9",
+   "q": "藍色星原：旅謠什麼時候公測？有哪些平台？有 PS5 版嗎？",
+   "answer": "2026-11-26 10:00（UTC+8），PC、iOS、Android",
+   "qualifier": "PS5 版開發中、沒有日期",
+   "page": "/"
+  },
+  {
+   "id": "q10",
+   "q": "藍色星原有沒有英文版或國際服？",
+   "answer": "公測時沒有英文服；英文 Open Beta 預定 2027 年夏季",
+   "qualifier": "使用美國的獨立伺服器",
+   "page": "/"
+  },
+  {
+   "id": "q11",
+   "q": "莉莉的星鳴技叫什麼？傷害倍率多少？",
+   "answer": "不屈之心，技能等級 1 為 200% 風屬性傷害（等級 12 為 420%）",
+   "qualifier": "命中後進入「意志」狀態 7 秒，被擊中時自動精準防禦並反擊",
+   "page": "/characters/lily/"
+  },
+  {
+   "id": "q12",
+   "q": "哪些奇波可以騎？",
+   "answer": "29 隻有專用鞍具的奇波",
+   "qualifier": "每隻要用自己專用的鞍具，要先捕捉",
+   "page": "/kibo/riding/"
+  }
+ ]
+}

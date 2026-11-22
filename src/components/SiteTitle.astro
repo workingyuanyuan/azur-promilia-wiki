@@ -1,0 +1,147 @@
+---
+// Override of Starlight's SiteTitle: the site name, a mark that the site is not the
+// publisher's, and a link to the first page of each top-level sidebar group (characters,
+// Kibo, systems), in the sidebar's order and labels. The Markdown twin,
+// llms.txt and index.json are linked from the page notes (MarkdownContent.astro).
+import { LABELS, pageId, localeOf } from '../lib/site.mjs';
+
+const { siteTitle, siteTitleHref, id: routeId, sidebar } = Astro.locals.starlightRoute;
+// The header follows the address: on Starlight's English fallback at a Japanese or Korean
+// address it stays Japanese or Korean.
+const t = LABELS[localeOf(pageId(routeId)).lang];
+const links = (entries) => entries.flatMap((e) => (e.type === 'link' ? [e] : links(e.entries)));
+const sections = sidebar
+	.filter((entry) => entry.type === 'group')
+	.map((group) => {
+		const inner = links(group.entries);
+		return { label: group.label, href: inner[0]?.href, current: inner.some((e) => e.isCurrent) };
+	})
+	.filter((s) => s.href);
+---
+
+<a href={siteTitleHref} class="site-title" translate="no">
+	<span class="name">{siteTitle}</span>
+	<span class="unofficial">{t.unofficial}</span>
+</a>
+<nav class="sections" aria-label={t.sections}>
+	{sections.map((s) => <a href={s.href} aria-current={s.current ? 'true' : undefined}>{s.label}</a>)}
+</nav>
+
+<script is:inline>
+	// Entrance of section headings, tables and the page notes: each plays once, when it first
+	// comes into view (see the motion section of promilia.css). The class on <html> is set
+	// here, in the header, before the body is parsed; without this script or without
+	// IntersectionObserver nothing is hidden.
+	const motion = matchMedia('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window;
+	if (motion) document.documentElement.classList.add('ap-motion');
+	document.addEventListener('DOMContentLoaded', () => {
+		if (!motion) return;
+		const targets = document.querySelectorAll(
+			'.sl-markdown-content > .sl-heading-wrapper.level-h2, .sl-markdown-content > table, .sl-markdown-content > .facts',
+		);
+		let first = true;
+		const io = new IntersectionObserver((entries) => {
+			let n = 0;
+			for (const entry of entries) {
+				if (!entry.isIntersecting) continue;
+				const el = entry.target;
+				// Blocks on the first screen follow the title in turn; later ones start at once.
+				if (first) el.style.setProperty('--ap-delay', `${0.45 + n++ * 0.1}s`);
+				el.classList.add('ap-in');
+				io.unobserve(el);
+			}
+			first = false;
+		});
+		targets.forEach((el) => io.observe(el));
+	});
+</script>
+
+<style>
+	.site-title {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-family: var(--ap-serif);
+		font-size: 1.2rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		line-height: 1;
+		color: var(--sl-color-white);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	/* A four-point star before the name, as on the official site's buttons. */
+	.name::before {
+		content: '\2726';
+		margin-inline-end: 0.4em;
+		color: var(--ap-star);
+		font-size: 0.85em;
+	}
+	.unofficial {
+		padding: 0.3em 0.65em;
+		border: 1px solid var(--ap-line);
+		border-radius: 999px;
+		color: var(--ap-muted);
+		font-family: var(--sl-font);
+		font-size: 0.68rem;
+		font-weight: 500;
+		letter-spacing: 0.08em;
+	}
+	.sections {
+		display: none;
+		gap: 0.4rem;
+		margin-inline-start: 1.75rem;
+		font-family: var(--ap-serif);
+		font-size: 0.95rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		white-space: nowrap;
+	}
+	@media (min-width: 72rem) {
+		.sections {
+			display: flex;
+		}
+	}
+	.sections a {
+		padding: 0.3em 0.9em;
+		border-radius: 999px;
+		color: var(--sl-color-gray-3);
+		text-decoration: none;
+	}
+	/* Motion, as the official site's navigation: the section links drop in once from just
+	   above, one after another; the star before the name twinkles once; the pointer gets
+	   an answer in 0.2 s. */
+	@keyframes ap-nav-in {
+		from { opacity: 0; transform: translateY(-0.5rem); }
+		to { opacity: 1; transform: none; }
+	}
+	@keyframes ap-twinkle {
+		0% { opacity: 0; transform: scale(0.2) rotate(-90deg); }
+		60% { opacity: 1; transform: scale(1.35) rotate(10deg); }
+		100% { opacity: 1; transform: none; }
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		.name::before {
+			display: inline-block;
+			animation: ap-twinkle 0.8s cubic-bezier(0.333, 0, 0.3, 1) 0.1s both;
+		}
+		.sections a {
+			animation: ap-nav-in 0.6s cubic-bezier(0.333, 0, 0.3, 1) both;
+			transition: background-color 0.2s ease, color 0.2s ease;
+		}
+		.sections a:nth-child(1) { animation-delay: 0.15s; }
+		.sections a:nth-child(2) { animation-delay: 0.25s; }
+		.sections a:nth-child(3) { animation-delay: 0.35s; }
+		.sections a:nth-child(4) { animation-delay: 0.45s; }
+	}
+	/* The section of the current page, marked as the sidebar marks the current page. */
+	.sections a[aria-current] {
+		color: var(--sl-color-white);
+		box-shadow: inset 0 -2px 0 var(--ap-star);
+	}
+	.sections a:hover,
+	.sections a:focus-visible {
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-white);
+	}
+</style>

@@ -1,0 +1,547 @@
+/* Skin for the Azur Promilia wiki. It borrows the look of the game's Taiwan official site
+   (azurpromilia.com/zh-tw/, seen 2026-11-22): a night-blue ground, pale lavender text, a
+   serif display face for names, rounded pill buttons and a four-point star as the mark.
+   The light theme turns it into pale paper with night-blue ink. No wordmark, image or font
+   of the publisher is used. Motion is at the end of this file.
+   Rule: every mark here is drawn with CSS and is never written into the page text, so the
+   text an agent extracts from a page stays clean (scripts/check-dist.mjs, check 5). */
+
+:root,
+::backdrop {
+	--ap-night: #0e1430;
+	--ap-panel: #161e42;
+	--ap-line: #2c3768;
+	--ap-muted: #98a2cc;
+	--ap-row: rgb(255 255 255 / 0.03);
+	--ap-head-bg: #1d2754;
+	--ap-head-text: #e9ecff;
+	/* Star gold: the sparkle of the official site's buttons. A mark colour, never text on white. */
+	--ap-star: #f0d58c;
+	--ap-link: #b7c6ff;
+	/* Serif for names and headings, as the official site sets its titles: Noto Serif TC / SC
+	   (SIL OFL 1.1, from Fontsource, weight 700, loaded per Unicode range). */
+	--ap-serif: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', 'PMingLiU', 'MingLiU', serif;
+
+	--sl-color-accent-low: #222c5c;
+	--sl-color-accent: #7f95e8;
+	--sl-color-accent-high: #d6defd;
+	--sl-color-white: #f3f4ff;
+	--sl-color-gray-1: #e3e6f7;
+	--sl-color-gray-2: #c3c8e2;
+	--sl-color-gray-3: #98a2cc;
+	--sl-color-gray-4: #5d6799;
+	--sl-color-gray-5: #2c3768;
+	--sl-color-gray-6: #161e42;
+	--sl-color-black: #0e1430;
+
+	--sl-color-bg-nav: #0b1028;
+	--sl-color-bg-sidebar: #0b1028;
+
+	--sl-font: 'Segoe UI', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+	--sl-content-width: 50rem;
+	--sl-text-h1: 1.9rem;
+	--sl-text-h2: 1.4rem;
+	--sl-text-h3: 1.12rem;
+}
+
+/* Simplified Chinese pages take Simplified fonts, so punctuation sits where mainland readers expect it. */
+:root[lang='zh-CN'] {
+	--sl-font: 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+	--ap-serif: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+}
+
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop {
+	--ap-night: #f6f5fb;
+	--ap-panel: #eceaf6;
+	--ap-line: #d5d3e6;
+	--ap-muted: #5f6488;
+	--ap-row: rgb(29 37 80 / 0.035);
+	--ap-head-bg: #1d2550;
+	--ap-head-text: #ffffff;
+	--ap-star: #c9962a;
+	--ap-link: #2c46a8;
+
+	--sl-color-accent-low: #dfe4fb;
+	--sl-color-accent: #2c46a8;
+	--sl-color-accent-high: #1d2550;
+	--sl-color-white: #141a3a;
+	--sl-color-gray-1: #1d2550;
+	--sl-color-gray-2: #2f3765;
+	--sl-color-gray-3: #555b82;
+	--sl-color-gray-4: #7b80a3;
+	--sl-color-gray-5: #b6b9d2;
+	--sl-color-gray-6: #e4e3f1;
+	--sl-color-gray-7: #f1f0f8;
+	--sl-color-black: #fbfaff;
+
+	--sl-color-bg-nav: #fbfaff;
+	--sl-color-bg-sidebar: #f1f0f8;
+}
+
+body {
+	background: var(--sl-color-black);
+}
+/* The night sky of the official site, as a still gradient behind the dark theme. */
+:root:not([data-theme='light']) body {
+	background:
+		radial-gradient(60rem 30rem at 85% -10%, rgb(108 92 190 / 0.22), transparent 70%),
+		radial-gradient(50rem 28rem at -10% 10%, rgb(54 92 190 / 0.18), transparent 70%),
+		var(--ap-night);
+	background-attachment: fixed;
+}
+
+/* Starfield: two layers of soft stars behind the page, drawn with CSS on body::before (far,
+   small) and body::after (near, larger and more blurred). No element and no text: the text an
+   agent extracts is the same with or without it. Dim enough to stay behind the words; still
+   when reduced motion is asked for (it drifts and twinkles in the motion section). */
+:root {
+	--ap-sky-1: rgb(214 222 253 / 0.55);
+	--ap-sky-2: rgb(240 213 140 / 0.5);
+	--ap-sky-opacity: 1;
+}
+:root[data-theme='light'] {
+	--ap-sky-1: rgb(44 70 168 / 0.32);
+	--ap-sky-2: rgb(201 150 42 / 0.4);
+	--ap-sky-opacity: 0.7;
+}
+body::before,
+body::after {
+	content: '';
+	position: fixed;
+	inset: 0 0 auto 0;
+	z-index: -1;
+	pointer-events: none;
+	opacity: var(--ap-sky-opacity);
+}
+body::before {
+	height: calc(100vh + 360px);
+	background-image:
+		radial-gradient(circle at 165px 77px, var(--ap-sky-1) 0 0.8px, transparent 1.6px),
+		radial-gradient(circle at 24px 37px, var(--ap-sky-1) 0 1.1px, transparent 1.9px),
+		radial-gradient(circle at 48px 187px, var(--ap-sky-2) 0 0.9px, transparent 1.7px),
+		radial-gradient(circle at 259px 109px, var(--ap-sky-1) 0 0.6px, transparent 1.4px),
+		radial-gradient(circle at 222px 214px, var(--ap-sky-1) 0 0.6px, transparent 1.4px),
+		radial-gradient(circle at 46px 282px, var(--ap-sky-2) 0 0.9px, transparent 1.7px),
+		radial-gradient(circle at 289px 63px, var(--ap-sky-1) 0 1.2px, transparent 2.0px),
+		radial-gradient(circle at 322px 321px, var(--ap-sky-1) 0 0.9px, transparent 1.7px),
+		radial-gradient(circle at 31px 295px, var(--ap-sky-2) 0 1.0px, transparent 1.8px),
+		radial-gradient(circle at 25px 113px, var(--ap-sky-1) 0 0.6px, transparent 1.4px),
+		radial-gradient(circle at 68px 148px, var(--ap-sky-1) 0 0.9px, transparent 1.7px),
+		radial-gradient(circle at 276px 60px, var(--ap-sky-2) 0 0.9px, transparent 1.7px),
+		radial-gradient(circle at 286px 349px, var(--ap-sky-1) 0 0.7px, transparent 1.5px),
+		radial-gradient(circle at 297px 292px, var(--ap-sky-1) 0 1.0px, transparent 1.8px),
+		radial-gradient(circle at 190px 49px, var(--ap-sky-2) 0 0.9px, transparent 1.7px),
+		radial-gradient(circle at 32px 288px, var(--ap-sky-1) 0 0.6px, transparent 1.4px);
+	background-size: 360px 360px;
+	filter: blur(0.5px);
+}
+body::after {
+	height: calc(100vh + 720px);
+	background-image:
+		radial-gradient(circle at 210px 508px, var(--ap-sky-1) 0 2.3px, transparent 3.1px),
+		radial-gradient(circle at 437px 321px, var(--ap-sky-2) 0 2.1px, transparent 2.9px),
+		radial-gradient(circle at 464px 370px, var(--ap-sky-1) 0 1.9px, transparent 2.7px),
+		radial-gradient(circle at 184px 715px, var(--ap-sky-1) 0 2.4px, transparent 3.2px),
+		radial-gradient(circle at 83px 588px, var(--ap-sky-2) 0 1.9px, transparent 2.7px),
+		radial-gradient(circle at 506px 351px, var(--ap-sky-1) 0 2.3px, transparent 3.1px);
+	background-size: 720px 720px;
+	filter: blur(1.6px);
+}
+/* The stars stay out of the text column, so that none sits between the words or reads as
+   a full stop. From 72rem the column is centred in the window and is at most
+   --sl-content-width wide (the space between the two sidebars, less padding, below that);
+   a mask clears it, fading over 5rem at each side. Below 72rem the column fills all the space
+   beside the sidebar, so there is no sky. */
+body::before,
+body::after {
+	display: none;
+	--ap-half: calc(min(var(--sl-content-width), 100% - 2 * var(--sl-sidebar-width) - 3rem) / 2);
+	mask-image: linear-gradient(
+		90deg,
+		#000 calc(50% - var(--ap-half) - 6rem),
+		transparent calc(50% - var(--ap-half) - 1rem),
+		transparent calc(50% + var(--ap-half) + 1rem),
+		#000 calc(50% + var(--ap-half) + 6rem)
+	);
+}
+@media (min-width: 72rem) {
+	body::before,
+	body::after {
+		display: block;
+	}
+}
+@media print {
+	body::before,
+	body::after {
+		display: none;
+	}
+}
+
+@media (min-width: 50em) {
+	:root {
+		--sl-text-h1: 2.5rem;
+		--sl-text-h2: 1.55rem;
+	}
+}
+
+::selection {
+	background: var(--sl-color-accent-low);
+	color: var(--sl-color-white);
+}
+:focus-visible {
+	outline: 2px solid var(--ap-star);
+	outline-offset: 2px;
+}
+
+/* Wide windows: the table of contents keeps the width of the left sidebar and the text
+   column sits in the middle of the space between the two. */
+@media (min-width: 72rem) {
+	.right-sidebar-container {
+		width: var(--sl-sidebar-width);
+	}
+	[data-has-sidebar][data-has-toc] .main-pane {
+		--sl-content-margin-inline: auto;
+		width: calc(100% - var(--sl-sidebar-width));
+	}
+}
+@media (min-width: 110rem) {
+	:root {
+		--sl-content-width: 60rem;
+	}
+}
+
+/* Header: the night bar with a hairline under it; the theme and language controls are pills. */
+header.header {
+	border-bottom: 1px solid var(--ap-line);
+}
+:root:not([data-theme='light']) header.header,
+:root:not([data-theme='light']) .sidebar-pane {
+	background: rgb(11 16 40 / 0.92);
+}
+site-search button[data-open-modal] {
+	border: 1px solid var(--ap-line);
+	border-radius: 999px;
+}
+
+/* Page title: serif, as the names on the official site. */
+.content-panel h1#_top {
+	font-family: var(--ap-serif);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+.content-panel + .content-panel {
+	border-top: 1px solid var(--ap-line);
+}
+
+/* The one-sentence answer under the title: a star-gold rule beside it. */
+.sl-markdown-content .answer {
+	padding: 0.2rem 0 0.2rem 1rem;
+	border-inline-start: 3px solid var(--ap-star);
+	font-weight: 600;
+}
+
+/* Section headings: serif, a hairline above, and a four-point star drawn before the name. */
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+	margin-top: 2.75rem;
+	padding-top: 1.1rem;
+	border-top: 1px solid var(--ap-line);
+}
+.sl-markdown-content :is(h2, h3) {
+	font-family: var(--ap-serif);
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: 0.02em;
+}
+.sl-markdown-content h2::before {
+	content: '\2726';
+	margin-inline-end: 0.45em;
+	color: var(--ap-star);
+	font-size: 0.8em;
+	vertical-align: 0.08em;
+}
+
+/* Links in the text: periwinkle with a thin underline, brighter on hover. */
+.sl-markdown-content a:not(:where(.not-content *)) {
+	color: var(--ap-link);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.22em;
+	text-decoration-color: color-mix(in srgb, var(--ap-link) 45%, transparent);
+}
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+	color: var(--sl-color-white);
+	text-decoration-color: var(--ap-star);
+}
+
+/* Tables: a night-blue header row, hairlines between rows, soft corners on the frame.
+   A wide table scrolls inside itself, so the page never scrolls sideways. */
+.sl-markdown-content table:not(:where(.not-content *)) {
+	display: block;
+	overflow-x: auto;
+	width: max-content;
+	max-width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid var(--ap-line);
+	border-radius: 0.6rem;
+	font-size: var(--sl-text-sm);
+	line-height: 1.6;
+}
+.sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+	min-width: 4.5rem;
+	padding: 0.5rem 0.75rem;
+	border: 0;
+	border-bottom: 1px solid var(--ap-line);
+	vertical-align: top;
+}
+.sl-markdown-content tbody tr:last-child td:not(:where(.not-content *)) {
+	border-bottom: 0;
+}
+.sl-markdown-content th:not(:where(.not-content *)) {
+	background: var(--ap-head-bg);
+	color: var(--ap-head-text);
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-align: start;
+	white-space: nowrap;
+}
+.sl-markdown-content tbody tr:nth-child(even):not(:where(.not-content *)) {
+	background: var(--ap-row);
+}
+.sl-markdown-content td:first-child:not(:where(.not-content *)) {
+	font-weight: 600;
+	color: var(--sl-color-white);
+	white-space: nowrap;
+}
+.sl-markdown-content td code {
+	overflow-wrap: anywhere;
+}
+
+/* Character art: the figure cut out of the official illustration, with no frame. */
+/* The cutout links to the official original; the link shows only as a pointer and a focus ring. */
+.sl-markdown-content a:has(> img[src*='/art/']) {
+	display: block;
+	border-radius: 0.75rem;
+}
+.sl-markdown-content img[src*='/art/'] {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	max-height: 26rem;
+	margin-inline: auto;
+}
+@media (min-width: 50rem) {
+	.sl-markdown-content p:has(img[src*='/art/characters/']) {
+		float: right;
+		width: min(42%, 19rem);
+		margin: 0.25rem 0 1.25rem 1.75rem;
+	}
+	.sl-markdown-content p:has(img[src*='/art/characters/']) ~ .sl-heading-wrapper.level-h2 {
+		display: flow-root;
+	}
+}
+
+/* Page notes after the body: a panel with soft corners. */
+.sl-markdown-content .facts {
+	clear: both;
+	border: 1px solid var(--ap-line);
+	border-radius: 0.75rem;
+	background: var(--ap-panel);
+}
+.sl-markdown-content .facts dt {
+	color: var(--ap-muted);
+	font-size: 0.75rem;
+	letter-spacing: 0.04em;
+	line-height: 1.9;
+}
+.sl-markdown-content .facts a {
+	color: var(--sl-color-white);
+	text-decoration: underline;
+	text-decoration-color: var(--ap-muted);
+	text-underline-offset: 0.2em;
+}
+
+/* Sidebar: group names in serif; the current page is a soft pill with a star-gold edge. */
+.sidebar-content .large,
+.sidebar-content summary .large {
+	font-family: var(--ap-serif);
+	font-size: 0.95rem;
+	font-weight: 700;
+	color: var(--sl-color-gray-2);
+}
+.sidebar-content a {
+	font-size: var(--sl-text-sm);
+	border-radius: 999px;
+}
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+	background: var(--sl-color-accent-low);
+	color: var(--sl-color-white);
+	font-weight: 700;
+	box-shadow: inset 3px 0 0 var(--ap-star);
+}
+
+/* Table of contents. */
+starlight-toc h2,
+mobile-starlight-toc .toggle {
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	color: var(--ap-muted);
+}
+starlight-toc a[aria-current='true'] {
+	color: var(--sl-color-white);
+	font-weight: 700;
+}
+
+/* Motion, taken from the official site (measured 2026-11-22): blocks rise 0.4rem while they
+   fade in, with the ease cubic-bezier(0.333, 0, 0.3, 1) and staggered delays; a band of
+   light sweeps once across a panel; the pointer gets an answer in 0.2 to 0.33 s. Here the
+   title rises in, a glint runs once along the foot of the header, the star of each section
+   heading twinkles once as the section first comes into view, tables and the page notes
+   rise in, and the page changes with a short cross-fade while the header and sidebar stay
+   still; those play once. The starfield keeps moving: the far layer drifts up one tile in
+   240 s, the near one in 300 s, and the near stars brighten and dim over 7 s. Images do
+   not move. All of it sits inside
+   prefers-reduced-motion: no-preference, and a block waits unseen for its entrance only
+   while the script in SiteTitle.astro runs (on screen, not in print). */
+:root {
+	--ap-ease: cubic-bezier(0.333, 0, 0.3, 1);
+}
+@keyframes ap-rise {
+	from { opacity: 0; transform: translateY(0.4rem); }
+	to { opacity: 1; transform: none; }
+}
+@keyframes ap-glint {
+	0% { opacity: 0; transform: translateX(-30vw); }
+	15% { opacity: 1; }
+	85% { opacity: 1; }
+	100% { opacity: 0; transform: translateX(100vw); }
+}
+@keyframes ap-drift-far {
+	to { transform: translateY(-360px); }
+}
+@keyframes ap-drift-near {
+	to { transform: translateY(-720px); }
+}
+@keyframes ap-sky-twinkle {
+	from { opacity: calc(var(--ap-sky-opacity) * 0.35); }
+	to { opacity: var(--ap-sky-opacity); }
+}
+@keyframes ap-star-in {
+	0% { opacity: 0; transform: scale(0.2) rotate(-90deg); }
+	60% { opacity: 1; transform: scale(1.4) rotate(10deg); }
+	100% { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	body::before {
+		will-change: transform;
+		animation: ap-drift-far 240s linear infinite;
+	}
+	body::after {
+		will-change: transform, opacity;
+		animation:
+			ap-drift-near 300s linear infinite,
+			ap-sky-twinkle 7s ease-in-out infinite alternate;
+	}
+	/* Between pages the header and the sidebar stay put; only the page changes. */
+	@view-transition {
+		navigation: auto;
+	}
+	header.header {
+		view-transition-name: ap-header;
+	}
+	.sidebar-pane {
+		view-transition-name: ap-sidebar;
+	}
+	::view-transition-group(ap-header),
+	::view-transition-group(ap-sidebar),
+	::view-transition-old(ap-header),
+	::view-transition-new(ap-header),
+	::view-transition-old(ap-sidebar),
+	::view-transition-new(ap-sidebar) {
+		animation: none;
+	}
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.2s;
+	}
+
+	/* On load: a star-gold glint runs once along the foot of the header. */
+	header.header {
+		overflow-x: clip;
+	}
+	header.header::after {
+		content: '';
+		position: absolute;
+		inset-inline-start: 0;
+		bottom: -1px;
+		width: 30vw;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--ap-star), transparent);
+		opacity: 0;
+		pointer-events: none;
+		animation: ap-glint 1.4s var(--ap-ease) 0.2s both;
+	}
+
+	/* The title and the first blocks of the body rise in one after another. */
+	.content-panel h1#_top {
+		animation: ap-rise 0.9s var(--ap-ease) 0.05s both;
+	}
+	.sl-markdown-content > :is(p, ul, ol, blockquote):not(.not-content, :has(img)):nth-child(-n + 9) {
+		animation: ap-rise 0.8s var(--ap-ease) both;
+		animation-delay: calc(0.25s + var(--ap-i, 0) * 0.08s);
+	}
+	.sl-markdown-content > :nth-child(3) { --ap-i: 1; }
+	.sl-markdown-content > :nth-child(4) { --ap-i: 2; }
+	.sl-markdown-content > :nth-child(5) { --ap-i: 3; }
+	.sl-markdown-content > :nth-child(6) { --ap-i: 4; }
+	.sl-markdown-content > :nth-child(7) { --ap-i: 5; }
+	.sl-markdown-content > :nth-child(8) { --ap-i: 6; }
+	.sl-markdown-content > :nth-child(9) { --ap-i: 7; }
+
+	/* Until its entrance a heading, table or the page notes waits unseen, so it does not show
+	   for a frame and then vanish. Only on screen and only with the script running. */
+	@media screen {
+		.ap-motion .sl-markdown-content > :is(.sl-heading-wrapper.level-h2, table, .facts):not(.ap-in) {
+			opacity: 0;
+		}
+	}
+	/* A section rises in and the star before its heading twinkles once. */
+	.sl-markdown-content > :is(.sl-heading-wrapper.level-h2, table, .facts).ap-in {
+		animation: ap-rise 0.8s var(--ap-ease) var(--ap-delay, 0s) both;
+	}
+	.sl-markdown-content .sl-heading-wrapper.level-h2 h2::before {
+		display: inline-block;
+	}
+	.sl-markdown-content .sl-heading-wrapper.level-h2.ap-in h2::before {
+		animation: ap-star-in 0.8s var(--ap-ease) calc(var(--ap-delay, 0s) + 0.15s) both;
+	}
+
+	/* Response to the pointer: 0.2 s, as on the official site. */
+	.sl-markdown-content a:not(:where(.not-content *)),
+	.sidebar-content a,
+	starlight-toc a,
+	site-search button[data-open-modal],
+	.sl-markdown-content tbody tr {
+		transition:
+			background-color 0.2s ease,
+			color 0.2s ease,
+			text-decoration-color 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+}
+
+/* Hover marks: a star-gold edge in the sidebar and a lit row in tables. Without motion they
+   appear at once. */
+.sidebar-content a:not([aria-current='page']):hover {
+	box-shadow: inset 3px 0 0 color-mix(in srgb, var(--ap-star) 60%, transparent);
+}
+.sl-markdown-content tbody tr:hover:not(:where(.not-content *)) {
+	background: var(--sl-color-accent-low);
+}

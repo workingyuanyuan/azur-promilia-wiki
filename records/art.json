@@ -1,0 +1,14 @@
+{
+ "tushan-xiaoyu": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-BPOao-rT.png", "cut": "pipeline/cut_art.py"},
+ "minamoto-chiyo": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DHu48Cek.png", "cut": "pipeline/cut_art.py"},
+ "abyy": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DTLaY6DP.png", "cut": "pipeline/cut_art.py"},
+ "cathbelle": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DOarIFuC.png", "cut": "pipeline/cut_art.py"},
+ "maple": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DHCf6so1.png", "cut": "pipeline/cut_art.py"},
+ "terara": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-P655wHIt.png", "cut": "pipeline/cut_art.py"},
+ "lan-xiangzi": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-RrWvR-8T.png", "cut": "pipeline/cut_art.py"},
+ "anais": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-xmSuPBnu.png", "cut": "pipeline/cut_art.py"},
+ "shalle": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DIYtMJRN.png", "cut": "pipeline/cut_art.py"},
+ "pengpeng": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-ONgaS64_.png", "cut": "pipeline/cut_art.py"},
+ "pei-pei": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-OaYjc6fM.png", "cut": "pipeline/cut_art.py"},
+ "mitty": {"original": "https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-BJAzOeYC.png", "cut": "pipeline/cut_art.py"}
+}
