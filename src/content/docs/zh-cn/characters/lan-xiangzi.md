@@ -21,6 +21,8 @@ sources:
 
 [![兰香子，官方立绘](/art/characters/lan-xiangzi.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-RrWvR-8T.png)
 
+## 人物与打法
+
 兰香子是辰王朝的智人族少女，穿着古老袍服、额头贴着符箓，常驻角色。她以星鸣技召出在场 18 秒的木棺，木棺每 3 秒驱使魄影或魂影攻击，并随她的出招升级；每次召唤或升级木棺都会提高全队攻击力。
 
 ## 基本资料

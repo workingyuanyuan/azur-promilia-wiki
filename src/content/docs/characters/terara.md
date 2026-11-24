@@ -20,6 +20,8 @@ sources:
 
 [![忒拉拉，官方立繪](/art/characters/terara.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-P655wHIt.png)
 
+## 人物與打法
+
 忒拉拉是新芽山谷夏露露村的狼人少女，屬獸人族，常駐角色。她幾乎每個技能都會進入「熾騰」，這時長按攻擊鍵就能接出派生重擊，邊打邊回血，並消耗火印記打出超限傷害；每次進入「熾騰」也會補充星決蓄能。
 
 ## 基本資料

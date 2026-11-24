@@ -21,6 +21,8 @@ sources:
 
 [![枫糖，官方立绘](/art/characters/maple.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DHCf6so1.png)
 
+## 人物与打法
+
 枫糖是弗利斯城邦冒险公会的看板娘，兽人族，常驻角色。重击、星决技、极限反击与完美招架都让她得到「喵喵连击」，期间每次命中追加真实伤害，星鸣技也多出第二段；她的主要用途是提高全队的攻击力、伤害与超限强度。
 
 ## 基本资料

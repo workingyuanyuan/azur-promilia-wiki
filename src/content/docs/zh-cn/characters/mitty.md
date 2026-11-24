@@ -20,6 +20,8 @@ sources:
 
 [![米蒂，官方立绘](/art/characters/mitty.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-BJAzOeYC.png)
 
+## 人物与打法
+
 米蒂是新芽山谷断风磐的翼人弓手，兽人族，常驻角色。她的重击可蓄力三段，蓄得越满伤害越高，命中后还会留下持续放电的闪电球；星鸣技与星决技给她「蓄电」，让下一次满蓄力重击多射 2 支箭、多拿雷印记。
 
 ## 基本资料

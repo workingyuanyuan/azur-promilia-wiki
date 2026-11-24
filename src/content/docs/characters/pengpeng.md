@@ -20,6 +20,8 @@ sources:
 
 [![芃芃，官方立繪](/art/characters/pengpeng.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-ONgaS64_.png)
 
+## 人物與打法
+
 芃芃是辰王朝的帕米族，自稱功夫大師，常駐角色。她的普攻第四段可連按攻擊鍵持續出拳，途中長按改出派生重擊，替全隊補星決蓄能並強化下一次星鳴技；星決技則提高全隊的火、地屬性傷害。
 
 ## 基本資料

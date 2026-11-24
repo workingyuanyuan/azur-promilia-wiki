@@ -20,6 +20,8 @@ sources:
 
 [![忒拉拉，官方立绘](/art/characters/terara.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-P655wHIt.png)
 
+## 人物与打法
+
 忒拉拉是新芽山谷夏露露村的狼人少女，属兽人族，常驻角色。她几乎每个技能都会进入「炽腾」，这时长按攻击键就能接出派生重击，边打边回血，并消耗火印记打出超限伤害；每次进入「炽腾」也会补充星决蓄能。
 
 ## 基本资料

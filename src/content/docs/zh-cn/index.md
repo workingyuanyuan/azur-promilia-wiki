@@ -24,12 +24,12 @@ sources:
     url: https://www.gamespress.com/en-US/Azur-Promilia-Marks-20-Million-Global-Pre-Registration-Milestone-With-
 ---
 
-## 分区
+## 角色、奇波与系统
 
-| 分区 | 内容 |
+| 项目 | 内容 |
 | --- | --- |
 | [角色](/zh-cn/characters/) | 可用角色的稀有度、属性、职业、武器与技能 |
-| [奇波](/zh-cn/kibo/) | 可捕捉、可骑乘、在家园工作的伙伴；[家园工作查询](/zh-cn/kibo/work/)、[骑乘查询](/zh-cn/kibo/riding/)；依属性：[火](/zh-cn/kibo/elements/fire/)、[水](/zh-cn/kibo/elements/water/)、[风](/zh-cn/kibo/elements/wind/)、[雷](/zh-cn/kibo/elements/thunder/)、[冰](/zh-cn/kibo/elements/ice/)、[木](/zh-cn/kibo/elements/wood/)、[地](/zh-cn/kibo/elements/earth/)、[光](/zh-cn/kibo/elements/light/)、[暗](/zh-cn/kibo/elements/dark/) |
+| [奇波](/zh-cn/kibo/) | 可捕捉、可骑乘、在家园工作的伙伴；[家园工作查询](/zh-cn/kibo/work/)、[骑乘查询](/zh-cn/kibo/riding/)；[依属性](/zh-cn/kibo/elements/)：[火](/zh-cn/kibo/elements/fire/)、[水](/zh-cn/kibo/elements/water/)、[风](/zh-cn/kibo/elements/wind/)、[雷](/zh-cn/kibo/elements/thunder/)、[冰](/zh-cn/kibo/elements/ice/)、[木](/zh-cn/kibo/elements/wood/)、[地](/zh-cn/kibo/elements/earth/)、[光](/zh-cn/kibo/elements/light/)、[暗](/zh-cn/kibo/elements/dark/) |
 | [系统](/zh-cn/systems/) | [观测（抽卡）](/zh-cn/systems/gacha/)的卡池与保底；[灵子](/zh-cn/systems/lingzi/) |
 
 ## 游戏

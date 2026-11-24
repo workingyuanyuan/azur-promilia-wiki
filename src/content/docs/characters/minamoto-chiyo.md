@@ -20,6 +20,8 @@ sources:
 
 [![源千代，官方立繪](/art/characters/minamoto-chiyo.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DHu48Cek.png)
 
+## 人物與打法
+
 源千代是祈雲出身的鬼人族武士，背負使命離鄉獨行，是限定角色。她以普攻第四段與蓄滿的重擊替敵人疊上「鬼火」，再用星鳴技把鬼火換成追加斬擊；星鳴技與星決技還能消耗水、冰、暗屬性的失序印記，大幅提高傷害。
 
 ## 基本資料

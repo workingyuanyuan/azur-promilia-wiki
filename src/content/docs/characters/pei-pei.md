@@ -20,6 +20,8 @@ sources:
 
 [![佩佩，官方立繪](/art/characters/pei-pei.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-OaYjc6fM.png)
 
+## 人物與打法
+
 佩佩是辰王朝的熊貓帕米，一心想當大俠，也是吉逸樓的看板娘，常駐角色。施放星鳴技或星決技後她得到「陰陽聚氣」，重擊變成四段強化重擊，同時打出地屬性與光屬性傷害；身上有 2 枚以上地或光印記時，地屬性傷害更高。
 
 ## 基本資料

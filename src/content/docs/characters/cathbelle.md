@@ -21,6 +21,8 @@ sources:
 
 [![姬瑟貝露，官方立繪](/art/characters/cathbelle.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DOarIFuC.png)
 
+## 人物與打法
+
 姬瑟貝露是弗利斯城邦的獸人女僕，出生於羅吉亞帝國，常駐角色。她的重擊依派生時機分成兩型：從普攻前段接出的第二型帶來「怪力」與雷印記，從後段接出的第三型蓄滿後消耗印記打出超限傷害，大幅削減架勢槽。
 
 ## 基本資料

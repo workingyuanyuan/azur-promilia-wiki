@@ -21,6 +21,8 @@ sources:
 
 [![塗山小玉，官方立繪](/art/characters/tushan-xiaoyu.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-BPOao-rT.png)
 
+## 人物與打法
+
 塗山小玉是辰王朝青華鄉的狐人少女，被人稱為「仙人」，仍在修行，是限定角色。她的打法圍繞「與君結緣」：重擊命中累積緣結值，滿 100 點後進入這個狀態，普攻改為三段並強化重擊；星決技也能讓她立即進入。
 
 ## 基本資料

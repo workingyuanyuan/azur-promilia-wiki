@@ -21,6 +21,8 @@ sources:
 
 [![楓糖，官方立繪](/art/characters/maple.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DHCf6so1.png)
 
+## 人物與打法
+
 楓糖是弗利斯城邦冒險公會的看板娘，獸人族，常駐角色。重擊、星決技、極限反擊與完美招架都讓她得到「喵喵連擊」，期間每次命中追加真實傷害，星鳴技也多出第二段；她的主要用途是提高全隊的攻擊力、傷害與超限強度。
 
 ## 基本資料

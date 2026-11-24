@@ -1,8 +1,8 @@
 ---
 title: "奇波列表"
-description: "《蓝色星原：旅谣》全部奇波：属性、成长阶段、定位与家园工作，每只一页。"
+description: "《蓝色星原：旅谣》的 207 只奇波，分属火、水、风、雷、冰、木、地、光、暗九种属性。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
-caveat: "同一系列的幼年期与成熟期是不同的奇波，各有一页；「（特殊）」是剧情用的另一个版本。"
+caveat: "同一系列的幼年期与成熟期是不同的奇波，各有自己的技能与家园工作；「（特殊）」是剧情用的另一个版本。"
 lastVerified: 2026-11-22
 aliases:
   - "奇波一覽"
@@ -12,8 +12,6 @@ sources:
   - title: "BWIKI：奇波分类"
     url: https://wiki.biligame.com/ap/Category%3A%E5%A5%87%E6%B3%A2
 ---
-
-共 207 只奇波，依属性排列。查哪只奇波能做哪种家园工作，见[家园工作查询](/zh-cn/kibo/work/)；哪些能骑，见[骑乘查询](/zh-cn/kibo/riding/)；依属性查，见[属性查询](/zh-cn/kibo/elements/)。
 
 ## 奇波
 

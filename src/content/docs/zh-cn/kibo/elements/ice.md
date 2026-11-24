@@ -1,8 +1,8 @@
 ---
 title: "冰属性奇波"
-description: "《蓝色星原：旅谣》全部冰属性奇波：成长阶段、定位、家园工作与能否骑乘。"
+description: "《蓝色星原：旅谣》的 16 只冰属性奇波，其中 2 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
-caveat: "双属性的奇波也列在另一个属性的页面；同一系列进化前后是不同的奇波，各列一列。"
+caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
 aliases:
   - "冰屬性奇波"
@@ -11,8 +11,6 @@ sources:
   - title: "BWIKI：奇波分类"
     url: https://wiki.biligame.com/ap/Category%3A%E5%A5%87%E6%B3%A2
 ---
-
-共 16 只冰属性奇波。
 
 ## 冰属性奇波
 

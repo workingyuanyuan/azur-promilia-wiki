@@ -32,6 +32,8 @@ uv run --with opencc-python-reimplemented --with pypinyin python3 -I pipeline/bu
 uv run --with opencc-python-reimplemented python3 -I pipeline/build_pages.py                     # records -> generated root pages
 uv run --with opencc-python-reimplemented python3 -I scripts/to-zh-cn.py                         # root pages -> src/content/docs/zh-cn/
 uv run -q --with opencc-python-reimplemented --with pypinyin python3 -I pipeline/check_text.py char <slug>   # one character's restated text against the source (also: char-src, kibo, kibo-todo, kibo-file)
+node scripts/prose-review.mjs run      # after pnpm build: a reader of another model reads every unit of prose not yet in reviews/prose-ledger.json
+node scripts/prose-review.mjs status   # units of prose the ledger lacks
 pnpm verify      # prose check, build, acceptance checks
 pnpm preview     # serve dist/ with charset=utf-8 (scripts/preview.mjs)
 python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/bwiki/ (resumable; exit 3 = blocked, run again later)
@@ -71,6 +73,7 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 | `pipeline/baha_text.py`, `cache/baha/` | Text of saved Bahamut forum posts (not committed) |
 | `scripts/to-zh-cn.py` | Simplified Chinese pages; names that differ come from the records |
 | `src/lib/kibo-nav.mjs` | Kibo part of the sidebar |
+| `scripts/prose-review.mjs`, `scripts/prose-rubric.md`, `scripts/prose-site.mjs`, `reviews/prose-ledger.json` | Prose ledger: the shared reader and rubric (copied unchanged between sites), this site's settings, the units read |
 
 ## Sources (read 2026-11-22)
 

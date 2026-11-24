@@ -21,6 +21,8 @@ sources:
 
 [![艾妮絲，官方立繪](/art/characters/anais.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-xmSuPBnu.png)
 
+## 人物與打法
+
 艾妮絲是弗利斯城邦卡爾儂療養院的護士，獸人族，常駐角色。她的派生重擊、星鳴技與星決技都會治療全隊，回復量看她的生命值上限；星鳴技與星攜技另外提高攻擊力，星決技則讓全隊重擊傷害上升。
 
 ## 基本資料

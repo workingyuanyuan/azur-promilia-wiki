@@ -1,8 +1,8 @@
 ---
 title: "雷屬性奇波"
-description: "《藍色星原：旅謠》全部雷屬性奇波：成長階段、定位、家園工作與能否騎乘。"
+description: "《藍色星原：旅謠》的 30 隻雷屬性奇波，其中 5 隻可以騎乘。"
 appliesTo: "BWIKI 整理的遊戲資料，2026-11-22 讀取"
-caveat: "雙屬性的奇波也列在另一個屬性的頁面；同一系列進化前後是不同的奇波，各列一列。"
+caveat: "部分奇波兼有兩種屬性；同一系列進化前後是不同的奇波，各有自己的技能與家園工作。"
 lastVerified: 2026-11-22
 aliases:
   - "雷属性奇波"
@@ -11,8 +11,6 @@ sources:
   - title: "BWIKI：奇波分類"
     url: https://wiki.biligame.com/ap/Category%3A%E5%A5%87%E6%B3%A2
 ---
-
-共 30 隻雷屬性奇波。
 
 ## 雷屬性奇波
 

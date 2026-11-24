@@ -117,7 +117,7 @@ def character_page(c, text, kibo_by_cn):
     art = ROOT / 'public' / 'art' / 'characters' / f"{c['slug']}.webp"
     has_art = art.exists() and original
     body = [f"[![{c['name_tw']}，官方立繪](/art/characters/{c['slug']}.webp)]({original})", ''] if has_art else []
-    body += [text['lead'], '', '## 基本資料', '', table(['項目', '內容'], facts)]
+    body += ['## 人物與打法', '', text['lead'], '', '## 基本資料', '', table(['項目', '內容'], facts)]
     body += ['## 技能', '', text.get('skills_intro', ''), '', table(['技能', '種類', '效果（技能等級 1）', '技能等級 12 的倍率', '冷卻與消耗'], skills)]
     if text.get('kibo'):
         body += ['## 奇波', '', text['kibo'], '']
@@ -143,13 +143,14 @@ def characters_index(chars, written):
         name = f"[{c['name_tw']}](/characters/{c['slug']}/)" if c['slug'] in written else c['name_tw']
         rows.append([name, c['name_cn'], c.get('romaji'), stars(c['rarity']), c['element'], c['class'], c['weapon'], c['type']])
     rows.sort(key=lambda r: 0 if r[0].startswith('[') else 1)
-    head = front('角色列表', '《藍色星原：旅謠》全部可用角色：稀有度、屬性、職業、武器，以及繁簡兩種寫法。',
+    n5 = sum(c['rarity'] == '5星' for c in chars)
+    head = front('角色列表', f'《藍色星原：旅謠》的 {len(chars)} 名可用角色，其中 {n5} 名是 5 星。',
                  'BWIKI 整理的遊戲資料，2026-11-22 讀取', '名稱以台港澳服官網為準；官網未列出的角色，繁體名稱由簡體名稱逐字轉寫。',
                  [{'title': 'BWIKI：角色分類', 'url': BWIKI + quote('Category:角色')}, {'title': '藍色星原：旅謠 台港澳官方網站', 'url': TW_SITE}],
                  aliases=['角色一覽', '角色图鉴', 'Azur Promilia characters'])
     n5 = sum(c['rarity'] == '5星' for c in chars)
-    lead = f"共 {len(chars)} 名角色，其中五星 {n5} 名、四星 {len(chars) - n5} 名。玩家操作的主角「星臨者」也列在其中。"
-    return head + '\n' + lead + '\n\n## 角色\n\n' + table(['名稱', '簡體', '英文名', '稀有度', '屬性', '職業', '武器', '類型'], rows)
+    lead = f"其餘 {len(chars) - n5} 名是四星；名單含玩家操作的主角「星臨者」。"
+    return head + '\n## 角色\n\n' + lead + '\n\n' + table(['名稱', '簡體', '英文名', '稀有度', '屬性', '職業', '武器', '類型'], rows)
 
 
 # ---------------------------------------------------------------- Kibo
@@ -199,12 +200,11 @@ def kibo_page(k, by_tw, skill_text):
 
 def kibo_index(kibo):
     rows = [[kibo_link(k), k['element'], k['stage'], k['tag'], '、'.join(k['work']), '有' if k['shiny'] else ''] for k in kibo]
-    head = front('奇波列表', '《藍色星原：旅謠》全部奇波：屬性、成長階段、定位與家園工作，每隻一頁。',
-                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '同一系列的幼年期與成熟期是不同的奇波，各有一頁；「（特殊）」是劇情用的另一個版本。',
+    head = front('奇波列表', f'《藍色星原：旅謠》的 {len(kibo)} 隻奇波，分屬火、水、風、雷、冰、木、地、光、暗九種屬性。',
+                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '同一系列的幼年期與成熟期是不同的奇波，各有自己的技能與家園工作；「（特殊）」是劇情用的另一個版本。',
                  [{'title': 'BWIKI：奇波分類', 'url': BWIKI + quote('Category:奇波')}],
                  aliases=['奇波一覽', '奇波图鉴', 'Kibo list'])
-    lead = f"共 {len(kibo)} 隻奇波，依屬性排列。查哪隻奇波能做哪種家園工作，見[家園工作查詢](/kibo/work/)；哪些能騎，見[騎乘查詢](/kibo/riding/)；依屬性查，見[屬性查詢](/kibo/elements/)。"
-    return head + '\n' + lead + '\n\n## 奇波\n\n' + table(['奇波', '屬性', '階段', '定位', '家園工作', '星彩'], rows)
+    return head + '\n## 奇波\n\n' + table(['奇波', '屬性', '階段', '定位', '家園工作', '星彩'], rows)
 
 
 def kibo_work(kibo):
@@ -213,12 +213,12 @@ def kibo_work(kibo):
         for w in k['work']:
             jobs.setdefault(w, []).append(k)
     order = sorted(jobs, key=lambda w: -len(jobs[w]))
-    head = front('家園工作查詢', '《藍色星原：旅謠》哪些奇波能做哪種家園工作：照料、耕作、澆水、採集等，依工作列出。',
-                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '一隻奇波可做多種工作；同一系列進化前後的工作可能不同，表中各自列出。',
+    head = front('家園工作查詢', '《藍色星原：旅謠》奇波的家園工作：耕作、澆水、照料、採礦、伐木等，每隻奇波能做的工作不同。',
+                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '一隻奇波可做多種工作；同一系列進化前後的工作可能不同。',
                  [{'title': 'BWIKI：奇波分類', 'url': BWIKI + quote('Category:奇波')}],
                  aliases=['家园工种', '奇波 家園 工作', '哪隻奇波會澆水'])
     summary = table(['工作', '奇波數'], [[f'[{w}](#{w})', len(jobs[w])] for w in order])
-    parts = [head, '\n', '家園工作是奇波在家園裡做的工作。下表先列出每種工作有幾隻奇波能做，再依工作列出每一隻。', '', summary]
+    parts = [head, '\n## 各工作的奇波數', '', summary]
     for w in order:
         rows = [[kibo_link(k), k['element'], k['stage'], '、'.join(x for x in k['work'] if x != w)] for k in jobs[w]]
         parts += [f'## {w}', '', table(['奇波', '屬性', '階段', '其他工作'], rows)]
@@ -227,14 +227,15 @@ def kibo_work(kibo):
 
 def kibo_riding(kibo):
     ride = [k for k in kibo if k.get('saddles')]
-    head = front('騎乘查詢', '《藍色星原：旅謠》哪些奇波可以騎乘，以及騎乘每一隻要用的鞍具。',
+    head = front('騎乘查詢', f'《藍色星原：旅謠》有 {len(ride)} 隻奇波可以騎乘，每隻要用牠專用的鞍具。',
                  'BWIKI 整理的遊戲資料（鞍具），2026-11-22 讀取；三測加入的鞍具',
                  '騎乘一隻奇波要先捕捉到牠，再做出牠專用的鞍具；鞍具只對應一隻奇波，進化前後也不通用。',
                  [{'title': 'BWIKI：鞍具分類', 'url': BWIKI + quote('Category:鞍具')}],
                  aliases=['奇波 騎乘', '坐騎', '坐骑', '鞍具', '哪些奇波可以騎'])
     rows = [[kibo_link(k), k['element'], k['size'], k['stage'], '、'.join(f"{x['name_tw']}（{x['rarity'].replace('5星', '五星')}）" for x in k['saddles'])] for k in ride]
-    lead = f"共 {len(ride)} 隻奇波可以騎乘，每隻有專用的鞍具；森彩靈蝶有兩種鞍具。"
-    return head + '\n' + lead + '\n\n## 可騎乘的奇波\n\n' + table(['奇波', '屬性', '體型', '階段', '鞍具'], rows)
+    two = [k['name_tw'] for k in ride if len(k['saddles']) > 1]
+    lead = f"{'、'.join(two)}有兩種鞍具，其他奇波各一種。" if two else '每隻奇波各有一種鞍具。'
+    return head + '\n## 可騎乘的奇波\n\n' + lead + '\n\n' + table(['奇波', '屬性', '體型', '階段', '鞍具'], rows)
 
 
 ELEMENT_SLUG = {'火': 'fire', '水': 'water', '風': 'wind', '雷': 'thunder', '冰': 'ice', '木': 'wood', '地': 'earth', '光': 'light', '暗': 'dark', '無': 'none'}
@@ -252,8 +253,8 @@ def kibo_by_element(kibo):
 def kibo_elements(kibo):
     """The summary page: how many Kibo per element, each linking its element page."""
     by = kibo_by_element(kibo)
-    head = front('屬性查詢', '《藍色星原：旅謠》奇波依屬性分類：火、水、風、雷、冰、木、地、光、暗，各屬性有幾隻奇波。',
-                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '雙屬性的奇波在兩個屬性下都列出；奇波的屬性決定牠技能的傷害屬性，與角色的屬性分開計算。',
+    head = front('屬性查詢', '《藍色星原：旅謠》的奇波分九種屬性：火、水、風、雷、冰、木、地、光、暗，部分奇波兼有兩種。',
+                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '一隻奇波可以有兩種屬性，因此各屬性的奇波數相加多於奇波總數；奇波的屬性決定牠技能的傷害屬性，與角色的屬性分開計算。',
                  [{'title': 'BWIKI：奇波分類', 'url': BWIKI + quote('Category:奇波')}],
                  aliases=['奇波 属性', '奇波 元素'])
     rows = [[f'[{e}屬性奇波](/kibo/elements/{ELEMENT_SLUG[e]}/)', len(by[e])] for e in by]
@@ -261,12 +262,12 @@ def kibo_elements(kibo):
 
 
 def kibo_element_page(e, ks):
-    head = front(f'{e}屬性奇波', f'《藍色星原：旅謠》全部{e}屬性奇波：成長階段、定位、家園工作與能否騎乘。',
-                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '雙屬性的奇波也列在另一個屬性的頁面；同一系列進化前後是不同的奇波，各列一列。',
+    head = front(f'{e}屬性奇波', f"《藍色星原：旅謠》的 {len(ks)} 隻{e}屬性奇波，其中 {sum(bool(k.get('saddles')) for k in ks)} 隻可以騎乘。",
+                 'BWIKI 整理的遊戲資料，2026-11-22 讀取', '部分奇波兼有兩種屬性；同一系列進化前後是不同的奇波，各有自己的技能與家園工作。',
                  [{'title': 'BWIKI：奇波分類', 'url': BWIKI + quote('Category:奇波')}],
                  aliases=[f'{e}屬性奇波', tw2s.convert(f'{e}屬性奇波'), f'{e}系奇波'])
     rows = [[kibo_link(k), k['element'], k['stage'], k['tag'], '、'.join(k['work']), '可' if k.get('saddles') else ''] for k in ks]
-    return head + '\n' + f'共 {len(ks)} 隻{e}屬性奇波。\n\n## {e}屬性奇波\n\n' + table(['奇波', '屬性', '階段', '定位', '家園工作', '騎乘'], rows)
+    return head + '\n' + f'## {e}屬性奇波\n\n' + table(['奇波', '屬性', '階段', '定位', '家園工作', '騎乘'], rows)
 
 
 def lingzi_page(items, texts, intro):
@@ -275,7 +276,7 @@ def lingzi_page(items, texts, intro):
     head = front('靈子', intro['description'], f"BWIKI 整理的遊戲資料（三測），2026-11-22 讀取；共 {len(items)} 種靈子",
                  intro['caveat'], [{'title': 'BWIKI：靈子分類', 'url': BWIKI + quote('Category:灵子')}],
                  aliases=['灵子', '靈子 是什麼', '靈子列表', '靈子 專武'])
-    parts = [head, '\n', intro['lead'], '']
+    parts = [head, '\n## 數值與取得', '', intro['lead'], '']
     for r in ('SSR', 'SR', 'R'):
         group = [row for row, x in zip(rows, items) if x['rarity'] == r]
         if group:

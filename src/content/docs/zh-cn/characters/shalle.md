@@ -21,6 +21,8 @@ sources:
 
 [![夏儿，官方立绘](/art/characters/shalle.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DIYtMJRN.png)
 
+## 人物与打法
+
 夏儿是阿瓦利安的高等精灵骑士，直属精灵王，骑着天马洛伊莱，常驻角色。普攻第六段、星鸣技与星决技都让她得到 8 秒「勇毅」，期间满蓄力重击改为投枪；在星鸣技或星决技之后备好印记，投枪的伤害会大幅提高。
 
 ## 基本资料

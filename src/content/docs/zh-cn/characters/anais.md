@@ -21,6 +21,8 @@ sources:
 
 [![艾妮丝，官方立绘](/art/characters/anais.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-xmSuPBnu.png)
 
+## 人物与打法
+
 艾妮丝是弗利斯城邦卡尔侬疗养院的护士，兽人族，常驻角色。她的派生重击、星鸣技与星决技都会治疗全队，回复量看她的生命值上限；星鸣技与星携技另外提高攻击力，星决技则让全队重击伤害上升。
 
 ## 基本资料

@@ -21,6 +21,8 @@ sources:
 
 [![涂山小玉，官方立绘](/art/characters/tushan-xiaoyu.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-BPOao-rT.png)
 
+## 人物与打法
+
 涂山小玉是辰王朝青华乡的狐人少女，被人称为「仙人」，仍在修行，是限定角色。她的打法围绕「与君结缘」：重击命中累积缘结值，满 100 点后进入这个状态，普攻改为三段并强化重击；星决技也能让她立即进入。
 
 ## 基本资料

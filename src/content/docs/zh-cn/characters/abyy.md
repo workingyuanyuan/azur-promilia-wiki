@@ -20,6 +20,8 @@ sources:
 
 [![阿比，官方立绘](/art/characters/abyy.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DTLaY6DP.png)
 
+## 人物与打法
+
 阿比是洛斯兰瑟的龙人族女孩，外表稚气却让动物惧怕，只关心肚子饿了吃什么，常驻角色。她的打法围绕派生重击：普攻打到不同段数后长按攻击键，接出聚拢敌人的第二型或三段连击的第三型；第三型与星决技都能消耗印记重创敌方架势槽。
 
 ## 基本资料

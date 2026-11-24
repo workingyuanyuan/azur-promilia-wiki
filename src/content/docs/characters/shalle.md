@@ -21,6 +21,8 @@ sources:
 
 [![夏兒，官方立繪](/art/characters/shalle.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DIYtMJRN.png)
 
+## 人物與打法
+
 夏兒是阿瓦利安的高等精靈騎士，直屬精靈王，騎著天馬洛伊萊，常駐角色。普攻第六段、星鳴技與星決技都讓她得到 8 秒「勇毅」，期間滿蓄力重擊改為投槍；在星鳴技或星決技之後備好印記，投槍的傷害會大幅提高。
 
 ## 基本資料

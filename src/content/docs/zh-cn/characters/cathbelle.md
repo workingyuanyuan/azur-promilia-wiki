@@ -21,6 +21,8 @@ sources:
 
 [![姬瑟贝露，官方立绘](/art/characters/cathbelle.webp)](https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-DOarIFuC.png)
 
+## 人物与打法
+
 姬瑟贝露是弗利斯城邦的兽人女仆，出生于罗吉亚帝国，常驻角色。她的重击依派生时机分成两型：从普攻前段接出的第二型带来「怪力」与雷印记，从后段接出的第三型蓄满后消耗印记打出超限伤害，大幅削减架势槽。
 
 ## 基本资料
