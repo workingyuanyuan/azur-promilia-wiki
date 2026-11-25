@@ -232,6 +232,12 @@ site-search button[data-open-modal] {
 	letter-spacing: 0.02em;
 }
 .content-panel + .content-panel {
+	border-top: 0;
+	padding-top: 0;
+}
+/* The rule under the title spans the text column, not the space between the sidebars. */
+.content-panel + .content-panel > .sl-container {
+	padding-top: 1.5rem;
 	border-top: 1px solid var(--ap-line);
 }
 
@@ -341,6 +347,27 @@ site-search button[data-open-modal] {
 	}
 	.sl-markdown-content p:has(img[src*='/art/characters/']) ~ .sl-heading-wrapper.level-h2 {
 		display: flow-root;
+	}
+	/* The first table fills the width beside the picture, or the column once it is below it
+	   (root AGENTS.md, Visible page): a table next to a float stretches to the space left. */
+	.sl-markdown-content p:has(img[src*='/art/characters/']) ~ table:first-of-type:not(:where(.not-content *)) {
+		display: table;
+	}
+	/* One value per @supports: in one rule the build keeps only the last. */
+	@supports (width: -webkit-fill-available) {
+		.sl-markdown-content p:has(img[src*='/art/characters/']) ~ table:first-of-type:not(:where(.not-content *)) {
+			width: -webkit-fill-available;
+		}
+	}
+	@supports (width: -moz-available) {
+		.sl-markdown-content p:has(img[src*='/art/characters/']) ~ table:first-of-type:not(:where(.not-content *)) {
+			width: -moz-available;
+		}
+	}
+	@supports (width: stretch) {
+		.sl-markdown-content p:has(img[src*='/art/characters/']) ~ table:first-of-type:not(:where(.not-content *)) {
+			width: stretch;
+		}
 	}
 }
 
