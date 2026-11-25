@@ -1,20 +1,17 @@
-"""Check restated text against the game data, one unit at a time, and print the source for a writer.
+"""Read the game data for the text that the site writes itself, and check that text.
 
 Usage (in the site folder):
   uv run --with opencc-python-reimplemented python3 -I pipeline/check_text.py char-src <slug>     # source of one character, Traditional
   uv run --with opencc-python-reimplemented python3 -I pipeline/check_text.py char <slug> [...]   # check records/text/characters/<slug>.json
-  uv run --with opencc-python-reimplemented python3 -I pipeline/check_text.py kibo-todo [i/n]     # keys without text, with their source (part i of n)
-  uv run --with opencc-python-reimplemented python3 -I pipeline/check_text.py lingzi-todo | lingzi [name ...] | lingzi-file <file>   # 靈子 skills
-  uv run --with opencc-python-reimplemented python3 -I pipeline/check_text.py kibo-file <file>    # check a batch file of the same shape as kibo-skills.json
-  uv run --with opencc-python-reimplemented python3 -I pipeline/check_text.py kibo [key ...]      # check records/text/kibo-skills.json (all keys by default)
 
+The skill and trait text on the pages is the game's own, shown as BWIKI gives it (pipeline/gametext.py
+writes records/gametext.json with the readers below); it is never restated. What the site writes
+itself is checked here: the description, scope, caveat, lead and the note above the skill table.
 A check fails (exit 1) when:
-  - a field is missing, or a character skill of the record has no text;
-  - a percentage in the text is not a level-1 value of that skill in the source;
-  - the text follows the source too closely (after conversion to Traditional, without markup,
-    spaces and punctuation): one shared run of 20 or more characters, or more than half of the
-    text in shared runs of 8 or more. Game terms and short formulas such as 消耗1枚風印記 may
-    repeat; sentences may not;
+  - a field is missing;
+  - the lead follows the character's introduction too closely (after conversion to Traditional,
+    without markup, spaces and punctuation): one shared run of 20 or more characters, or more
+    than half of the text in shared runs of 8 or more;
   - the description is longer than 70 characters;
   - a pattern of pipeline/check_prose.py matches (source names, hedges, timed content, the site).
 The source is cache/bwiki/ (not committed); the game data is from test builds.
@@ -36,7 +33,6 @@ s2tw = OpenCC('s2tw')
 COPY_RUN = 20
 COPY_SHARE = 0.5
 COPY_MIN = 8
-PCT = re.compile(r'(\d+(?:\.\d+)?)\s*%')
 
 
 def clean(text):
@@ -106,7 +102,7 @@ def check_char(slug):
     t = json.loads(path.read_text(encoding='utf-8'))
     src = char_source(c)
     errs = []
-    for key in ('description', 'applies', 'caveat', 'lead', 'skills_intro', 'skills'):
+    for key in ('description', 'applies', 'caveat', 'lead', 'skills_intro'):
         if not t.get(key):
             errs.append(f'missing "{key}"')
     if len(t.get('description', '')) > 70:
@@ -117,22 +113,6 @@ def check_char(slug):
     msg = copied(t.get('lead', ''), src['intro'] + src['words'])
     if msg:
         errs.append(f'lead {msg}')
-    for s in c['skills']:
-        n = str(s['n'])
-        mine = (t.get('skills') or {}).get(n)
-        if not mine:
-            errs.append(f'skill {n} ({s["name_tw"]}): no text')
-            continue
-        source = src['skills'].get(n, {}).get('desc', '')
-        allowed = set(PCT.findall(source))
-        for v in PCT.findall(mine.get('effect', '')):
-            if v not in allowed:
-                errs.append(f'skill {n}: {v}% is not a level-1 value of the source ({", ".join(sorted(allowed)) or "none"})')
-        msg = copied(mine.get('effect', ''), source)
-        if msg:
-            errs.append(f'skill {n}: {msg}')
-        for h in prose_hits(mine.get('effect', '')):
-            errs.append(f'skill {n}: {h}')
     return [f'{slug}: {e}' for e in errs]
 
 
@@ -154,31 +134,6 @@ def kibo_sources():
     return out
 
 
-def check_kibo(keys, file=None):
-    texts = json.loads(Path(file or ROOT / 'records' / 'text' / 'kibo-skills.json').read_text(encoding='utf-8'))
-    sources = kibo_sources()
-    errs = []
-    for key in keys or list(texts):
-        mine = texts.get(key)
-        if mine is None:
-            errs.append(f'{key}: no text')
-            continue
-        if key not in sources:
-            errs.append(f'{key}: no skill or trait of this key in the game data')
-            continue
-        source = sources[key]['source']
-        allowed = set(PCT.findall(source))
-        for v in PCT.findall(mine):
-            if v not in allowed:
-                errs.append(f'{key}: {v}% is not in the level-1 source ({", ".join(sorted(allowed)) or "none"})')
-        msg = copied(mine, source)
-        if msg:
-            errs.append(f'{key}: {msg}')
-        for h in prose_hits(mine):
-            errs.append(f'{key}: {h}')
-    return errs
-
-
 def lingzi_sources():
     """靈子 name (Traditional) -> its skill text at one star and at full stars."""
     out = {}
@@ -187,32 +142,6 @@ def lingzi_sources():
             continue
         out[s2tw.convert(f['名称'])] = {'source': clean(f.get('技能描述')), 'source_full': clean(f.get('满星技能描述')), 'skill': s2tw.convert(f.get('技能', ''))}
     return out
-
-
-def check_lingzi(keys, file=None):
-    texts = json.loads(Path(file or ROOT / 'records' / 'text' / 'lingzi-skills.json').read_text(encoding='utf-8'))
-    sources = lingzi_sources()
-    errs = []
-    for key in keys or list(texts):
-        mine = texts.get(key)
-        if mine is None:
-            errs.append(f'{key}: no text')
-            continue
-        if key not in sources:
-            errs.append(f'{key}: no 靈子 of this name in the game data')
-            continue
-        src = sources[key]
-        allowed = set(PCT.findall(src['source'])) | set(PCT.findall(src['source_full']))
-        allowed |= {re.sub(r'\.?0+$', '', v) for v in allowed if '.' in v}  # 6.50% may be written 6.5%
-        for v in PCT.findall(mine):
-            if v not in allowed:
-                errs.append(f'{key}: {v}% is not in the source ({", ".join(sorted(allowed)) or "none"})')
-        msg = copied(mine, src['source'])
-        if msg:
-            errs.append(f'{key}: {msg}')
-        for h in prose_hits(mine):
-            errs.append(f'{key}: {h}')
-    return errs
 
 
 def main(argv):
@@ -228,35 +157,10 @@ def main(argv):
                'source': char_source(c)}
         print(json.dumps(out, ensure_ascii=False, indent=1))
         return 0
-    if cmd == 'kibo-todo':
-        texts = json.loads((ROOT / 'records' / 'text' / 'kibo-skills.json').read_text(encoding='utf-8'))
-        todo = {k: v for k, v in kibo_sources().items() if k not in texts and k.split('@')[0] not in texts}
-        if args:  # part i of n, e.g. 2/4: a fixed split of the sorted keys
-            i, n = map(int, args[0].split('/'))
-            keys = sorted(todo)
-            todo = {k: todo[k] for k in keys[(i - 1) * len(keys) // n:i * len(keys) // n]}
-        print(json.dumps(todo, ensure_ascii=False, indent=1))
-        print(f'{len(todo)} keys without text', file=sys.stderr)
-        return 0
-    if cmd == 'lingzi-todo':
-        path = ROOT / 'records' / 'text' / 'lingzi-skills.json'
-        texts = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
-        todo = {k: v for k, v in lingzi_sources().items() if k not in texts}
-        print(json.dumps(todo, ensure_ascii=False, indent=1))
-        print(f'{len(todo)} keys without text', file=sys.stderr)
-        return 0
     errs = []
-    if cmd == 'lingzi':
-        errs = check_lingzi(args)
-    elif cmd == 'lingzi-file':
-        errs = check_lingzi([], args[0])
-    elif cmd == 'char':
+    if cmd == 'char':
         for slug in args:
             errs += check_char(slug)
-    elif cmd == 'kibo':
-        errs = check_kibo(args)
-    elif cmd == 'kibo-file':  # check every key of a batch file
-        errs = check_kibo([], args[0])
     else:
         print(__doc__)
         return 2

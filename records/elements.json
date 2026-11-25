@@ -1,0 +1,94 @@
+{
+ "_note": "Element advantage. strong: the elements this element deals 125% damage to; weak: the elements it deals 75% to; any other pair 100%. Against an enemy with two elements, each element's +25% or -25% is added (50% to 150%). Read 2026-11-25 from BWIKI 元素 (revision 24270) and from the wikiru page 属性相性表; the two agree.",
+ "order": [
+  "火",
+  "水",
+  "風",
+  "雷",
+  "冰",
+  "木",
+  "地",
+  "光",
+  "暗"
+ ],
+ "strong": {
+  "火": [
+   "木",
+   "冰"
+  ],
+  "水": [
+   "火",
+   "地"
+  ],
+  "地": [
+   "火",
+   "雷"
+  ],
+  "風": [
+   "地",
+   "冰"
+  ],
+  "木": [
+   "風",
+   "水"
+  ],
+  "冰": [
+   "木",
+   "雷"
+  ],
+  "雷": [
+   "風",
+   "水"
+  ],
+  "光": [
+   "暗"
+  ],
+  "暗": [
+   "光"
+  ],
+  "無": []
+ },
+ "weak": {
+  "火": [
+   "地",
+   "水"
+  ],
+  "水": [
+   "木",
+   "雷"
+  ],
+  "地": [
+   "風",
+   "水"
+  ],
+  "風": [
+   "木",
+   "雷"
+  ],
+  "木": [
+   "火",
+   "冰"
+  ],
+  "冰": [
+   "火",
+   "風"
+  ],
+  "雷": [
+   "地",
+   "冰"
+  ],
+  "光": [],
+  "暗": [],
+  "無": []
+ },
+ "sources": [
+  {
+   "title": "BWIKI：元素（修訂 24270，2026-11-21）",
+   "url": "https://wiki.biligame.com/ap/index.php?title=%E5%85%83%E7%B4%A0&oldid=24270"
+  },
+  {
+   "title": "アズールプロミリア有志Wiki：属性相性表（2026-11-25 讀取）",
+   "url": "https://azurpromilia.wikiru.jp/?%E5%B1%9E%E6%80%A7%E7%9B%B8%E6%80%A7%E8%A1%A8"
+  }
+ ]
+}

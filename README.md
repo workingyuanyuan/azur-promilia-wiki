@@ -12,7 +12,7 @@ This site is not run by 積咪網路, 蠻啾網路 or any publisher of the game.
 | --- | --- |
 | Characters | One page per released character (23): profile, skills with values at skill levels 1 and 12 |
 | Kibo | One page per Kibo (207): element, stage, home work, riding, traits, skills, evolution; lookups by home work, riding and element |
-| Systems | Observation (gacha) pools and pity; 靈子 (75 equipment cards) |
+| Systems | Observation (gacha) pools and pity; 靈子 (75 equipment cards); element advantage |
 
 Languages: Traditional Chinese at the root, Simplified Chinese under `/zh-cn/` (written by script from the Traditional Chinese pages).
 
@@ -20,7 +20,7 @@ The game's public launch is 2026-11-26. Until the pages are checked against the 
 
 ## Sources
 
-Game data from BWIKI (`wiki.biligame.com/ap/`, CC BY-NC-SA 3.0): facts only, restated in our own words; no wikitext is kept in this repository. Taiwan names and character art from the Taiwan official site; the character pictures are cutouts made by this site and link to the official originals. Gacha rules from the official card-pool notices as relayed on the Bahamut forum.
+Game data from BWIKI (`wiki.biligame.com/ap/`, CC BY-NC-SA 3.0). The skill and trait text is the game's, as BWIKI gives it, converted from Simplified to Traditional characters (`records/gametext.json`, CC BY-NC-SA 3.0). Taiwan names and the art of 12 characters from the Taiwan official site: cutouts made by this site that link to the official originals. Japanese names and the card art of 11 characters from the Japanese fan wiki wikiru (`azurpromilia.wikiru.jp`), shown as hosted there. Gacha rules from the official card-pool notices as relayed on the Bahamut forum.
 
 ## For agents
 

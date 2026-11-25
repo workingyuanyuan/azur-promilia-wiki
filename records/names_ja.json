@@ -1,0 +1,123 @@
+{
+ "_note": "Japanese-service names of the characters, from the wikiru page of each character, read 2026-11-25. Matched to the records by the Japanese voice actor in BWIKI (日语CV); by hand where the voice actor is missing or shared: ペイペイ and ポンポン by element (地、光 / 火), メイプル, 星臨者 and 洛卿 by name.",
+ "abyy": {
+  "name_ja": "アビィ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%82%A2%E3%83%93%E3%82%A3",
+  "match": "cv"
+ },
+ "anais": {
+  "name_ja": "アニス",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%82%A2%E3%83%8B%E3%82%B9",
+  "match": "cv"
+ },
+ "cathbelle": {
+  "name_ja": "キャスベル",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%99%E3%83%AB",
+  "match": "cv"
+ },
+ "faridah": {
+  "name_ja": "ファランタ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%95%E3%82%A1%E3%83%A9%E3%83%B3%E3%82%BF",
+  "match": "cv"
+ },
+ "han-youyou": {
+  "name_ja": "寒悠悠",
+  "page": "https://azurpromilia.wikiru.jp/?%E5%AF%92%E6%82%A0%E6%82%A0",
+  "match": "cv"
+ },
+ "kataru": {
+  "name_ja": "カタル",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%82%AB%E3%82%BF%E3%83%AB",
+  "match": "cv"
+ },
+ "lan-xiangzi": {
+  "name_ja": "蘭香子",
+  "page": "https://azurpromilia.wikiru.jp/?%E8%98%AD%E9%A6%99%E5%AD%90",
+  "match": "cv"
+ },
+ "lily": {
+  "name_ja": "リリィ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%AA%E3%83%AA%E3%82%A3",
+  "match": "cv"
+ },
+ "luo-qing": {
+  "name_ja": "洛卿",
+  "page": "https://azurpromilia.wikiru.jp/?%E6%B4%9B%E5%8D%BF",
+  "match": "manual"
+ },
+ "luruka": {
+  "name_ja": "ルルカ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%AB%E3%83%AB%E3%82%AB",
+  "match": "cv"
+ },
+ "maple": {
+  "name_ja": "メイプル",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%A1%E3%82%A4%E3%83%97%E3%83%AB",
+  "match": "manual"
+ },
+ "metsa": {
+  "name_ja": "メーツァ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%A1%E3%83%BC%E3%83%84%E3%82%A1",
+  "match": "cv"
+ },
+ "minamoto-chiyo": {
+  "name_ja": "源千代",
+  "page": "https://azurpromilia.wikiru.jp/?%E6%BA%90%E5%8D%83%E4%BB%A3",
+  "match": "cv"
+ },
+ "mitty": {
+  "name_ja": "ミィティ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%9F%E3%82%A3%E3%83%86%E3%82%A3",
+  "match": "cv"
+ },
+ "morwyn-halkon": {
+  "name_ja": "モーレン ハクオン",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%A2%E3%83%BC%E3%83%AC%E3%83%B3",
+  "match": "cv"
+ },
+ "nono": {
+  "name_ja": "ノノ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%8E%E3%83%8E",
+  "match": "cv"
+ },
+ "pei-pei": {
+  "name_ja": "ペイペイ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%9A%E3%82%A4%E3%83%9A%E3%82%A4",
+  "match": "manual"
+ },
+ "pengpeng": {
+  "name_ja": "ポンポン",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%9D%E3%83%B3%E3%83%9D%E3%83%B3",
+  "match": "manual"
+ },
+ "ruby": {
+  "name_ja": "ルビーナ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%AB%E3%83%93%E3%83%BC%E3%83%8A",
+  "match": "cv"
+ },
+ "shalle": {
+  "name_ja": "シャル",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%82%B7%E3%83%A3%E3%83%AB",
+  "match": "cv"
+ },
+ "starborn": {
+  "name_ja": "星臨者",
+  "page": "https://azurpromilia.wikiru.jp/?%E6%98%9F%E8%87%A8%E8%80%85",
+  "match": "manual"
+ },
+ "symphoria-tarandelion": {
+  "name_ja": "シンフォーリア",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AA%E3%82%A2",
+  "match": "cv"
+ },
+ "terara": {
+  "name_ja": "テララ",
+  "page": "https://azurpromilia.wikiru.jp/?%E3%83%86%E3%83%A9%E3%83%A9",
+  "match": "cv"
+ },
+ "tushan-xiaoyu": {
+  "name_ja": "塗山小玉",
+  "page": "https://azurpromilia.wikiru.jp/?%E5%A1%97%E5%B1%B1%E5%B0%8F%E7%8E%89",
+  "match": "cv"
+ }
+}

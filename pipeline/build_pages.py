@@ -8,6 +8,7 @@ Usage: uv run --with opencc-python-reimplemented python3 -I pipeline/build_pages
 """
 
 import json
+import urllib.parse
 import re
 from pathlib import Path
 from urllib.parse import quote
@@ -23,6 +24,15 @@ TODAY = '2026-11-22'
 BWIKI = 'https://wiki.biligame.com/ap/'
 TW_SITE = 'https://azurpromilia.com/zh-tw/home/'
 ART = json.loads((ROOT / 'records' / 'art.json').read_text(encoding='utf-8'))
+# The game's own skill and trait text, as BWIKI gives it, converted to Traditional characters
+# (pipeline/gametext.py). Shown as it is, never restated.
+NAMES_JA = json.loads((ROOT / 'records' / 'names_ja.json').read_text(encoding='utf-8'))
+GAMETEXT = json.loads((ROOT / 'records' / 'gametext.json').read_text(encoding='utf-8'))
+
+
+def game_text(s):
+    """The game's text on one line: its line breaks become spaces."""
+    return ' '.join(line.strip() for line in s.split('\n') if line.strip())
 # BWIKI's names for the tests -> how pages write them.
 BUILD = {'一测': '第一次測試', '二测': '第二次測試', '三测': '第三次測試', '四测': '第四次測試', '1.0': '公測 1.0'}
 ELEMENTS = ['火', '水', '風', '雷', '冰', '木', '地', '光', '暗', '無']
@@ -42,9 +52,9 @@ def bwiki_source(rec):
             'url': f"{BWIKI}index.php?title={quote(src['title'])}&oldid={src['revid']}"}
 
 
-def front(title, description, applies, caveat, sources, aliases=(), effective=None, art=None):
+def front(title, description, applies, caveat, sources, aliases=(), effective=None, art=None, verified=None):
     lines = ['---', f'title: {yaml_str(title)}', f'description: {yaml_str(description)}', f'appliesTo: {yaml_str(applies)}',
-             f'caveat: {yaml_str(caveat)}', f'lastVerified: {TODAY}']
+             f'caveat: {yaml_str(caveat)}', f'lastVerified: {verified or TODAY}']
     if effective:
         lines.append(f'effectiveDate: {effective}')
     # The Simplified title is an alias of every page: scripts/to-zh-cn.py makes it the title there.
@@ -95,39 +105,52 @@ def kibo_link(k):
 def character_page(c, text, kibo_by_cn):
     skills = []
     for s in c['skills']:
-        t = text['skills'].get(str(s['n']))
-        if not t or t['effect'] == '—':  # a slot the game data leaves empty (no name, no text)
+        g = GAMETEXT['characters'].get(c['slug'], {}).get(str(s['n']))
+        if not g:  # a slot the game data leaves empty (no name, no text)
             continue
+        kind = text['skills'].get(str(s['n']), {}).get('kind', s['kind'])
         lv12 = '、'.join(f'{n} {v}' for n, v in zip(s['value_names'], s['values_by_level'][-1])) if len(s['values_by_level']) > 1 and s['value_names'] else ''
         cost = []
         if s['cooldown'] and float(s['cooldown']) > 0:
             cost.append(f"冷卻 {float(s['cooldown']):g} 秒")
         if s['energy'] and float(s['energy']) > 0:
             cost.append(f"能量 {float(s['energy']):g}")
-        skills.append([t['name'], t['kind'], t['effect'], lv12, '、'.join(cost)])
+        skills.append([g['name'], kind, game_text(g['text']), lv12, '、'.join(cost)])
     facts = [
         ['稀有度', stars(c['rarity'])], ['屬性', c['element']], ['職業', c['class']], ['武器', c['weapon']],
-        ['戰鬥定位', '、'.join(c['role'])], ['類型', c['type']], ['陣營', c['faction']], ['種族', c['race']],
+        ['日服名稱', NAMES_JA.get(c['slug'], {}).get('name_ja')], ['戰鬥定位', '、'.join(c['role'])], ['類型', c['type']], ['陣營', c['faction']], ['種族', c['race']],
         ['日文配音', text.get('cv_ja') or c['cv_ja']], ['加入版本', BUILD.get(c['release_version'], c['release_version'])],
     ]
     facts = [f for f in facts if f[1] and f[1] != '未知']  # the game data's 未知 tells the reader nothing
-    # The picture is our cutout of an official illustration (pipeline/cut_art.py); it links to
-    # the original, which is also credited in the page notes.
-    original = ART.get(c['slug'], {}).get('original')
+    # Two kinds of picture (records/art.json): our cutout of an official illustration of the
+    # Taiwan site (pipeline/cut_art.py), which links to the original; or the game's own card
+    # art as wikiru hosts it, shown unchanged but resized, which links to the wikiru page.
+    entry = ART.get(c['slug'], {})
     art = ROOT / 'public' / 'art' / 'characters' / f"{c['slug']}.webp"
-    has_art = art.exists() and original
-    body = [f"[![{c['name_tw']}，官方立繪](/art/characters/{c['slug']}.webp)]({original})", ''] if has_art else []
+    has_art = art.exists() and entry.get('original')
+    wikiru = entry.get('source') == 'wikiru'
+    if has_art:
+        alt, link = (f"{c['name_tw']}，遊戲立繪", entry['page']) if wikiru else (f"{c['name_tw']}，官方立繪", entry['original'])
+        body = [f"[![{alt}](/art/characters/{c['slug']}.webp)]({link})", '']
+        credits = ([{'title': f"アズールプロミリア有志Wiki（{urllib.parse.unquote(entry['page'].split('?', 1)[1])}）", 'url': entry['page']},
+                    {'title': f"立繪原檔：{entry['file_title']}（讀取於 {entry['read']}）", 'url': entry['original']}] if wikiru else
+                   [{'title': '台港澳官方網站（角色）', 'url': TW_SITE},
+                    {'title': f"{c['name_tw']}立繪原圖（去背前）", 'url': entry['original']}])
+    else:
+        body, credits = [], None
     body += ['## 人物與打法', '', text['lead'], '', '## 基本資料', '', table(['項目', '內容'], facts)]
     body += ['## 技能', '', text.get('skills_intro', ''), '', table(['技能', '種類', '效果（技能等級 1）', '技能等級 12 的倍率', '冷卻與消耗'], skills)]
     if text.get('kibo'):
         body += ['## 奇波', '', text['kibo'], '']
     sources = [bwiki_source(c)]
+    ja = NAMES_JA.get(c['slug'])
+    if ja:
+        sources.append({'title': f"アズールプロミリア有志Wiki：{ja['name_ja']}（日服名稱，2026-11-25 讀取）", 'url': ja['page']})
     if c['name_tw_source'] == 'official-tw':
         sources.append({'title': '藍色星原：旅謠 台港澳官方網站（角色）', 'url': TW_SITE})
     head = front(c['name_tw'], text['description'], text['applies'], text['caveat'], sources,
-                 aliases=[c['name_cn'], c.get('romaji')],
-                 art=[{'title': '台港澳官方網站（角色）', 'url': TW_SITE},
-                      {'title': f"{c['name_tw']}立繪原圖（去背前）", 'url': original}] if has_art else None)
+                 aliases=[c['name_cn'], c.get('romaji'), ja and ja['name_ja']],
+                 art=credits)
     return head + '\n' + '\n'.join(body).replace('\n\n\n', '\n\n')
 
 
@@ -156,8 +179,9 @@ def characters_index(chars, written):
 # ---------------------------------------------------------------- Kibo
 
 def text_for(k, name, skill_text):
-    """Restated text of a Kibo's skill or trait: `name@fingerprint` first, then `name`."""
-    return skill_text.get(f"{name}@{k['skill_fp'].get(name)}") or skill_text.get(name)
+    """The game's text of a Kibo's skill or trait: `name@fingerprint` first, then `name`."""
+    s = skill_text.get(f"{name}@{k['skill_fp'].get(name)}") or skill_text.get(name)
+    return game_text(s) if s else s
 
 
 def kibo_page(k, by_tw, skill_text):
@@ -272,7 +296,8 @@ def kibo_element_page(e, ks):
 
 def lingzi_page(items, texts, intro):
     rows = [[x['name_tw'], x['class'] or '', f"{x['stat']} {x['stat_1']} → {x['stat_100']}",
-             f"{x['hp_100']} / {x['atk_100']} / {x['def_100']}", texts[x['name_tw']]] for x in items]
+             f"{x['hp_100']} / {x['atk_100']} / {x['def_100']}",
+             f"**{texts[x['name_tw']]['skill']}** 一星：{game_text(texts[x['name_tw']]['one'])} 滿星：{game_text(texts[x['name_tw']]['full'])}"] for x in items]
     head = front('靈子', intro['description'], f"BWIKI 整理的遊戲資料（三測），2026-11-22 讀取；共 {len(items)} 種靈子",
                  intro['caveat'], [{'title': 'BWIKI：靈子分類', 'url': BWIKI + quote('Category:灵子')}],
                  aliases=['灵子', '靈子 是什麼', '靈子列表', '靈子 專武'])
@@ -283,6 +308,26 @@ def lingzi_page(items, texts, intro):
             parts += [f'## {r} 靈子', '', f'共 {len(group)} 種。', '',
                       table(['靈子', '職業', '副屬性（等級 1 → 100）', '生命 / 攻擊 / 防禦（等級 100）', '技能（一星，滿星）'], group)]
     return '\n'.join(parts)
+
+
+# ---------------------------------------------------------------- element advantage
+
+def elements_page():
+    e = load('elements.json')
+    order = e['order']
+
+    def rate(atk, enemy):
+        return 25 if enemy in e['strong'][atk] else -25 if enemy in e['weak'][atk] else 0
+    single = [[a, '、'.join(e['strong'][a]) or '—', '、'.join(e['weak'][a]) or '—'] for a in order + ['無']]
+    pairs = [(x, y) for i, x in enumerate(order) for y in order[i + 1:]]
+    dual = [[f'{x}、{y}'] + [f'{100 + rate(a, x) + rate(a, y)}%' for a in order] for x, y in pairs]
+    head = front('屬性克制', '《藍色星原：旅謠》的屬性克制：七種屬性各克制兩種、被兩種克制，光與暗互相克制，無屬性不克制也不被克制。',
+                 '公測前測試版的遊戲資料，2026-11-25 讀取；BWIKI 與日服 wikiru 的表相同',
+                 '克制時傷害 +25%、被克時 −25%；敵人有兩種屬性時兩者分別計算後相加，範圍是 50% 到 150%。',
+                 e['sources'], aliases=['屬性相剋', '元素克制', '属性相性表', 'element weakness'], verified='2026-11-25')
+    body = ['## 單一屬性', '', table(['攻擊屬性', '傷害 125% 的敵人屬性', '傷害 75% 的敵人屬性'], single),
+            '## 雙屬性敵人', '', table(['敵人屬性'] + [f'{a}攻擊' for a in order], dual)]
+    return head + '\n' + '\n'.join(body)
 
 
 def main():
@@ -297,7 +342,7 @@ def main():
             write(f"characters/{c['slug']}.md", character_page(c, json.loads(f.read_text(encoding='utf-8')), kibo_by_cn))
             written.add(c['slug'])
     write('characters/index.md', characters_index(chars, written))
-    skill_text = json.loads((RECORDS / 'text' / 'kibo-skills.json').read_text(encoding='utf-8')) if (RECORDS / 'text' / 'kibo-skills.json').exists() else {}
+    skill_text = GAMETEXT['kibo']
     by_tw = {k['name_tw']: k for k in kibo}
     # A skill name whose level-1 text differs between Kibo must be keyed `name@fingerprint`.
     fps = {}
@@ -306,11 +351,11 @@ def main():
             fps.setdefault(name, set()).add(fp)
     for name, text in list(skill_text.items()):
         if '@' not in name and len(fps.get(name, ())) > 1:
-            raise SystemExit(f'kibo-skills.json: "{name}" has {len(fps[name])} different texts in the game data; key it as {name}@<fingerprint>')
+            raise SystemExit(f'gametext.json: "{name}" has {len(fps[name])} different texts in the game data; key it as {name}@<fingerprint>')
     pages = 0
     for k in kibo:
         names = [k['fixed_skill'], k['combo_skill'], *k['skills'], *[p['name_tw'] for p in k['passives']]]
-        # A page only once every skill and trait has restated text.
+        # A page only once every skill and trait has text.
         if all(text_for(k, n, skill_text) for n in names if n):
             KIBO_PAGES.add(k['slug'])
     by_tw.update({k['name_tw']: k for k in kibo})
@@ -324,13 +369,14 @@ def main():
     for e, ks in kibo_by_element(kibo).items():
         write(f'kibo/elements/{ELEMENT_SLUG[e]}.md', kibo_element_page(e, ks))
     write('kibo/riding.md', kibo_riding(kibo))
-    # 靈子: one page, written only once every 靈子 of the records has restated text.
-    lz_path, lz_text = RECORDS / 'lingzi.json', RECORDS / 'text' / 'lingzi-skills.json'
-    if lz_path.exists() and lz_text.exists():
-        items, texts = load('lingzi.json'), json.loads(lz_text.read_text(encoding='utf-8'))
+    # 靈子: one page, written only once every 靈子 of the records has text.
+    lz_path = RECORDS / 'lingzi.json'
+    if lz_path.exists():
+        items, texts = load('lingzi.json'), GAMETEXT['lingzi']
         intro = json.loads((RECORDS / 'text' / 'lingzi.json').read_text(encoding='utf-8'))
         if all(x['name_tw'] in texts for x in items):
             write('systems/lingzi.md', lingzi_page(items, texts, intro))
+    write('systems/elements.md', elements_page())
     print('characters with pages:', len(written), 'kibo pages:', pages)
 
 

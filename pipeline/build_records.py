@@ -181,9 +181,9 @@ def kibo(names_tw):
             'shiny': f.get('异色') == '1',
             'build': f.get('实装版本'),
             'passives': [{'name_tw': s2tw.convert(f[f'特性{i}']), 'name_cn': f[f'特性{i}']} for i in (1, 2, 3) if f.get(f'特性{i}')],
-            # Fingerprint of each skill's level-1 text (the text itself is not kept): restated text
-            # in records/text/kibo-skills.json is keyed by name, and a name whose text differs
-            # between Kibo gets one entry per fingerprint (`name@fp`).
+            # Fingerprint of each skill's level-1 text: the game text in records/gametext.json
+            # is keyed by name, and a name whose text differs between Kibo gets one entry per
+            # fingerprint (`name@fp`).
             'skill_fp': skill_fingerprints(f),
             'fixed_skill': s2tw.convert(f.get('固定技能', '')) or None,
             'skills': [s2tw.convert(f[f'技能{i}']) for i in (1, 2, 3, 4) if f.get(f'技能{i}')],
@@ -211,8 +211,7 @@ RARITY = {}  # R, SR, SSR as the game writes them
 
 
 def lingzi():
-    """靈子 (equipment cards). Restated skill text is in records/text/lingzi-skills.json, keyed
-    by name; the source text is not kept, only a fingerprint of it."""
+    """靈子 (equipment cards). Their skill text is in records/gametext.json, keyed by name."""
     if not (CACHE / '灵子.json').exists():
         return None
     out = []
