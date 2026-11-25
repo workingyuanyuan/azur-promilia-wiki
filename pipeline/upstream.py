@@ -67,7 +67,7 @@ KINDS = [
     ('new update notice', re.compile(r'版本|更新說明|更新公告|改版|維護公告|停機維護')),
 ]
 # Titles of notices that no page rests on: previews, pre-download, events, store news.
-NOTE_TITLE = re.compile(r'預下載|預約|預告|直播|網頁活動|抽獎|轉發|社群|商城|周邊|聯動預熱')
+NOTE_TITLE = re.compile(r'預下載|預約|預告|直播|網頁活動|抽獎|轉發|社群|商城|周邊|聯動預熱|公平營運')
 
 
 class NotMade(Exception):

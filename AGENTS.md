@@ -110,7 +110,9 @@ From Bahamut 哈啦板 titles and the guides read; Traditional Chinese, with the
 | 保底會繼承到下一期嗎？ | systems/gacha |
 | 新手池幾抽必出五星？要幾張票？ | systems/gacha |
 | 常駐池 50 抽自選是什麼？ | systems/gacha |
-| 有沒有免費的五星角色？ | to write (needs launch notices) |
+| 有沒有免費的五星角色？ | systems/gacha |
+| 電腦／手機跑得動嗎？配置需求？ | home |
+| 手機和電腦資料互通嗎？ | home |
 | 限定角色有哪些？ | characters（類型欄） |
 | 哪隻奇波會澆水／耕作／照料？／蓝色星原 奇波 浇水 | kibo/work |
 | 奇波怎麼進化？幾級進化？ | kibo/<slug> |

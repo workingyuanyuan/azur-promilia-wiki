@@ -3,7 +3,7 @@ title: "蓝色星原：旅谣 Wiki"
 description: 《蓝色星原：旅谣》(Azur Promilia) 的角色、奇波、观测（抽卡）规则与游戏基本资料。
 appliesTo: 《蓝色星原：旅谣》港澳台服；2026-11-26 公测前的测试版资料
 caveat: 游戏 2026-11-26 公测；公测前的测试版（旅迹测试、恒序测试等）与公测版的数值、卡池与角色可能不同。英文服尚未营运，英文 Open Beta 预定 2027 年夏季。
-lastVerified: 2026-11-22
+lastVerified: 2026-11-26
 effectiveDate: 2026-11-20
 aliases:
   - "Azur Promilia wiki"
@@ -16,6 +16,8 @@ sources:
     url: https://azurpromilia.com/zh-tw/home/
   - title: 《蓝色星原：旅谣》公测正式定档11月26日！（港澳台官网公告，2026-10-23）
     url: https://azurpromilia.jimi-global.com/home/news/detail/901594357415677952
+  - title: 《蓝色星原：旅谣》公测常见问题说明（港澳台官网公告，2026-11-24）
+    url: https://azurpromilia.jimi-global.com/home/news/detail/912424101560324096
   - title: 【情报】1.0 限定卡池（巴哈姆特哈啦板，转载官方开服时间）
     url: https://forum.gamer.com.tw/C.php?bsn=79865&snA=531
   - title: Azur Promilia releases on November 26 in Japan and Asia（Final Weapon，2026-10-23）
@@ -40,9 +42,20 @@ sources:
 | 开发 | 积咪网络 |
 | 公测 | 2026-11-26 10:00（UTC+8），中国大陆、港澳台、日本、韩国同日 |
 | 公测平台 | PC、iOS、Android |
+| 跨平台 | 三个平台资料互通，同一账号可在各平台登录 |
 | PlayStation 5 | 开发中，没有日期 |
 | 英文版 | Open Beta 预定 2027 年夏季，使用美国的独立服务器 |
 | 台湾分级 | 辅12级 |
+
+## 装置需求
+
+| 项目 | PC | Android | iOS |
+| --- | --- | --- | --- |
+| 系统 | Windows 10 64 位元以上，DirectX 11.1 以上 | Android 10.0 以上 | iOS 15.0 以上 |
+| 推荐 | Intel Core i7-10700K 与 NVIDIA GeForce RTX 2060 或同级以上 | Snapdragon 8 Gen1、天玑 9000+ 或同级以上 | iPhone 13 Pro 以上 |
+| 最低 | Intel Core i5-9400F 与 NVIDIA GeForce GTX 1060 或同级 | Snapdragon 855、天玑 1000+、麒麟 990 或同级以上 | iPhone 12 Pro 以上 |
+| 记忆体 | 16 GB（推荐与最低相同） | 推荐 8 GB，最低 6 GB | 推荐 8 GB，最低 6 GB |
+| 储存空间 | 120 GB 以上，建议装在 SSD | 55 GB 以上 | 55 GB 以上 |
 
 ## 各地区营运
 
