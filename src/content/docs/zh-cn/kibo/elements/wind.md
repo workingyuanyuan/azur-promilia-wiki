@@ -1,6 +1,6 @@
 ---
 title: "风属性奇波"
-description: "《蓝色星原：旅谣》的 42 只风属性奇波，其中 9 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 42 只风属性奇波，其中 11 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -50,9 +50,9 @@ sources:
 | [旋风鹰](/zh-cn/kibo/xuanfengying/) | 风 | 成长期 | 输出 | 照料 | — |
 | [雪绒花](/zh-cn/kibo/xueronghua/) | 风、光 | 幼年期 | 辅助 | 照料 | — |
 | [迅狼](/zh-cn/kibo/xunlang/) | 风 | 成熟期 | 输出 | 伐木 | — |
-| [音霸蛙](/zh-cn/kibo/yinbawa/) | 风、雷 | 成熟期 | 辅助 | 手工 | — |
+| [音霸蛙](/zh-cn/kibo/yinbawa/) | 风、雷 | 成熟期 | 辅助 | 手工 | 可 |
 | [鹰嘴兽](/zh-cn/kibo/yingzuishou/) | 风、光 | 幼年期 | 输出 | 照料 | — |
-| [伊欧利安](/zh-cn/kibo/yioulian/) | 风 | 超限体 | 侵扰 | 木工 | — |
+| [伊欧利安](/zh-cn/kibo/yioulian/) | 风 | 超限体 | 侵扰 | 木工 | 可 |
 | [帕莫拉](/zh-cn/kibo/pamola/) | 雷、风 | 成熟期 | 输出 | 元素 | 可 |
 | [怯影之翼](/zh-cn/kibo/qieyingzhiyi/) | 暗、风 | 完全体 | 输出 | 手工、锻造 | 可 |
 | [小夜蝠](/zh-cn/kibo/xiaoyefu/) | 暗、风 | 幼年期 | 输出 | 锻造 | — |

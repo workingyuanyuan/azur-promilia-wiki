@@ -1,6 +1,6 @@
 ---
 title: "火属性奇波"
-description: "《蓝色星原：旅谣》的 42 只火属性奇波，其中 6 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 42 只火属性奇波，其中 8 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -43,12 +43,12 @@ sources:
 | [炎豹](/zh-cn/kibo/yanbao/) | 火 | 成长期 | 输出 | 燃火 | — |
 | [焰火雀](/zh-cn/kibo/yanhuoque/) | 火 | 成长期 | 输出 | 燃火 | — |
 | [炎晶甲](/zh-cn/kibo/yanjingjia/) | 火、地 | 成熟期 | 辅助 | 采矿、燃火 | — |
-| [焰翎龙](/zh-cn/kibo/yanlinglong/) | 火 | 成熟期 | 输出 | 燃火 | — |
+| [焰翎龙](/zh-cn/kibo/yanlinglong/) | 火 | 成熟期 | 输出 | 燃火 | 可 |
 | [焰灵偶](/zh-cn/kibo/yanlingou/) | 火 | 成熟期 | 辅助 | 元素、燃火 | — |
 | [焰哞哞](/zh-cn/kibo/yanmoumou/) | 火 | 幼年期 | 输出 | 燃火 | — |
 | [焰牛牛](/zh-cn/kibo/yanniuniu/) | 火 | 成长期 | 输出 | 燃火 | — |
 | [焰羊羊](/zh-cn/kibo/yanyangyang/) | 火 | 幼年期 | 输出 | 燃火 | — |
-| [炎灼角羊](/zh-cn/kibo/yanzhuojiaoyang/) | 火 | 成熟期 | 输出 | 燃火 | — |
+| [炎灼角羊](/zh-cn/kibo/yanzhuojiaoyang/) | 火 | 成熟期 | 输出 | 燃火 | 可 |
 | [炎鬃霸主](/zh-cn/kibo/yanzongbazhu/) | 火、地 | 完全体 | 输出 | 燃火 | — |
 | [灼加野猪](/zh-cn/kibo/zhuojiayezhu/) | 火、地 | 成熟期 | 输出 | 燃火 | — |
 | [猪勇力](/zh-cn/kibo/zhuyongli/) | 火、地 | 幼年期 | 输出 | 燃火 | — |

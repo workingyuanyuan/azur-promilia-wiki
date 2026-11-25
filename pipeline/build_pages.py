@@ -252,10 +252,10 @@ def kibo_work(kibo):
 def kibo_riding(kibo):
     ride = [k for k in kibo if k.get('saddles')]
     head = front('騎乘查詢', f'《藍色星原：旅謠》有 {len(ride)} 隻奇波可以騎乘，每隻要用牠專用的鞍具。',
-                 'BWIKI 整理的遊戲資料（鞍具），2026-11-22 讀取；三測加入的鞍具',
+                 'BWIKI 整理的遊戲資料（鞍具 44 種），2026-11-22 與 2026-11-25 讀取；二測與三測加入的鞍具',
                  '騎乘一隻奇波要先捕捉到牠，再做出牠專用的鞍具；鞍具只對應一隻奇波，進化前後也不通用。',
                  [{'title': 'BWIKI：鞍具分類', 'url': BWIKI + quote('Category:鞍具')}],
-                 aliases=['奇波 騎乘', '坐騎', '坐骑', '鞍具', '哪些奇波可以騎'])
+                 aliases=['奇波 騎乘', '坐騎', '坐骑', '鞍具', '哪些奇波可以騎'], verified='2026-11-25')
     rows = [[kibo_link(k), k['element'], k['size'], k['stage'], '、'.join(f"{x['name_tw']}（{x['rarity'].replace('5星', '五星')}）" for x in k['saddles'])] for k in ride]
     two = [k['name_tw'] for k in ride if len(k['saddles']) > 1]
     lead = f"{'、'.join(two)}有兩種鞍具，其他奇波各一種。" if two else '每隻奇波各有一種鞍具。'

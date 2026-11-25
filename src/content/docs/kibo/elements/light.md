@@ -1,6 +1,6 @@
 ---
 title: "光屬性奇波"
-description: "《藍色星原：旅謠》的 22 隻光屬性奇波，其中 2 隻可以騎乘。"
+description: "《藍色星原：旅謠》的 22 隻光屬性奇波，其中 3 隻可以騎乘。"
 appliesTo: "BWIKI 整理的遊戲資料，2026-11-22 讀取"
 caveat: "部分奇波兼有兩種屬性；同一系列進化前後是不同的奇波，各有自己的技能與家園工作。"
 lastVerified: 2026-11-22
@@ -35,6 +35,6 @@ sources:
 | [絨心布里尼](/kibo/rongxinbulini/) | 光、火 | 成熟期 | 輸出 | 手工、鍛造 | — |
 | [閃閃螢](/kibo/shanshanying/) | 光 | 成長期 | 恢復 | 耕作 | — |
 | [絲絨](/kibo/sirong/) | 光、火 | 成熟期 | 輸出 | 手工、鍛造 | — |
-| [馱馱龍](/kibo/tuotuolong/) | 光 | 成熟期 | 輔助 | 耕作 | — |
+| [馱馱龍](/kibo/tuotuolong/) | 光 | 成熟期 | 輔助 | 耕作 | 可 |
 | [小星喵](/kibo/xiaoxingmiao/) | 光 | 幼年期 | 輸出 | 照料 | — |
 | [螢螢](/kibo/yingying/) | 光 | 幼年期 | 恢復 | 耕作 | — |

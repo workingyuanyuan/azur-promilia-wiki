@@ -1629,7 +1629,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "焰翎龍鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "焰翎龙鞍具",
+     "revid": 21327,
+     "timestamp": "2026-09-24T13:56:00Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "焰翎龙",
@@ -1904,7 +1915,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "炎灼角羊鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "炎灼角羊鞍具",
+     "revid": 21326,
+     "timestamp": "2026-09-24T13:55:59Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "炎灼角羊",
@@ -3248,7 +3270,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "星鰩鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "星鳐鞍具",
+     "revid": 21299,
+     "timestamp": "2026-09-24T13:55:37Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "星鳐",
@@ -5283,7 +5316,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "音霸蛙鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "音霸蛙鞍具",
+     "revid": 22126,
+     "timestamp": "2026-09-25T02:48:20Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "音霸蛙",
@@ -5407,7 +5451,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "伊歐利安鞍具",
+    "rarity": "5星",
+    "build": "二测",
+    "source": {
+     "title": "伊欧利安鞍具",
+     "revid": 16225,
+     "timestamp": "2026-06-16T04:11:37Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "伊欧利安",
@@ -6796,7 +6851,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "霆羽獸鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "霆羽兽鞍具",
+     "revid": 22116,
+     "timestamp": "2026-09-25T02:48:10Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "霆羽兽",
@@ -7654,7 +7720,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "烏爾鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "乌尔鞍具",
+     "revid": 21259,
+     "timestamp": "2026-09-24T13:55:01Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "乌尔",
@@ -9179,7 +9256,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "葉冠駝鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "叶冠驼鞍具",
+     "revid": 21328,
+     "timestamp": "2026-09-24T13:56:01Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "叶冠驼",
@@ -10214,7 +10302,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "重巖蹄鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "重岩蹄鞍具",
+     "revid": 21463,
+     "timestamp": "2026-09-24T13:58:18Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "重岩蹄",
@@ -10270,7 +10369,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "鑽山蜥鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "钻山蜥鞍具",
+     "revid": 22111,
+     "timestamp": "2026-09-25T02:48:05Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "钻山蜥",
@@ -10728,7 +10838,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "馱馱龍鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "驮驮龙鞍具",
+     "revid": 21261,
+     "timestamp": "2026-09-24T13:55:03Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "驮驮龙",
@@ -11353,7 +11474,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "霧球蛙鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "雾球蛙鞍具",
+     "revid": 21260,
+     "timestamp": "2026-09-24T13:55:02Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "雾球蛙",
@@ -11521,7 +11653,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "笑面蝠鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "笑面蝠鞍具",
+     "revid": 22117,
+     "timestamp": "2026-09-25T02:48:11Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "笑面蝠",
@@ -11865,7 +12008,18 @@
   "evolves_from": null,
   "evolves_to": null,
   "evolve_level": null,
-  "saddles": [],
+  "saddles": [
+   {
+    "name_tw": "夜貓鴞鞍具",
+    "rarity": "5星",
+    "build": "三测",
+    "source": {
+     "title": "夜猫鸮鞍具",
+     "revid": 22123,
+     "timestamp": "2026-09-25T02:48:17Z"
+    }
+   }
+  ],
   "page": true,
   "source": {
    "title": "夜猫鸮",

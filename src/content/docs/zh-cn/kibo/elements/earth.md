@@ -1,6 +1,6 @@
 ---
 title: "地属性奇波"
-description: "《蓝色星原：旅谣》的 41 只地属性奇波，其中 6 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 41 只地属性奇波，其中 8 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -53,7 +53,7 @@ sources:
 | [小岩蹄](/zh-cn/kibo/xiaoyanti/) | 地 | 幼年期 | 输出 | 耕作 | — |
 | [羊面悍狼](/zh-cn/kibo/yangmianhanlang/) | 地 | 成熟期 | 输出 | 耕作 | — |
 | [岩甲蜥](/zh-cn/kibo/yanjiaxi/) | 地 | 幼年期 | 击破 | 采矿 | — |
-| [重岩蹄](/zh-cn/kibo/zhongyanti/) | 地 | 成熟期 | 输出 | 耕作 | — |
-| [钻山蜥](/zh-cn/kibo/zuanshanxi/) | 地 | 成熟期 | 击破 | 采矿 | — |
+| [重岩蹄](/zh-cn/kibo/zhongyanti/) | 地 | 成熟期 | 输出 | 耕作 | 可 |
+| [钻山蜥](/zh-cn/kibo/zuanshanxi/) | 地 | 成熟期 | 击破 | 采矿 | 可 |
 | [暗夜守望者](/zh-cn/kibo/anyeshouwangzhe/) | 暗、地 | 成熟期 | 输出 | 手工、锻造、元素 | — |
 | [幽幽稻草人](/zh-cn/kibo/youyoudaocaoren/) | 暗、地 | 幼年期 | 输出 | 手工、锻造、元素 | — |

@@ -1,6 +1,6 @@
 ---
 title: "木属性奇波"
-description: "《蓝色星原：旅谣》的 30 只木属性奇波，其中 4 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 30 只木属性奇波，其中 5 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -44,5 +44,5 @@ sources:
 | [森境鹿](/zh-cn/kibo/senjinglu/) | 木 | 成熟期 | 辅助 | 伐木 | 可 |
 | [松野鹿](/zh-cn/kibo/songyelu/) | 木 | 成长期 | 辅助 | 伐木 | — |
 | [小芽狐](/zh-cn/kibo/xiaoyahu/) | 木 | 幼年期 | 输出 | 耕作 | — |
-| [叶冠驼](/zh-cn/kibo/yeguantuo/) | 木 | 成熟期 | 击破 | 伐木 | — |
+| [叶冠驼](/zh-cn/kibo/yeguantuo/) | 木 | 成熟期 | 击破 | 伐木 | 可 |
 | [棕木鹿](/zh-cn/kibo/zongmulu/) | 木 | 幼年期 | 辅助 | 伐木 | — |

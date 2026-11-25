@@ -1,6 +1,6 @@
 ---
 title: "水属性奇波"
-description: "《蓝色星原：旅谣》的 25 只水属性奇波，其中 6 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 25 只水属性奇波，其中 7 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -35,7 +35,7 @@ sources:
 | [水灵仔](/zh-cn/kibo/shuilingzai/) | 水 | 幼年期 | 恢复 | 元素、浇水 | — |
 | [水岩灵](/zh-cn/kibo/shuiyanling/) | 水 | 幼年期 | 击破 | 元素、浇水 | — |
 | [水岩卫](/zh-cn/kibo/shuiyanwei/) | 水 | 成熟期 | 击破 | 元素、浇水 | 可 |
-| [星鳐](/zh-cn/kibo/staray/) | 水 | 成熟期 | 输出 | 浇水 | — |
+| [星鳐](/zh-cn/kibo/staray/) | 水 | 成熟期 | 输出 | 浇水 | 可 |
 | [兔耳鳐](/zh-cn/kibo/tueryao/) | 水 | 幼年期 | 输出 | 浇水 | — |
 | [汐灵偶](/zh-cn/kibo/xilingou/) | 水 | 成熟期 | 恢复 | 元素、浇水 | — |
 | [库库](/zh-cn/kibo/kuku/) | 风、水 | 幼年期 | 输出 | 锻造 | — |

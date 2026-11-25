@@ -1,6 +1,6 @@
 ---
 title: "冰属性奇波"
-description: "《蓝色星原：旅谣》的 16 只冰属性奇波，其中 2 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 16 只冰属性奇波，其中 3 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -28,7 +28,7 @@ sources:
 | [霜灵偶](/zh-cn/kibo/shuanglingou/) | 冰 | 成熟期 | 输出 | 元素 | — |
 | [霜刃狼](/zh-cn/kibo/shuangrenlang/) | 冰 | 成熟期 | 输出 | 伐木 | 可 |
 | [碎冰兔](/zh-cn/kibo/suibingtu/) | 冰 | 成熟期 | 输出 | 元素、手工 | — |
-| [乌尔](/zh-cn/kibo/wuer/) | 冰 | 成熟期 | 输出 | 伐木 | — |
+| [乌尔](/zh-cn/kibo/wuer/) | 冰 | 成熟期 | 输出 | 伐木 | 可 |
 | [小雪狼](/zh-cn/kibo/xiaoxuelang/) | 冰 | 幼年期 | 输出 | 伐木 | — |
 | [雪球](/zh-cn/kibo/xueqiu/) | 冰 | 幼年期 | 输出 | 元素 | — |
 | [稚牙虎](/zh-cn/kibo/zhiyahu/) | 冰 | 幼年期 | 输出 | 元素 | — |

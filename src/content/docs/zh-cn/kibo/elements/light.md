@@ -1,6 +1,6 @@
 ---
 title: "光属性奇波"
-description: "《蓝色星原：旅谣》的 22 只光属性奇波，其中 2 只可以骑乘。"
+description: "《蓝色星原：旅谣》的 22 只光属性奇波，其中 3 只可以骑乘。"
 appliesTo: "BWIKI 整理的游戏资料，2026-11-22 读取"
 caveat: "部分奇波兼有两种属性；同一系列进化前后是不同的奇波，各有自己的技能与家园工作。"
 lastVerified: 2026-11-22
@@ -35,6 +35,6 @@ sources:
 | [绒心布里尼](/zh-cn/kibo/rongxinbulini/) | 光、火 | 成熟期 | 输出 | 手工、锻造 | — |
 | [闪闪萤](/zh-cn/kibo/shanshanying/) | 光 | 成长期 | 恢复 | 耕作 | — |
 | [丝绒](/zh-cn/kibo/sirong/) | 光、火 | 成熟期 | 输出 | 手工、锻造 | — |
-| [驮驮龙](/zh-cn/kibo/tuotuolong/) | 光 | 成熟期 | 辅助 | 耕作 | — |
+| [驮驮龙](/zh-cn/kibo/tuotuolong/) | 光 | 成熟期 | 辅助 | 耕作 | 可 |
 | [小星喵](/zh-cn/kibo/xiaoxingmiao/) | 光 | 幼年期 | 输出 | 照料 | — |
 | [萤萤](/zh-cn/kibo/yingying/) | 光 | 幼年期 | 恢复 | 耕作 | — |

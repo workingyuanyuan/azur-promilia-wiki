@@ -1,6 +1,6 @@
 ---
 title: "地屬性奇波"
-description: "《藍色星原：旅謠》的 41 隻地屬性奇波，其中 6 隻可以騎乘。"
+description: "《藍色星原：旅謠》的 41 隻地屬性奇波，其中 8 隻可以騎乘。"
 appliesTo: "BWIKI 整理的遊戲資料，2026-11-22 讀取"
 caveat: "部分奇波兼有兩種屬性；同一系列進化前後是不同的奇波，各有自己的技能與家園工作。"
 lastVerified: 2026-11-22
@@ -53,7 +53,7 @@ sources:
 | [小巖蹄](/kibo/xiaoyanti/) | 地 | 幼年期 | 輸出 | 耕作 | — |
 | [羊面悍狼](/kibo/yangmianhanlang/) | 地 | 成熟期 | 輸出 | 耕作 | — |
 | [巖甲蜥](/kibo/yanjiaxi/) | 地 | 幼年期 | 擊破 | 採礦 | — |
-| [重巖蹄](/kibo/zhongyanti/) | 地 | 成熟期 | 輸出 | 耕作 | — |
-| [鑽山蜥](/kibo/zuanshanxi/) | 地 | 成熟期 | 擊破 | 採礦 | — |
+| [重巖蹄](/kibo/zhongyanti/) | 地 | 成熟期 | 輸出 | 耕作 | 可 |
+| [鑽山蜥](/kibo/zuanshanxi/) | 地 | 成熟期 | 擊破 | 採礦 | 可 |
 | [暗夜守望者](/kibo/anyeshouwangzhe/) | 暗、地 | 成熟期 | 輸出 | 手工、鍛造、元素 | — |
 | [幽幽稻草人](/kibo/youyoudaocaoren/) | 暗、地 | 幼年期 | 輸出 | 手工、鍛造、元素 | — |
