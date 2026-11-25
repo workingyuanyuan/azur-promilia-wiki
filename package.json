@@ -9,6 +9,7 @@
     "preview": "node scripts/preview.mjs",
     "astro": "astro",
     "check": "node scripts/check-dist.mjs",
+    "upstream": "python3 -I pipeline/upstream.py",
     "verify": "python3 -I pipeline/check_prose.py && astro build && node scripts/check-dist.mjs"
   },
   "dependencies": {

@@ -1,0 +1,80 @@
+name: Check the sources
+
+# Compares the Taiwan official notices and the BWIKI pages of Azur Promilia with what the pages
+# were written from (pipeline/upstream.py, upstream/README.md). It changes no page: a difference
+# opens or updates one issue, and the issue closes when a later run finds none.
+
+on:
+  schedule:
+    # Every day 07:47 in Taipei (23:47 UTC the day before). Off the hour: runs at :00 are often late.
+    - cron: '47 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: upstream
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      # Python's standard library and curl only. Exit 0: no difference. 1: differences.
+      # Anything else: the check was not made, and the job fails here, before the issue is touched.
+      - id: check
+        run: |
+          set +e
+          python3 -I pipeline/upstream.py > report.txt 2>&1
+          code=$?
+          cat report.txt
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          [ "$code" -le 1 ]
+      # Only for the default branch: a run on another branch says nothing about the live pages.
+      - name: Open, update or close the issue
+        if: github.event_name == 'schedule' || github.ref_name == github.event.repository.default_branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          CODE: ${{ steps.check.outputs.code }}
+          OWNER: ${{ github.repository_owner }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          gh label create upstream --color 5319e7 --description 'The sources differ from what the pages were written from' --force
+          number=$(gh issue list --label upstream --state open --json number --jq '.[0].number // empty')
+          if [ "$CODE" = 0 ]; then
+            if [ -n "$number" ]; then gh issue close "$number" --comment "No difference in the run of $(date -u +%F): $RUN_URL"; fi
+            exit 0
+          fi
+          # The kind and id of every difference, from the whole report: the body may be cut below.
+          keys=$(sed -n 's/^\([a-z ]*: [^:]*\):.*/\1/p' report.txt | grep -v '^note' | sort -u | sha256sum | cut -c1-16)
+          {
+            echo 'The sources differ from what the pages of this site were written from. `upstream/README.md` says what to do with each line; run `pnpm upstream` for the present state.'
+            echo
+            echo '```text'
+            # An issue body holds 65,536 characters; after launch nearly every BWIKI page changes.
+            # Whole lines only, counted in bytes, so no character is cut in two.
+            LC_ALL=C awk -v max=56000 '{ n += length($0) + 1; if (n > max) { cut = 1; exit } print } END { if (cut) print "…" }' report.txt
+            echo '```'
+            if [ "$(wc -c < report.txt)" -gt 56000 ]; then echo; echo "The report is longer than an issue holds; the whole report is in the run: $RUN_URL"; fi
+            echo
+            echo "<!-- keys: $keys -->"
+          } > body.md
+          if [ -z "$number" ]; then
+            gh issue create --title 'Sources changed' --label upstream --assignee "$OWNER" --body-file body.md
+            exit 0
+          fi
+          # The body always shows the newest report. A comment, which notifies, is added only
+          # when the kind of difference or its notice or BWIKI page changes. The comment goes
+          # first: if it fails, the body keeps the old keys and the next run comments again.
+          old=$(gh issue view "$number" --json body --jq .body | sed -n 's/^<!-- keys: \([0-9a-f]*\) -->$/\1/p')
+          if [ "$old" != "$keys" ]; then
+            gh issue comment "$number" --body "The differences changed in the run of $(date -u +%F): $RUN_URL"
+          fi
+          gh issue edit "$number" --body-file body.md

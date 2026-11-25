@@ -18,7 +18,7 @@ Published 2026-11-22 at `https://yuanaruru.com/azur-promilia-wiki/` (repository 
 - How the home page reaches every page: index pages per section, each listing every page of its section within its first 5,000 extracted characters (the `endfield-wiki` pattern).
 - Look: taken from the Taiwan official site (colours, type, layout; not its wordmark, images or fonts).
 - Who lets a change go live: the owner confirms every time.
-- How the site follows its sources: `pnpm upstream` on demand (official notice list and BWIKI revision ids).
+- How the site follows its sources: `pnpm upstream`, also run every day by `.github/workflows/upstream.yml`, which keeps one issue (2026-11-25; it was on demand only until then, and the command had not been written). `upstream/README.md` says what it watches and what to do with each line.
 - Address: `https://yuanaruru.com/azur-promilia-wiki/`.
 
 ## Advisors (2026-11-22)
@@ -36,6 +36,7 @@ uv run -q --with opencc-python-reimplemented --with pypinyin python3 -I pipeline
 node scripts/prose-review.mjs run      # after pnpm build: a reader of another model reads every unit of prose not yet in reviews/prose-ledger.json
 node scripts/prose-review.mjs status   # units of prose the ledger lacks
 pnpm verify      # prose check, build, acceptance checks
+pnpm upstream    # compare the official notices and BWIKI pages with what the pages were written from; changes no page (upstream/README.md)
 pnpm preview     # serve dist/ with charset=utf-8 (scripts/preview.mjs)
 python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/bwiki/ (resumable; exit 3 = blocked, run again later)
 ```
@@ -75,6 +76,7 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 | `pipeline/check_text.py` | Check of the site's own text for one character; reads the game data (also for `gametext.py`) |
 | `pipeline/cut_art.py`, `cache/art-tw/` | Character cutouts from the Taiwan official site's illustrations (cache not committed) |
 | `pipeline/baha_text.py`, `cache/baha/` | Text of saved Bahamut forum posts (not committed) |
+| `pipeline/upstream.py`, `upstream/` | `pnpm upstream`: what the pages were written from against the sources (`upstream/README.md`) |
 | `scripts/to-zh-cn.py` | Simplified Chinese pages; names that differ come from the records |
 | `src/lib/kibo-nav.mjs` | Kibo part of the sidebar |
 | `scripts/prose-review.mjs`, `scripts/prose-rubric.md`, `scripts/prose-site.mjs`, `reviews/prose-ledger.json` | Prose ledger: the shared reader and rubric (copied unchanged between sites), this site's settings (it skips the game text), the units read |
