@@ -371,6 +371,14 @@ site-search button[data-open-modal] {
 	}
 }
 
+/* The first section after the figure follows the answer line with no rule above it
+   (root AGENTS.md, Visible page). */
+.sl-markdown-content p:has(img[src*='/art/characters/']) + .sl-heading-wrapper.level-h2 {
+	margin-top: 1.5rem;
+	padding-top: 0;
+	border-top: 0;
+}
+
 /* Page notes after the body: a panel with soft corners. */
 .sl-markdown-content .facts {
 	clear: both;
