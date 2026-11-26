@@ -3,20 +3,24 @@ title: 系統總覽
 description: 《藍色星原：旅謠》的觀測（抽卡）卡池、保底與抽卡票、角色攜帶的裝備靈子，以及屬性克制。
 appliesTo: 公測 1.0（2026-11-26 起）
 caveat: 限定角色 90 抽、限定靈子 80 抽內必得當期限定五星，沒有「先歪一次」；常駐卡池的抽數不與限定卡池互通。
-lastVerified: 2026-11-22
+lastVerified: 2026-11-26
 effectiveDate: 2026-11-21
 aliases:
   - 系统总览
   - Azur Promilia systems
 sources:
-  - title: 【情報】1.0 限定卡池（巴哈姆特哈啦板，轉載官方卡池圖）
-    url: https://forum.gamer.com.tw/C.php?bsn=79865&snA=531
+  - title: 《藍色星原：旅謠》「弦定觀測」玩法機率公告（台港澳官方網站，2026-11-26）
+    url: https://azurpromilia.jimi-global.com/home/news/detail/841385703681167360
+  - title: 《藍色星原：旅謠》「羈點觀測」玩法機率公告（台港澳官方網站，2026-11-26）
+    url: https://azurpromilia.jimi-global.com/home/news/detail/850084629649166336
+  - title: 【攻略】公測前瞻懶人包：抽卡保底機制（巴哈姆特哈啦板，整理官方公測前瞻直播）
+    url: https://forum.gamer.com.tw/C.php?bsn=79865&snA=551
 ---
 
 ## 系統
 
 | 系統 | 內容 |
 | --- | --- |
-| [觀測與保底](/systems/gacha/) | 五種卡池、各自幾抽保底、會不會歪、抽數是否繼承、抽卡票 |
+| [觀測與保底](/systems/gacha/) | 五種卡池的機率、保底、會不會歪、抽數是否繼承、抽卡票 |
 | [靈子](/systems/lingzi/) | 角色攜帶的裝備：全部 75 種靈子的稀有度、副屬性、基礎數值與技能 |
 | [屬性克制](/systems/elements/) | 哪個屬性打哪個屬性傷害 125% 或 75%，雙屬性敵人的倍率 |
