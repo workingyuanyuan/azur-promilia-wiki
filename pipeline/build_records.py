@@ -210,10 +210,22 @@ def kibo(names_tw):
 RARITY = {}  # R, SR, SSR as the game writes them
 
 
+def lingzi_names_tw():
+    """Mainland 靈子 name -> Taiwan service name, where it differs from the conversion."""
+    d = json.loads((RECORDS / 'names_tw_lingzi.json').read_text(encoding='utf-8'))
+    return {k: v for k, v in d.items() if not k.startswith('_')}
+
+
+def lingzi_name_tw(cn, names=None):
+    """The Taiwan name of a 靈子 or of its skill (every 靈子's skill bears the 靈子's name)."""
+    return (names if names is not None else lingzi_names_tw()).get(cn) or s2tw.convert(cn)
+
+
 def lingzi():
     """靈子 (equipment cards). Their skill text is in records/gametext.json, keyed by name."""
     if not (CACHE / '灵子.json').exists():
         return None
+    names = lingzi_names_tw()
     out = []
     for title, page in load('灵子').items():
         f = template(page['wikitext'], '灵子图鉴')
@@ -224,14 +236,15 @@ def lingzi():
             'id': f.get('id'),
             'slug': slug_pinyin(cn),
             'name_cn': cn,
-            'name_tw': s2tw.convert(cn),
+            'name_tw': lingzi_name_tw(cn, names),
+            'name_tw_source': 'official-tw' if cn in names else 'converted',
             'rarity': RARITY.get(f.get('稀有度'), f.get('稀有度')),
             'class': s2tw.convert(f.get('职业', '')) or None,
             'stat': s2tw.convert(f.get('属性', '')),
             'stat_1': f.get('属性值'), 'stat_100': f.get('100属性值'),
             'hp_1': f.get('基础生命'), 'atk_1': f.get('基础攻击'), 'def_1': f.get('基础防御'),
             'hp_100': f.get('100基础生命'), 'atk_100': f.get('100基础攻击'), 'def_100': f.get('100基础防御'),
-            'skill': s2tw.convert(f.get('技能', '')),
+            'skill': lingzi_name_tw(f.get('技能', ''), names),
             'skill_fp': hashlib.sha1(((f.get('技能描述') or '') + (f.get('满星技能描述') or '')).encode()).hexdigest()[:8],
             'build': f.get('实装版本'),
             'source': {'title': title, 'revid': page['revid'], 'timestamp': page['timestamp']},

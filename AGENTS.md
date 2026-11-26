@@ -54,7 +54,7 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 - The story copies of a Kibo carry （特殊） only in the BWIKI page title; the records add it to the name.
 - A character page exists only when its text file exists; a Kibo page only when every skill and trait of it has text. Index and lookup pages list every character and Kibo, linked where a page exists.
 - Characters that the game data dates after 1.0 with no date (`1.x`, `2027年xx月`) stay out of the pages (next-version content). 洛卿 is one (2026-11-22).
-- Names: `records/names_tw.json` holds the Taiwan official names and romanizations (12 characters, from the official site's character section). Other Traditional names are the mainland name converted (`name_tw_source: "converted"`); replace them from the launch build. The rate notices of 2026-11-26 (pool lists, images) give the Taiwan names of the 20 standard characters and of every SR and R 靈子: all match the records except the R 靈子 禁呪, which the Taiwan service spells 禁咒 (not yet changed: 靈子 names have no official-name map). Slugs: official romanization, else the game's English name from BWIKI (`英文名`), else pinyin.
+- Names: `records/names_tw.json` holds the Taiwan official names and romanizations (12 characters, from the official site's character section). Other Traditional names are the mainland name converted (`name_tw_source: "converted"`); replace them from the launch build. The rate notices of 2026-11-26 (pool lists, images) give the Taiwan names of the 20 standard characters and of every SR and R 靈子: all match the records except the R 靈子 禁呪, which the Taiwan service spells 禁咒. `records/names_tw_lingzi.json` holds the 靈子 names that differ from the conversion (from the 恆序觀測 notice's pool list); `build_records.py` and `gametext.py` apply it to the 靈子 and to its skill, which bears the 靈子's name (2026-11-26). Slugs: official romanization, else the game's English name from BWIKI (`英文名`), else pinyin.
 - Element of a character can be two (`地、火`).
 - Element advantage (`systems/elements.md`) is generated from `records/elements.json`: which element deals 125% or 75% to which, and the sums for an enemy with two elements. BWIKI's 元素 page and wikiru's 属性相性表 were compared cell by cell on 2026-11-25 and agree.
 - Japanese-service names of the characters: `records/names_ja.json` (24, from wikiru), matched to the records by the Japanese voice actor that BWIKI gives; ペイペイ and ポンポン share one, so they are matched by element, and メイプル, 星臨者 and 洛卿 by name. Shown in the facts table as 日服名稱 and as an alias. wikiru has no Japanese Kibo names (its list holds 12 Kibo under their Chinese names), and its アニマ names have no key that ties them to a 靈子; neither is used.
@@ -82,6 +82,7 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 | `src/lib/kibo-nav.mjs` | Kibo part of the sidebar |
 | `scripts/prose-review.mjs`, `scripts/prose-rubric.md`, `scripts/prose-site.mjs`, `reviews/prose-ledger.json` | Prose ledger: the shared reader and rubric (copied unchanged between sites), this site's settings (it skips the game text), the units read |
 | `pipeline/gametext.py`, `records/gametext.json` | The game's skill and trait text, converted to Traditional characters |
+| `records/names_tw_lingzi.json` | Taiwan names of 靈子 that differ from the converted mainland name |
 | `records/names_ja.json`, `records/elements.json`, `records/art.json` | Japanese names, element advantage, where each character picture comes from |
 | `cache/wikiru/` | wikiru pages and card art (not committed) |
 
@@ -95,6 +96,8 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 | Gamersky, TapTap, OSLink articles | No licence | Gacha rules of the 旅跡測試 (2026-09-17) |
 | Final Weapon, Games Press | No licence | Launch platforms, English open beta (summer 2027, US server), publishers per region |
 | wikiru `azurpromilia.wikiru.jp` (Japanese fan wiki) | No licence or reuse terms found; its guideline covers editing and comments. `robots.txt` allows every crawler. Fetched with curl, 3 s apart; the attachment info pages answer 403 | Japanese character names, card art of 11 characters, the element table as a second source. Its damage-formula page is its own reading of mainland CBT3 material, marked by it as untested; not used |
+| Japanese official site `azurpromilia.jp` (Yostar) | `robots.txt` allows every crawler | English names of Kibo (`records/kibo_en.json`). Read again 2026-11-26: its 5 characters bear the names wikiru gives; its pre-download notice gives the same requirements as the Taiwan FAQ (no iOS memory) and the launch at 11:00 JST, which is 10:00 UTC+8 |
+| Not used (read 2026-11-26) | | The mainland official site `azurpromilia.manjuu.com` is a launch page (download, pre-launch events, 塗山小玉 and 源千代) with no notice list or game data. `ap-cbt3.csxylic.com` is a fan site of CBT3 client data (0.3.0; `robots.txt` disallows ClaudeBot, `Content-Signal: search=yes, ai-train=no, use=reference`); its 75 靈子 are BWIKI's 75, test data. `hyazurpromiliawiki.com` is a personal wiki whose lists hold placeholders |
 
 ## Agent test
 

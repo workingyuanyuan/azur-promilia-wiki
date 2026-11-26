@@ -27,7 +27,7 @@ from opencc import OpenCC
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'pipeline'))
 from check_prose import PATTERNS  # noqa: E402
-from build_records import skill_fingerprints, template  # noqa: E402
+from build_records import lingzi_name_tw, lingzi_names_tw, skill_fingerprints, template  # noqa: E402
 
 s2tw = OpenCC('s2tw')
 COPY_RUN = 20
@@ -136,11 +136,11 @@ def kibo_sources():
 
 def lingzi_sources():
     """靈子 name (Traditional) -> its skill text at one star and at full stars."""
-    out = {}
+    out, names = {}, lingzi_names_tw()
     for f in load('灵子').values():
         if not f:
             continue
-        out[s2tw.convert(f['名称'])] = {'source': clean(f.get('技能描述')), 'source_full': clean(f.get('满星技能描述')), 'skill': s2tw.convert(f.get('技能', ''))}
+        out[lingzi_name_tw(f['名称'], names)] = {'source': clean(f.get('技能描述')), 'source_full': clean(f.get('满星技能描述')), 'skill': lingzi_name_tw(f.get('技能', ''), names)}
     return out
 
 

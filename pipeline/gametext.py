@@ -6,8 +6,9 @@ Usage (in the site folder):
 
 The text is the game's expression, so the pages show it as the source gives it and never in our
 own words (owner decision, 2026-11-25). Changes made here, and only these: markup removed, line
-breaks kept (the page joins them with a space), and names of characters that the Taiwan official
-site spells otherwise replaced by that spelling. Values are those of level 1; a character skill
+breaks kept (the page joins them with a space), names of characters that the Taiwan official
+site spells otherwise replaced by that spelling, and a 靈子's skill name (which is the 靈子's
+name) spelled as the Taiwan service spells the 靈子 (records/names_tw_lingzi.json). Values are those of level 1; a character skill
 whose written text carries another level's values is taken from its template filled with level 1.
 
 Output keys:

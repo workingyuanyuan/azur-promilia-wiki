@@ -299,7 +299,9 @@ def lingzi_page(items, texts, intro):
              f"{x['hp_100']} / {x['atk_100']} / {x['def_100']}",
              f"**{texts[x['name_tw']]['skill']}** 一星：{game_text(texts[x['name_tw']]['one'])} 滿星：{game_text(texts[x['name_tw']]['full'])}"] for x in items]
     head = front('靈子', intro['description'], f"BWIKI 整理的遊戲資料（三測），2026-11-22 讀取；共 {len(items)} 種靈子",
-                 intro['caveat'], [{'title': 'BWIKI：靈子分類', 'url': BWIKI + quote('Category:灵子')}],
+                 intro['caveat'], [{'title': 'BWIKI：靈子分類', 'url': BWIKI + quote('Category:灵子')},
+                                   {'title': '《藍色星原：旅謠》「恆序觀測」玩法機率公告（台港澳官方網站，2026-11-26）：靈子的台服名稱',
+                                    'url': 'https://azurpromilia.jimi-global.com/home/news/detail/912439441941991424'}],
                  aliases=['灵子', '靈子 是什麼', '靈子列表', '靈子 專武'])
     parts = [head, '\n## 數值與取得', '', intro['lead'], '']
     for r in ('SSR', 'SR', 'R'):
