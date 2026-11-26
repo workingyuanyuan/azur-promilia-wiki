@@ -54,7 +54,8 @@ ALLOW = {
     'systems/servers-and-time.md': {'SERVER'},
     'systems/platforms.md': {'SERVER'},
     'index.md': {'SERVER'},
-    'systems/combat.md': {'SOURCE'},  # one player test (NGA tid=47612632) stands alone
+    'systems/combat.md': {'SOURCE'},
+    'systems/servers.md': {'SOURCE'},  # player screenshots (PTT, NGA) stand alone for the settings and the mainland rebinding  # one player test (NGA tid=47612632) stands alone
 }
 
 

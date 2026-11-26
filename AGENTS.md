@@ -2,7 +2,7 @@
 
 This site is an unofficial wiki for the game Azur Promilia (藍色星原：旅謠 / 蓝色星原：旅谣; developed by 積咪網路, published by 蠻啾網路 Manjuu). Its first readers are AI agents; humans come second. The rules in `../AGENTS.md` apply; this file holds what is specific to this site.
 
-Published 2026-11-22 at `https://yuanaruru.com/azur-promilia-wiki/` (repository `workingyuanyuan/azur-promilia-wiki`, listed in the user site), after the owner's confirmation. State on 2026-11-22: the look, the motion (with the starfield) and the character cutouts are approved. Written: 23 character pages (every released character; 洛卿 waits for its version), 207 Kibo pages, the lookups (家園工作, 騎乘, one page per element), systems. 靈子: one generated page, `systems/lingzi` (75, from BWIKI category `灵子`; skill text from `records/gametext.json`, intro in `records/text/lingzi.json`). Not yet: the servers page (which service has Chinese is a launch fact; write it from the launch notices). The game's public launch (公測) is 2026-11-26 in mainland China, Taiwan / Hong Kong / Macau, Japan and Korea. There is no English service; an English open beta is announced for summer 2027.
+Published 2026-11-22 at `https://yuanaruru.com/azur-promilia-wiki/` (repository `workingyuanyuan/azur-promilia-wiki`, listed in the user site), after the owner's confirmation. State on 2026-11-22: the look, the motion (with the starfield) and the character cutouts are approved. Written: 23 character pages (every released character; 洛卿 waits for its version), 207 Kibo pages, the lookups (家園工作, 騎乘, one page per element), systems. 靈子: one generated page, `systems/lingzi` (75, from BWIKI category `灵子`; skill text from `records/gametext.json`, intro in `records/text/lingzi.json`). The servers page `systems/servers` (2026-11-26): operators, the text language of each service (the language each service's App Store listing declares), voice languages (settings screenshots posted on PTT for the Taiwan and Japanese services, Nexon's announcement for Korean voice), account rules (official notices and the Japanese terms of use) and the mainland phone rebinding (one customer-service reply posted on NGA, named in the sentence). Mainland and Korean voice options beyond that are left out until a source shows them. The game's public launch (公測) is 2026-11-26 in mainland China, Taiwan / Hong Kong / Macau, Japan and Korea. There is no English service; an English open beta is announced for summer 2027.
 
 ## Decisions by the owner (2026-11-22)
 
@@ -99,6 +99,9 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 | wikiru `azurpromilia.wikiru.jp` (Japanese fan wiki) | No licence or reuse terms found; its guideline covers editing and comments. `robots.txt` allows every crawler. Fetched with curl, 3 s apart; the attachment info pages answer 403 | Japanese character names, card art of 11 characters, the element table as a second source. Its damage-formula page is its own reading of mainland CBT3 material, marked by it as untested; not used |
 | Japanese official site `azurpromilia.jp` (Yostar) | `robots.txt` allows every crawler | English names of Kibo (`records/kibo_en.json`). Read again 2026-11-26: its 5 characters bear the names wikiru gives; its pre-download notice gives the same requirements as the Taiwan FAQ (no iOS memory) and the launch at 11:00 JST, which is 10:00 UTC+8 |
 | NGA 玩家社區 `bbs.nga.cn`, board `fid=510587` (read 2026-11-26) | No `robots.txt` (404); no licence. The first request answers with a `guestJs` cookie; send it with `ngaPassportUid` and a `bbs.nga.cn` Referer, 3 s apart; pages are GBK. Images load from `img.nga.cn` (`img.nga.178.com` does not resolve here) | `systems/combat`; player questions |
+| App Store listings of the four services (read 2026-11-26 through the iTunes lookup API) | Store metadata | Text language of each service (`languageCodesISO2A`), the seller of each app |
+| PTT `www.ptt.cc` C_Chat | `robots.txt` disallows ClaudeBot and carries `Content-Signal: search=yes, ai-train=no, use=reference`. Two named posts read (M.1795514834.A.EA5, M.1795508022.A.982) with the `over18` cookie, and the settings screenshots they link; no copy kept | Voice languages of the Taiwan and Japanese services |
+| Inven Global | No licence | Korean voice of the Korean service (Nexon's announcement, 2026-05-18) |
 | Not used (read 2026-11-26) | | The mainland official site `azurpromilia.manjuu.com` is a launch page (download, pre-launch events, 塗山小玉 and 源千代) with no notice list or game data. `ap-cbt3.csxylic.com` is a fan site of CBT3 client data (0.3.0; `robots.txt` disallows ClaudeBot, `Content-Signal: search=yes, ai-train=no, use=reference`); its 75 靈子 are BWIKI's 75, test data. `hyazurpromiliawiki.com` is a personal wiki whose lists hold placeholders |
 
 ## Agent test
@@ -125,11 +128,13 @@ From Bahamut 哈啦板 titles, NGA titles (2026-11-26) and the guides read; Trad
 | 哪些奇波可以騎、可以飛？ | kibo/riding（能飛的不在資料裡） |
 | 火屬性的奇波有哪些？ | kibo/elements/fire |
 | 莉莉是什麼屬性？技能怎麼用？ | characters/<slug> |
-| 台服、日服、陸服差在哪？哪一服有中文？ | to write (servers page) |
+| 台服、日服、陸服差在哪？哪一服有中文？ | systems/servers |
 | 有沒有英文版／國際服？ | home |
 | 有 PC 版、PS5 版嗎？ | home |
 | 靈子是什麼？ | systems/lingzi |
 | 傷害怎麼算？暴擊、等級壓制、超限傷害怎麼算？／蓝原伤害公式 伤害乘区 | systems/combat |
 | 架勢條多長？破韌值多少？星結合擊怎麼觸發？ | systems/combat |
-| 日服能設中文嗎？／日服能设置中文么（NGA, 2026-11-26） | to write (servers page) |
+| 日服能設中文嗎？／日服能设置中文么（NGA, 2026-11-26） | systems/servers |
+| 台服有日配嗎？ | systems/servers |
+| 帳號能不能換綁手機？／这游戏不能换绑吗（NGA, 2026-11-26） | systems/servers |
 | 沒滿級抓的奇波跟滿級抓的有差嗎？（NGA, 2026-11-26） | not answered yet |
