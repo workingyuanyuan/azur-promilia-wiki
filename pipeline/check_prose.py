@@ -54,6 +54,7 @@ ALLOW = {
     'systems/servers-and-time.md': {'SERVER'},
     'systems/platforms.md': {'SERVER'},
     'index.md': {'SERVER'},
+    'systems/combat.md': {'SOURCE'},  # one player test (NGA tid=47612632) stands alone
 }
 
 

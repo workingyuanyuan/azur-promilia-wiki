@@ -10,6 +10,7 @@ Published 2026-11-22 at `https://yuanaruru.com/azur-promilia-wiki/` (repository 
 - Languages: Traditional Chinese at the root, Simplified Chinese (`/zh-cn/`) written by script from it, with a name table for the names where the mainland service differs from the Taiwan service. Page addresses are ASCII slugs (official romanization where there is one, else pinyin or an internal id), so that `/ja/`, `/ko/` or `/en/` can be added later without changing URLs. Not English at the root: the game has almost no official English names.
 - 奇波 (Kibo): lookup tables across entries (work, riding and traversal, element, where caught) and one page per 奇波, all generated from records.
 - Official art: used, as on `endfield-wiki` and `nte-wiki`, credited in the `art` field. No fan-content guideline of Manjuu or the Taiwan publisher was found on 2026-11-22. Yostar's guideline for the Japanese service (`azurpromilia.jp/terms/guidelines`) forbids works that copy official illustrations directly with little originality; the owner confirmed the use of official art the same day with that guideline in view. Character art: the 12 character illustrations of the Taiwan official site's character section (`webstatic.jimi-global.com/.../home/assets/background-*.png`, 16:9 on an opaque light ground), cut out with `pipeline/cut_art.py` (anime-seg matte, whole figure, a soft fade where the figure runs off the canvas, never a straight cut through the figure) and saved as `public/art/characters/<slug>.webp` (at most 720 × 880, transparent, shown with no frame). The site has no official transparent image of them, so the cutout is ours: on the page it links to the original PNG, which `records/art.json` names, and the page notes credit the official site and the original (owner, 2026-11-22). The page of a character with both a file and an `art.json` entry shows it. The other 11 characters with a page (2026-11-25) show the game's own card art (スプラッシュアート) as the Japanese fan wiki wikiru hosts it, as given, scene included, only resized to at most 880 px. Art is not cut out as a rule (owner decision, 2026-11-25): an image that comes on its own transparent ground and shows no trace of a cutout made by a wiki is taken as the game's asset and shown as it is. Checked the same day: the ten cards are painted vignettes with soft alpha, floating debris and particles, and no matting halo; 星臨者 is a figure pair on a transparent ground (palette PNG). The picture links to the wikiru page of the character; the page notes credit that page and the file (`records/art.json`, `source: "wikiru"`). wikiru has the same kind of card for the 12 characters with official art; those keep the official cutout. The same site shows Kibo art with English file names (`airay`, `gusthawk`, ...); not used yet, because the names they map to are shown only on click.
+- Player research from the NGA board of the game (`bbs.nga.cn`, `fid=510587`, mainland players) may serve as a source (2026-11-26), as on `nte-wiki` and `endfield-wiki`. `systems/combat` (damage formula, marks and 超限, 架勢, co-op scaling) rests on the guide 「蓝原伤害乘区初探(旅迹测试)」 (`tid=47612632`, 666bj, 2026-09-23) alone: its first section names the source once, and `appliesTo` names the 旅跡測試 build. Its tables of mark effects, 超限 effects and Kibo aptitudes are images in the post, read on 2026-11-26. Terms follow the game text on the character pages (星鳴技, 架勢槽, 超限, 印記); terms the game text lacks (反制技, 霸體, 部位傷害倍率) are the guide's, converted by `s2tw`. Check against the launch build when a player retests it.
 - Home page key visual (2026-11-26, root rule): the poster of the Taiwan official site's home page (`webstatic.jimi-global.com/.../home/assets/poster-*.jpg`, 3840 × 2160, no lettering), resized to 1200 px as `public/art/key-visual.webp`.
 
 ## Defaults taken without a separate question (2026-11-22; the owner may change them)
@@ -97,6 +98,7 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 | Final Weapon, Games Press | No licence | Launch platforms, English open beta (summer 2027, US server), publishers per region |
 | wikiru `azurpromilia.wikiru.jp` (Japanese fan wiki) | No licence or reuse terms found; its guideline covers editing and comments. `robots.txt` allows every crawler. Fetched with curl, 3 s apart; the attachment info pages answer 403 | Japanese character names, card art of 11 characters, the element table as a second source. Its damage-formula page is its own reading of mainland CBT3 material, marked by it as untested; not used |
 | Japanese official site `azurpromilia.jp` (Yostar) | `robots.txt` allows every crawler | English names of Kibo (`records/kibo_en.json`). Read again 2026-11-26: its 5 characters bear the names wikiru gives; its pre-download notice gives the same requirements as the Taiwan FAQ (no iOS memory) and the launch at 11:00 JST, which is 10:00 UTC+8 |
+| NGA 玩家社區 `bbs.nga.cn`, board `fid=510587` (read 2026-11-26) | No `robots.txt` (404); no licence. The first request answers with a `guestJs` cookie; send it with `ngaPassportUid` and a `bbs.nga.cn` Referer, 3 s apart; pages are GBK. Images load from `img.nga.cn` (`img.nga.178.com` does not resolve here) | `systems/combat`; player questions |
 | Not used (read 2026-11-26) | | The mainland official site `azurpromilia.manjuu.com` is a launch page (download, pre-launch events, 塗山小玉 and 源千代) with no notice list or game data. `ap-cbt3.csxylic.com` is a fan site of CBT3 client data (0.3.0; `robots.txt` disallows ClaudeBot, `Content-Signal: search=yes, ai-train=no, use=reference`); its 75 靈子 are BWIKI's 75, test data. `hyazurpromiliawiki.com` is a personal wiki whose lists hold placeholders |
 
 ## Agent test
@@ -105,7 +107,7 @@ python3 -I pipeline/fetch_bwiki.py 角色 奇波 鞍具 灵子   # refill cache/
 
 ## Questions people ask (2026-11-22)
 
-From Bahamut 哈啦板 titles and the guides read; Traditional Chinese, with the Simplified wording where it differs.
+From Bahamut 哈啦板 titles, NGA titles (2026-11-26) and the guides read; Traditional Chinese, with the Simplified wording where it differs.
 
 | Question | Page |
 | --- | --- |
@@ -127,3 +129,7 @@ From Bahamut 哈啦板 titles and the guides read; Traditional Chinese, with the
 | 有沒有英文版／國際服？ | home |
 | 有 PC 版、PS5 版嗎？ | home |
 | 靈子是什麼？ | systems/lingzi |
+| 傷害怎麼算？暴擊、等級壓制、超限傷害怎麼算？／蓝原伤害公式 伤害乘区 | systems/combat |
+| 架勢條多長？破韌值多少？星結合擊怎麼觸發？ | systems/combat |
+| 日服能設中文嗎？／日服能设置中文么（NGA, 2026-11-26） | to write (servers page) |
+| 沒滿級抓的奇波跟滿級抓的有差嗎？（NGA, 2026-11-26） | not answered yet |
