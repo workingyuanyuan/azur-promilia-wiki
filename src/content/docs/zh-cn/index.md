@@ -9,6 +9,11 @@ aliases:
   - "Azur Promilia wiki"
   - "藍色星原：旅謠 Wiki"
   - "藍色星原 Wiki"
+art:
+  - title: "港澳台官方网站主视觉图"
+    url: https://azurpromilia.com/zh-tw/
+  - title: "图档 poster.jpg（读取于 2026-11-26）"
+    url: https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/poster-C-PmzHX_.jpg
 sources:
   - title: 蓝色星原：旅谣（维基百科，开发与发行）
     url: https://zh.wikipedia.org/zh-tw/%E8%97%8D%E8%89%B2%E6%98%9F%E5%8E%9F%EF%BC%9A%E6%97%85%E8%AC%A0
@@ -25,6 +30,8 @@ sources:
   - title: Azur Promilia Marks 20 Million Global Pre-Registration Milestone（Games Press，2026-10-13）
     url: https://www.gamespress.com/en-US/Azur-Promilia-Marks-20-Million-Global-Pre-Registration-Milestone-With-
 ---
+
+![官方主视觉图](/art/key-visual.webp)
 
 ## 角色、奇波与系统
 
