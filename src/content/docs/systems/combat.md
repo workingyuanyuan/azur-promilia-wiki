@@ -1,7 +1,7 @@
 ---
 title: 戰鬥公式
 description: 《藍色星原：旅謠》的傷害公式：一般傷害、超限傷害與架勢傷害的乘區，以及暴擊、等級壓制與印記。
-appliesTo: 旅跡測試（2026-09）的玩家實測與拆解，NGA 玩家 666bj 整理，2026-09-23
+appliesTo: 旅跡測試（2026-09）的玩家實測與拆解，NGA 玩家 666bj 整理，2026-09-23；公測 1.0 的超限改動讀自丸子的 Bilibili 影片，2026-11-26
 caveat: 暴擊時傷害乘以暴擊傷害本身：預設暴擊傷害 150%，暴擊打出 1.5 倍，不是 2.5 倍。
 lastVerified: 2026-11-26
 aliases:
@@ -21,6 +21,8 @@ aliases:
 sources:
   - title: 蓝原伤害乘区初探（旅迹测试）（NGA 玩家社區，666bj，2026-09-23）
     url: https://bbs.nga.cn/read.php?tid=47612632
+  - title: 蓝色星原公测最新强度榜！环境大变样4星整体调整？全角色加强削弱一览！（Bilibili，丸子，2026-11-26）
+    url: https://www.bilibili.com/video/BV1qwySzcEkk/
 ---
 
 ## 一般傷害
@@ -70,6 +72,8 @@ sources:
 | 超限會心區 | 會心時為 2，否則為 1；沒有提高超限會心傷害的效果 |
 
 超限傷害沒有暴擊區、架勢破壞易傷區與部位傷害倍率。
+
+丸子在 Bilibili 的影片（2026-11-26）指出公測 1.0 改了超限傷害的計算方式：[塗山小玉](/characters/tushan-xiaoyu/)、[末音](/characters/morwyn-halkon/)、[忒拉拉](/characters/terara/)與[西芙莉雅](/characters/symphoria-tarandelion/)的超限傷害因此改變，[楓糖](/characters/maple/)星決技與忒拉拉定弦 6 的超限強度也由固定值改為百分比（100 → 6%、75 → 4%）。
 
 | 屬性 | 每枚印記的效果 | 超限效果（每枚消耗的印記） |
 | --- | --- | --- |

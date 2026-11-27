@@ -28,6 +28,9 @@ ART = json.loads((ROOT / 'records' / 'art.json').read_text(encoding='utf-8'))
 # (pipeline/gametext.py). Shown as it is, never restated.
 NAMES_JA = json.loads((ROOT / 'records' / 'names_ja.json').read_text(encoding='utf-8'))
 GAMETEXT = json.loads((ROOT / 'records' / 'gametext.json').read_text(encoding='utf-8'))
+# Changes of the launch build (公測 1.0) against the third test, per character, read from a
+# player's video while the game text above is still the test build's (records/launch_changes.json).
+LAUNCH = json.loads((ROOT / 'records' / 'launch_changes.json').read_text(encoding='utf-8'))
 
 
 def game_text(s):
@@ -139,16 +142,30 @@ def character_page(c, text, kibo_by_cn):
     else:
         body, credits = [], None
     body += ['## 人物與打法', '', text['lead'], '', '## 基本資料', '', table(['項目', '內容'], facts)]
+    changes = LAUNCH['characters'].get(c['slug'])
+    if changes:
+        # A skill kind becomes the skill's name on this page; slot 5 is the passive.
+        slot = {'普攻': 1, '星鳴技': 2, '星決技': 3, '星攜技': 4, '被動': 5}
+        names = {s['n']: GAMETEXT['characters'].get(c['slug'], {}).get(str(s['n']), {}).get('name') for s in c['skills']}
+        def item(label):
+            return '、'.join(f"{names[slot[k]]}（{k}）" if names.get(slot.get(k)) else k for k in label.split('、'))
+        src = LAUNCH['sources']['wanzi']
+        body += ['## 公測改動', '', f"{src['label']}在 Bilibili 的影片（{src['date']}）列出公測 1.0 與第三次測試的差別，箭頭前是第三次測試的數值：", '',
+                 table(['技能', '公測 1.0 的改動'], [[item(k), v] for k, v in changes])]
     body += ['## 技能', '', text.get('skills_intro', ''), '', table(['技能', '種類', '效果（技能等級 1）', '技能等級 12 的倍率', '冷卻與消耗'], skills)]
     if text.get('kibo'):
         body += ['## 奇波', '', text['kibo'], '']
     sources = [bwiki_source(c)]
+    applies = text['applies']
+    if changes:
+        sources.append({'title': src['title'], 'url': src['url']})
+        applies += f"；公測改動讀自 {src['label']} 的 Bilibili 影片（{src['date']}）"
     ja = NAMES_JA.get(c['slug'])
     if ja:
         sources.append({'title': f"アズールプロミリア有志Wiki：{ja['name_ja']}（日服名稱，2026-11-25 讀取）", 'url': ja['page']})
     if c['name_tw_source'] == 'official-tw':
         sources.append({'title': '藍色星原：旅謠 台港澳官方網站（角色）', 'url': TW_SITE})
-    head = front(c['name_tw'], text['description'], text['applies'], text['caveat'], sources,
+    head = front(c['name_tw'], text['description'], applies, text['caveat'], sources,
                  aliases=[c['name_cn'], c.get('romaji'), ja and ja['name_ja']],
                  art=credits)
     return head + '\n' + '\n'.join(body).replace('\n\n\n', '\n\n')
