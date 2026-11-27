@@ -51,6 +51,11 @@ export default defineConfig({
 					translations: { 'zh-CN': '系统' },
 					items: [{ autogenerate: { directory: 'systems' } }],
 				},
+				{
+					label: '社群攻略',
+					translations: { 'zh-CN': '社群攻略' },
+					items: [{ slug: 'community' }, { slug: 'community/tier-list' }, { slug: 'community/teams' }],
+				},
 			],
 			customCss: ['@fontsource/noto-serif-tc/700.css', '@fontsource/noto-serif-sc/700.css', './src/styles/promilia.css'],
 			components: {

@@ -1,0 +1,860 @@
+{
+ "_about": "One record per claim of the community section: a source (records/community/sources.json), the second in the video it is shown at, the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選). Read from the charts on screen.",
+ "claims": [
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "tushan-xiaoyu",
+   "value": "T0"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "ruby",
+   "value": "T0.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "cathbelle",
+   "value": "T0.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "lan-xiangzi",
+   "value": "T0.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "luruka",
+   "value": "T0.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "metsa",
+   "value": "T0.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "shalle",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "morwyn-halkon",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "pei-pei",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "abyy",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "faridah",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "han-youyou",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "maple",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "starborn",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "mitty",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "anais",
+   "value": "T1"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "terara",
+   "value": "T1.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "symphoria-tarandelion",
+   "value": "T1.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "nono",
+   "value": "T1.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "pengpeng",
+   "value": "T1.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "kataru",
+   "value": "T1.5"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 10,
+   "kind": "tier",
+   "subject": "lily",
+   "value": "T1.5"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "tushan-xiaoyu",
+   "value": "T0"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "starborn",
+   "value": "T0"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "anais",
+   "value": "T0"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "ruby",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "pei-pei",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "shalle",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "faridah",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "cathbelle",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "maple",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "lily",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "mitty",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "han-youyou",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "kataru",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "metsa",
+   "value": "T1"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "morwyn-halkon",
+   "value": "T2"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "terara",
+   "value": "T2"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "abyy",
+   "value": "T2"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "lan-xiangzi",
+   "value": "T2"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "luruka",
+   "value": "T2"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "pengpeng",
+   "value": "T2"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "symphoria-tarandelion",
+   "value": "T3"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 835,
+   "kind": "tier",
+   "subject": "nono",
+   "value": "T3"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "starborn",
+   "value": "T0"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "tushan-xiaoyu",
+   "value": "T0"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "morwyn-halkon",
+   "value": "T0.5"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "lan-xiangzi",
+   "value": "T0.5"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "lily",
+   "value": "T0.5"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "metsa",
+   "value": "T0.5"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "terara",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "ruby",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "cathbelle",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "maple",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "luruka",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "anais",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "shalle",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "abyy",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "han-youyou",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "mitty",
+   "value": "T1"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "symphoria-tarandelion",
+   "value": "T2"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "pei-pei",
+   "value": "T2"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "faridah",
+   "value": "T2"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "pengpeng",
+   "value": "T2"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "kataru",
+   "value": "T2"
+  },
+  {
+   "source": "wanzi-2026-11-26",
+   "at": 3,
+   "kind": "tier",
+   "subject": "nono",
+   "value": "T3"
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 252,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "starborn",
+    "metsa",
+    "lily"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 350,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "han-youyou"
+   ],
+   "third": [
+    "lan-xiangzi",
+    "luruka",
+    "anais",
+    "kataru"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 350,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "abyy"
+   ],
+   "third": [
+    "luruka"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 350,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "cathbelle"
+   ],
+   "third": [
+    "lan-xiangzi"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 350,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "faridah"
+   ],
+   "third": [
+    "mitty",
+    "starborn"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 462,
+   "kind": "team",
+   "subject": "morwyn-halkon",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "lan-xiangzi",
+    "kataru",
+    "anais",
+    "starborn",
+    "metsa"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 552,
+   "kind": "team",
+   "subject": "shalle",
+   "second": [
+    "abyy"
+   ],
+   "third": [
+    "luruka"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 552,
+   "kind": "team",
+   "subject": "shalle",
+   "second": [
+    "nono"
+   ],
+   "third": [
+    "pengpeng"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 552,
+   "kind": "team",
+   "subject": "shalle",
+   "second": [
+    "lan-xiangzi"
+   ],
+   "third": [
+    "kataru",
+    "anais"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 552,
+   "kind": "team",
+   "subject": "shalle",
+   "second": [
+    "faridah"
+   ],
+   "third": [
+    "starborn",
+    "mitty"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 552,
+   "kind": "team",
+   "subject": "shalle",
+   "second": [
+    "cathbelle"
+   ],
+   "third": [
+    "lan-xiangzi"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 660,
+   "kind": "team",
+   "subject": "pei-pei",
+   "second": [
+    "abyy"
+   ],
+   "third": [
+    "luruka"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 660,
+   "kind": "team",
+   "subject": "pei-pei",
+   "second": [
+    "nono"
+   ],
+   "third": [
+    "pengpeng"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 660,
+   "kind": "team",
+   "subject": "pei-pei",
+   "second": [
+    "lan-xiangzi"
+   ],
+   "third": [
+    "anais",
+    "kataru",
+    "cathbelle"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 660,
+   "kind": "team",
+   "subject": "pei-pei",
+   "second": [
+    "faridah"
+   ],
+   "third": [
+    "mitty",
+    "starborn"
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-26",
+   "at": 752,
+   "kind": "team",
+   "subject": "terara",
+   "second": [
+    "han-youyou"
+   ],
+   "third": [
+    "lan-xiangzi",
+    "anais",
+    "kataru",
+    "metsa"
+   ]
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 270,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "lily"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 270,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "starborn"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 330,
+   "kind": "team",
+   "subject": "pei-pei",
+   "second": [
+    "nono"
+   ],
+   "third": [
+    "anais"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 330,
+   "kind": "team",
+   "subject": "pei-pei",
+   "second": [
+    "nono"
+   ],
+   "third": [
+    "pengpeng"
+   ],
+   "label": "備選"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 380,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "han-youyou"
+   ],
+   "third": [
+    "luruka"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 380,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "faridah",
+    "cathbelle"
+   ],
+   "label": "備選"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 510,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "cathbelle"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 590,
+   "kind": "team",
+   "subject": "ruby",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "faridah"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 444,
+   "kind": "team",
+   "subject": "shalle",
+   "second": [
+    "abyy"
+   ],
+   "third": [
+    "luruka"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 630,
+   "kind": "team",
+   "subject": "morwyn-halkon",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "lily"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 630,
+   "kind": "team",
+   "subject": "morwyn-halkon",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "starborn"
+   ],
+   "label": "備選"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 676,
+   "kind": "team",
+   "subject": "terara",
+   "second": [
+    "han-youyou"
+   ],
+   "third": [
+    "starborn"
+   ],
+   "label": "主推"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 676,
+   "kind": "team",
+   "subject": "terara",
+   "second": [
+    "han-youyou"
+   ],
+   "third": [
+    "anais"
+   ],
+   "label": "備選"
+  },
+  {
+   "source": "chunfeng-2026-11-26",
+   "at": 810,
+   "kind": "team",
+   "subject": "symphoria-tarandelion",
+   "second": [
+    "lily"
+   ],
+   "third": [
+    "metsa"
+   ],
+   "label": "主推"
+  }
+ ]
+}

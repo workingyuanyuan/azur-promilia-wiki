@@ -33,13 +33,14 @@ sources:
 
 ![官方主視覺圖](/art/key-visual.webp)
 
-## 角色、奇波與系統
+## 角色、奇波、系統與社群攻略
 
 | 項目 | 內容 |
 | --- | --- |
 | [角色](/characters/) | 可用角色的稀有度、屬性、職業、武器與技能 |
 | [奇波](/kibo/) | 可捕捉、可騎乘、在家園工作的夥伴；[家園工作查詢](/kibo/work/)、[騎乘查詢](/kibo/riding/)；[依屬性](/kibo/elements/)：[火](/kibo/elements/fire/)、[水](/kibo/elements/water/)、[風](/kibo/elements/wind/)、[雷](/kibo/elements/thunder/)、[冰](/kibo/elements/ice/)、[木](/kibo/elements/wood/)、[地](/kibo/elements/earth/)、[光](/kibo/elements/light/)、[暗](/kibo/elements/dark/) |
 | [系統](/systems/) | [觀測（抽卡）](/systems/gacha/)的卡池與保底；[靈子](/systems/lingzi/)；[屬性克制](/systems/elements/)；[戰鬥公式](/systems/combat/)；[伺服器與語言](/systems/servers/) |
+| [社群攻略](/community/) | 玩家發表的[強度榜](/community/tier-list/)與[配隊](/community/teams/) |
 
 ## 遊戲
 

@@ -306,6 +306,11 @@ def main():
             continue
         kind = kind_of(n)
         (differences.append(f'{kind}: {line}') if kind else notes.append(f'note: new notice: {line}'))
+        # The community section holds the newest version's guides: a new version may make its
+        # tier lists and teams old (records/community/sources.json names the version of each).
+        if kind == 'new update notice':
+            versions = sorted({s['version'] for s in json.loads((ROOT / 'records' / 'community' / 'sources.json').read_text(encoding='utf-8'))['sources']})
+            differences.append(f'community section may be old: {nid}: its guides are for {", ".join(versions)}; look for guides of the new version (community/, community/tier-list, community/teams)')
 
     # 2. Cited notices.
     new_prints = {}

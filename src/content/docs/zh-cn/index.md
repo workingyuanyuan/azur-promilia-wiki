@@ -33,13 +33,14 @@ sources:
 
 ![官方主视觉图](/art/key-visual.webp)
 
-## 角色、奇波与系统
+## 角色、奇波、系统与社群攻略
 
 | 项目 | 内容 |
 | --- | --- |
 | [角色](/zh-cn/characters/) | 可用角色的稀有度、属性、职业、武器与技能 |
 | [奇波](/zh-cn/kibo/) | 可捕捉、可骑乘、在家园工作的伙伴；[家园工作查询](/zh-cn/kibo/work/)、[骑乘查询](/zh-cn/kibo/riding/)；[依属性](/zh-cn/kibo/elements/)：[火](/zh-cn/kibo/elements/fire/)、[水](/zh-cn/kibo/elements/water/)、[风](/zh-cn/kibo/elements/wind/)、[雷](/zh-cn/kibo/elements/thunder/)、[冰](/zh-cn/kibo/elements/ice/)、[木](/zh-cn/kibo/elements/wood/)、[地](/zh-cn/kibo/elements/earth/)、[光](/zh-cn/kibo/elements/light/)、[暗](/zh-cn/kibo/elements/dark/) |
 | [系统](/zh-cn/systems/) | [观测（抽卡）](/zh-cn/systems/gacha/)的卡池与保底；[灵子](/zh-cn/systems/lingzi/)；[属性克制](/zh-cn/systems/elements/)；[战斗公式](/zh-cn/systems/combat/)；[服务器与语言](/zh-cn/systems/servers/) |
+| [社群攻略](/zh-cn/community/) | 玩家发表的[强度榜](/zh-cn/community/tier-list/)与[配队](/zh-cn/community/teams/) |
 
 ## 游戏
 

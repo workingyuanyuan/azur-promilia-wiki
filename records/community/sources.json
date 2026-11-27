@@ -1,0 +1,57 @@
+{
+ "_about": "One record per source of the community section (社群攻略): a player's guide, as published. `conditions` restates what the source itself says its ratings assume; `scale` is the source's own tiers, highest first. Read from the video and the charts it shows on screen; no transcript or frame is kept.",
+ "sources": [
+  {
+   "id": "mianbei-2026-11-26",
+   "creator": "叫我棉被",
+   "platform": "Bilibili",
+   "title": "【蓝色星原】公测版本 这些角色必练！角色强度榜+各体系队伍搭配+养成+操作详解",
+   "url": "https://www.bilibili.com/video/BV1A4ymzKEmY/",
+   "published": "2026-11-26",
+   "read": "2026-11-27",
+   "version": "公測 1.0",
+   "conditions": "開荒期角色強度榜，依攻略組在公測環境的實戰表現排定",
+   "scale": [
+    "T0",
+    "T0.5",
+    "T1",
+    "T1.5"
+   ]
+  },
+  {
+   "id": "chunfeng-2026-11-26",
+   "creator": "春風滿馬",
+   "platform": "Bilibili",
+   "title": "【蓝色星原】开服首发测评作业！全角色强度榜&养成配队一图流 配队原理 深渊作业 看看谁登顶T0？",
+   "url": "https://www.bilibili.com/video/BV11R17ztEXK/",
+   "published": "2026-11-26",
+   "read": "2026-11-27",
+   "version": "公測 1.0",
+   "conditions": "以高難深淵的畢業水準評估：五星角色 0 定弦、四星角色 6 定弦、星臨者 4 定弦；同一梯度內不分先後",
+   "scale": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "id": "wanzi-2026-11-26",
+   "creator": "丸子",
+   "platform": "Bilibili",
+   "title": "蓝色星原公测最新强度榜！环境大变样4星整体调整？全角色加强削弱一览！",
+   "url": "https://www.bilibili.com/video/BV1qwySzcEkk/",
+   "published": "2026-11-26",
+   "read": "2026-11-27",
+   "version": "公測 1.0",
+   "conditions": "沿用第三次測試強度榜的評分準則；對角色後期的表現有所保留",
+   "scale": [
+    "T0",
+    "T0.5",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  }
+ ]
+}

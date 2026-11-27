@@ -20,10 +20,11 @@
 //  8. llms.txt: notes, bundles and other languages within the first 5,000 characters.
 //  9. The 404 page links each language's home page and page list.
 // 10. robots.txt names the sitemap and carries a Content-Signal line.
-// 11. The header links the first page of each sidebar section (versions, operators, systems,
-//     AIC); the page notes link the Markdown twin, llms.txt and index.json; no text in <main>
+// 11. The header links the first page of each sidebar section (characters, Kibo, systems,
+//     community); the page notes link the Markdown twin, llms.txt and index.json; no text in <main>
 //     is about the site or the page; the body does not open with a paragraph after the
-//     answer line (scripts/check-page-text.mjs).
+//     answer line; on a page of the community section, every table row (or its header), list
+//     item and paragraph links a source (scripts/check-page-text.mjs).
 // 12. Prose ledger: every unit of the site's own prose has been read against
 //     scripts/prose-rubric.md and is recorded in reviews/prose-ledger.json (scripts/prose-review.mjs).
 // Being found: title, description, canonical, hreflang and sitemap (scripts/check-found.mjs).
@@ -38,13 +39,13 @@ import { SITE, LOCALES, LLMS_NOTES, localeOf, bareId, idInLocale, htmlPath, mdPa
 import { bundlePath } from '../src/lib/llms.mjs';
 import { readPages, readPending } from '../src/lib/content-index.mjs';
 import { checkFound } from './check-found.mjs';
-import { checkHeaderAndOutputs, checkSelfReference, checkOpening } from './check-page-text.mjs';
+import { checkHeaderAndOutputs, checkSelfReference, checkOpening, checkCommunity } from './check-page-text.mjs';
 import { checkProse } from './prose-review.mjs';
 
 const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
 const LIMIT = 5000;
 // The top-level sidebar groups, in order, by the id of their first page (astro.config.mjs).
-const SECTIONS = ['characters', 'kibo', 'systems'];
+const SECTIONS = ['characters', 'kibo', 'systems', 'community'];
 const failures = [];
 const fail = (page, message) => failures.push(`${page}: ${message}`);
 
@@ -307,6 +308,10 @@ for (const { id, data } of pages) {
 	});
 	checkSelfReference(doc, id, fail);
 	checkOpening(doc, id, fail);
+	// The community section: every judgment carries a link to its source.
+	if (bareId(id) === 'community' || bareId(id).startsWith('community/')) {
+		checkCommunity(doc, id, fail, (data.sources || []).map((s) => s.url.replace(/\/$/, '')));
+	}
 
 	// 5. No decoration leak into extracted text.
 	const visible = normalize(doc.body.textContent);

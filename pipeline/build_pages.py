@@ -15,6 +15,12 @@ from urllib.parse import quote
 
 from opencc import OpenCC
 
+# The community section's pages (pipeline/build_community.py); `-I` leaves this folder off sys.path.
+import importlib.util
+_spec = importlib.util.spec_from_file_location('build_community', Path(__file__).with_name('build_community.py'))
+build_community = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(build_community)
+
 tw2s = OpenCC('tw2s')
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -142,6 +148,7 @@ def character_page(c, text, kibo_by_cn):
     else:
         body, credits = [], None
     body += ['## 人物與打法', '', text['lead'], '', '## 基本資料', '', table(['項目', '內容'], facts)]
+    body += ['## 技能', '', text.get('skills_intro', ''), '', table(['技能', '種類', '效果（技能等級 1）', '技能等級 12 的倍率', '冷卻與消耗'], skills)]
     changes = LAUNCH['characters'].get(c['slug'])
     if changes:
         # A skill kind becomes the skill's name on this page; slot 5 is the passive.
@@ -152,7 +159,6 @@ def character_page(c, text, kibo_by_cn):
         src = LAUNCH['sources']['wanzi']
         body += ['## 公測改動', '', f"{src['label']}在 Bilibili 的影片（{src['date']}）列出公測 1.0 與第三次測試的差別，箭頭前是第三次測試的數值：", '',
                  table(['技能', '公測 1.0 的改動'], [[item(k), v] for k, v in changes])]
-    body += ['## 技能', '', text.get('skills_intro', ''), '', table(['技能', '種類', '效果（技能等級 1）', '技能等級 12 的倍率', '冷卻與消耗'], skills)]
     if text.get('kibo'):
         body += ['## 奇波', '', text['kibo'], '']
     sources = [bwiki_source(c)]
@@ -397,6 +403,7 @@ def main():
             write('systems/lingzi.md', lingzi_page(items, texts, intro))
     write('systems/elements.md', elements_page())
     print('characters with pages:', len(written), 'kibo pages:', pages)
+    build_community.main()
 
 
 if __name__ == '__main__':
