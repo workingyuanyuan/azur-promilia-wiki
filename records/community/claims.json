@@ -1,5 +1,5 @@
 {
- "_about": "One record per claim of the community section: a source (records/community/sources.json), the second in the video it is shown at, the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選). Read from the charts on screen.",
+ "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選). `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared on one team: the 靈子, its 階, the team's damage against the 靈子 of the source's team row, and that DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments.",
  "claims": [
   {
    "source": "mianbei-2026-11-26",
@@ -855,6 +855,398 @@
     "metsa"
    ],
    "label": "主推"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "starborn"
+   ]
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "lily"
+   ],
+   "third": [
+    "starborn"
+   ]
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "metsa"
+   ]
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321414396977,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "lily"
+   ],
+   "third": [
+    "maple"
+   ]
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "team",
+   "subject": "morwyn-halkon",
+   "second": [
+    "mitty"
+   ],
+   "third": [
+    "starborn"
+   ]
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "team",
+   "subject": "terara",
+   "second": [
+    "han-youyou"
+   ],
+   "third": [
+    "starborn"
+   ]
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "damage",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "maple",
+    "starborn"
+   ],
+   "kibo": [
+    "sencailingdie",
+    "mokongqiu",
+    "yinbawa"
+   ],
+   "seconds": "28.02",
+   "total": "270.2萬",
+   "dps": "96,445"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "damage",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "lily",
+    "starborn"
+   ],
+   "kibo": [
+    "sencailingdie",
+    "mokongqiu",
+    "tuotuolong"
+   ],
+   "seconds": "28.53",
+   "total": "251.5萬",
+   "dps": "88,158"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "damage",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "lily",
+    "starborn"
+   ],
+   "kibo": [
+    "sencailingdie",
+    "yinbawa",
+    "tuotuolong"
+   ],
+   "seconds": "28.53",
+   "total": "240.7萬",
+   "dps": "84,351"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "damage",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "maple",
+    "metsa"
+   ],
+   "kibo": [
+    "sencailingdie",
+    "mokongqiu",
+    "yinbawa"
+   ],
+   "seconds": "32.85",
+   "total": "267.3萬",
+   "dps": "81,368"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321414396977,
+   "kind": "damage",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "lily",
+    "maple"
+   ],
+   "kibo": [],
+   "seconds": "約27",
+   "total": "298萬",
+   "dps": "約10.9萬",
+   "note": "含先天因子特性；不含時約 280 萬"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "damage",
+   "subject": "morwyn-halkon",
+   "team": [
+    "morwyn-halkon",
+    "mitty",
+    "starborn"
+   ],
+   "kibo": [
+    "dianjutang",
+    "tingyushou",
+    "yinbawa"
+   ],
+   "seconds": "23.67",
+   "total": "198.6萬",
+   "dps": "83,896"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "damage",
+   "subject": "terara",
+   "team": [
+    "terara",
+    "han-youyou",
+    "starborn"
+   ],
+   "kibo": [
+    "yanjingjia",
+    "mokongqiu",
+    "yinbawa"
+   ],
+   "seconds": "21.60",
+   "total": "161.9萬",
+   "dps": "74,951"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "maple",
+    "starborn"
+   ],
+   "lingzi": "huazhiwu",
+   "step": 1,
+   "ratio": "100.0%",
+   "dps": "96,445"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "maple",
+    "starborn"
+   ],
+   "lingzi": "menggongduijue",
+   "step": 5,
+   "ratio": "98.5%",
+   "dps": "94,977"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "maple",
+    "starborn"
+   ],
+   "lingzi": "menggongduijue",
+   "step": 1,
+   "ratio": "92.9%",
+   "dps": "89,558"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "team": [
+    "tushan-xiaoyu",
+    "maple",
+    "starborn"
+   ],
+   "lingzi": "zhezhijiqing",
+   "step": 5,
+   "ratio": "87.4%",
+   "dps": "84,294"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "morwyn-halkon",
+   "team": [
+    "morwyn-halkon",
+    "mitty",
+    "starborn"
+   ],
+   "lingzi": "menggongduijue",
+   "step": 5,
+   "ratio": "108.0%",
+   "dps": "90,580"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "morwyn-halkon",
+   "team": [
+    "morwyn-halkon",
+    "mitty",
+    "starborn"
+   ],
+   "lingzi": "menggongduijue",
+   "step": 1,
+   "ratio": "100.6%",
+   "dps": "84,396"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "morwyn-halkon",
+   "team": [
+    "morwyn-halkon",
+    "mitty",
+    "starborn"
+   ],
+   "lingzi": "chufangdemimi",
+   "step": 1,
+   "ratio": "100.0%",
+   "dps": "83,896"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "morwyn-halkon",
+   "team": [
+    "morwyn-halkon",
+    "mitty",
+    "starborn"
+   ],
+   "lingzi": "xingwandezhuiyi",
+   "step": 5,
+   "ratio": "92.0%",
+   "dps": "77,210"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "terara",
+   "team": [
+    "terara",
+    "han-youyou",
+    "starborn"
+   ],
+   "lingzi": "menggongduijue",
+   "step": 5,
+   "ratio": "112.8%",
+   "dps": "84,508"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "terara",
+   "team": [
+    "terara",
+    "han-youyou",
+    "starborn"
+   ],
+   "lingzi": "menggongduijue",
+   "step": 1,
+   "ratio": "106.8%",
+   "dps": "80,067"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "terara",
+   "team": [
+    "terara",
+    "han-youyou",
+    "starborn"
+   ],
+   "lingzi": "shouliezitai",
+   "step": 5,
+   "ratio": "100.0%",
+   "dps": "74,951"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "lingzi",
+   "subject": "terara",
+   "team": [
+    "terara",
+    "han-youyou",
+    "starborn"
+   ],
+   "lingzi": "shouliezitai",
+   "step": 1,
+   "ratio": "96.8%",
+   "dps": "72,528"
+  },
+  {
+   "source": "longlonglong-2026-11-27",
+   "reply": 321412649201,
+   "kind": "kibo",
+   "subject": "terara",
+   "kibo": [
+    "menghuajiuwei"
+   ],
+   "note": "長線"
   }
  ]
 }

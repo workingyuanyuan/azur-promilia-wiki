@@ -1,7 +1,7 @@
 ---
 title: "战斗公式"
 description: 《蓝色星原：旅谣》的伤害公式：一般伤害、超限伤害与架势伤害的乘区，以及暴击、等级压制与印记。
-appliesTo: 旅迹测试（2026-09）的玩家实测与拆解，NGA 玩家 666bj 整理，2026-09-23；公测 1.0 的超限改动读自丸子的 Bilibili 视频，2026-11-26
+appliesTo: 旅迹测试（2026-09）的玩家实测与拆解，NGA 玩家 666bj 整理，2026-09-23；公测 1.0 的超限与架势破坏改动读自丸子的 Bilibili 视频（2026-11-26）与泷泷泷ii 在 Bilibili 视频下置顶的伤害计算图（2026-11-27）
 caveat: 暴击时伤害乘以暴击伤害本身：预设暴击伤害 150%，暴击打出 1.5 倍，不是 2.5 倍。
 lastVerified: 2026-11-26
 aliases:
@@ -23,6 +23,8 @@ sources:
     url: https://bbs.nga.cn/read.php?tid=47612632
   - title: 蓝色星原公测最新强度榜！环境大变样4星整体调整？全角色加强削弱一览！（Bilibili，丸子，2026-11-26）
     url: https://www.bilibili.com/video/BV1qwySzcEkk/
+  - title: 【蓝色星原】强度榜前瞻01：全网首发！公测主流超限队热启动伤害计算|附灵子配队差距一图流（Bilibili，泷泷泷ii，2026-11-27，置顶留言的图）
+    url: https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201
 ---
 
 ## 一般伤害
@@ -74,6 +76,8 @@ sources:
 超限伤害没有暴击区、架势破坏易伤区与部位伤害倍率。
 
 丸子在 Bilibili 的视频（2026-11-26）指出公测 1.0 改了超限伤害的计算方式：[涂山小玉](/zh-cn/characters/tushan-xiaoyu/)、[末音](/zh-cn/characters/morwyn-halkon/)、[忒拉拉](/zh-cn/characters/terara/)与[西芙莉雅](/zh-cn/characters/symphoria-tarandelion/)的超限伤害因此改变，[枫糖](/zh-cn/characters/maple/)星决技与忒拉拉定弦 6 的超限强度也由固定值改为百分比（100 → 6%、75 → 4%）。
+
+泷泷泷ii 在 Bilibili 视频下置顶的伤害计算图（2026-11-27，公测安装版 1.0.0.30）列出公测 1.0 的三项改动：超限强度区改为 1 + 超限强度 ÷ 100；架势破坏时的基础易伤为 1.5 倍，一般伤害、真实伤害与超限伤害相同（旅迹测试：一般伤害 200%，超限伤害没有这一区）；破坏角色的「趁胜追击」把非超限伤害的架势破坏易伤上限提高 60%。
 
 | 属性 | 每枚印记的效果 | 超限效果（每枚消耗的印记） |
 | --- | --- | --- |

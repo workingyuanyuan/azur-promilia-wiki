@@ -1,5 +1,5 @@
 {
- "_about": "One record per source of the community section (社群攻略): a player's guide, as published. `conditions` restates what the source itself says its ratings assume; `scale` is the source's own tiers, highest first. Read from the video and the charts it shows on screen; no transcript or frame is kept.",
+ "_about": "One record per source of the community section (社群攻略): a player's guide, as published. `conditions` restates what the source itself says its ratings assume; `scale` is the source's own tiers, highest first (empty for a source with no tier list). Read from the video and the charts it shows on screen; no transcript or frame is kept. `focus` names in a few words what the source rates by, for the notes of the pages that set sources side by side. `damage_note`: for a source of damage figures, the condition a reader of the figures most likely misses.",
  "sources": [
   {
    "id": "mianbei-2026-11-26",
@@ -16,7 +16,8 @@
     "T0.5",
     "T1",
     "T1.5"
-   ]
+   ],
+   "focus": "開荒期"
   },
   {
    "id": "chunfeng-2026-11-26",
@@ -33,7 +34,8 @@
     "T1",
     "T2",
     "T3"
-   ]
+   ],
+   "focus": "高難深淵"
   },
   {
    "id": "wanzi-2026-11-26",
@@ -51,7 +53,22 @@
     "T1",
     "T2",
     "T3"
-   ]
+   ],
+   "focus": "沿用第三次測試的評分準則"
+  },
+  {
+   "id": "longlonglong-2026-11-27",
+   "creator": "瀧瀧瀧ii",
+   "platform": "Bilibili",
+   "title": "【蓝色星原】强度榜前瞻01：全网首发！公测主流超限队热启动伤害计算|附灵子配队差距一图流",
+   "url": "https://www.bilibili.com/video/BV1KH1HzqECe/",
+   "published": "2026-11-27",
+   "read": "2026-11-27",
+   "version": "公測 1.0",
+   "conditions": "畢業練度的熱啟動爆發：角色 Lv100，五星角色 0+1，四星角色滿定弦並帶滿階四星靈子，星臨者 4 定弦，畢業金裝 4 件套；敵人為 Lv100 標準首領、防禦 1000、無屬性克制；滿能量、零印記起手；奇波技能增益按上限計，不含奇波自身的傷害、隨機因子與先天因子；公測安裝版 1.0.0.30",
+   "scale": [],
+   "focus": "畢業練度的熱啟動傷害",
+   "damage_note": "敵人為 Lv100 首領、防禦 1000，不含先天因子特性"
   }
  ]
 }

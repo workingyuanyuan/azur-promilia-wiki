@@ -539,6 +539,11 @@ site-search button[data-open-modal] {
 	text-align: start;
 	white-space: nowrap;
 }
+/* A link in the header row (a guide's creator) reads in the header's own text colour on the night blue. */
+.sl-markdown-content th a:not(:where(.not-content *)) {
+	color: var(--ap-head-text);
+	text-decoration-color: var(--ap-star);
+}
 .sl-markdown-content tbody tr:nth-child(even):not(:where(.not-content *)) {
 	background: var(--ap-row);
 }

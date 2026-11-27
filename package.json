@@ -10,6 +10,7 @@
     "astro": "astro",
     "check": "node scripts/check-dist.mjs",
     "upstream": "python3 -I pipeline/upstream.py",
+    "scout": "python3 -I pipeline/scout_guides.py",
     "verify": "python3 -I pipeline/check_prose.py && astro build && node scripts/check-dist.mjs"
   },
   "dependencies": {
