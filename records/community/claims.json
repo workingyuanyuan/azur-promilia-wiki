@@ -1,5 +1,5 @@
 {
- "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選). `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared on one team: the 靈子, its 階, the team's damage against the 靈子 of the source's team row, and that DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments.",
+ "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選). `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared on one team: the 靈子, its 階, the team's damage against the 靈子 of the source's team row, and that DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments. `facility`: a home facility (records/housing.json) on the source's build-order chart: its group on the chart, the tier, and the chart's own advice beside it (`note`). `job`: the Kibo the source recommends for one work, early and late; `evolutions`: those the source marks 及其进化体 (and its evolved forms). `advice`: one piece of the source's advice about a facility (`facility`) or another part of the home (`topic`), restated.",
  "claims": [
   {
    "source": "mianbei-2026-11-26",
@@ -1247,6 +1247,374 @@
     "menghuajiuwei"
    ],
    "note": "長線"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "linguoyuan",
+   "group": "採集",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "kuangchang",
+   "group": "採集",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "yuansujitan",
+   "group": "採集",
+   "tier": "T0",
+   "note": "關鍵養成素材"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "toushidian",
+   "group": "採集",
+   "tier": "T1",
+   "note": "偏後期"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "nongchang",
+   "group": "採集",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "muchang",
+   "group": "採集",
+   "tier": "T1"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "ronglu",
+   "group": "中級加工",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "fangche",
+   "group": "中級加工",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "zhigetai",
+   "group": "中級加工",
+   "tier": "T1"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "gongzuotai",
+   "group": "中級加工",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "mofang",
+   "group": "中級加工",
+   "tier": "T0"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "yuansushilu",
+   "group": "中級加工",
+   "tier": "T1"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "gongmingshitai",
+   "group": "最終加工",
+   "tier": "T0",
+   "note": "前期主要做星結卡，後期做靈子"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "gongzuotai",
+   "group": "最終加工",
+   "tier": "T0",
+   "note": "做貨品賺家園幣"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "duanzaopu",
+   "group": "最終加工",
+   "tier": "T1",
+   "note": "後期設施"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "lianjintai",
+   "group": "最終加工",
+   "tier": "T2",
+   "note": "依需要"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "pengrenguo",
+   "group": "最終加工",
+   "tier": "T0",
+   "note": "奇波的基礎設施"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "facility",
+   "facility": "fuhuazhuang",
+   "group": "最終加工",
+   "tier": "T0",
+   "note": "長期掛機收益"
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "伐木",
+   "early": [
+    "zongmulu"
+   ],
+   "late": [
+    "leiguanmao"
+   ],
+   "evolutions": [
+    "zongmulu"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "採礦",
+   "early": [
+    "yanjiaxi"
+   ],
+   "late": [
+    "leiguanmao"
+   ],
+   "evolutions": [
+    "yanjiaxi"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "元素",
+   "early": [
+    "huolingzai"
+   ],
+   "late": [
+    "shuiyanling"
+   ],
+   "evolutions": [
+    "huolingzai",
+    "shuiyanling"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "照料",
+   "early": [
+    "fenglingbao"
+   ],
+   "late": [
+    "xiaoxingmiao"
+   ],
+   "evolutions": [
+    "fenglingbao",
+    "xiaoxingmiao"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "燃火",
+   "early": [
+    "huolieying"
+   ],
+   "late": [
+    "zhuyongli"
+   ],
+   "evolutions": [
+    "zhuyongli"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "手工",
+   "early": [
+    "fenglingbao"
+   ],
+   "late": [
+    "shuerfu"
+   ],
+   "evolutions": [
+    "fenglingbao",
+    "shuerfu"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "澆水",
+   "early": [
+    "shuilingzai"
+   ],
+   "late": [
+    "shuiyanling"
+   ],
+   "evolutions": [
+    "shuilingzai",
+    "shuiyanling"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "耕作",
+   "early": [
+    "tuotuolong"
+   ],
+   "late": [
+    "baolanchulong"
+   ],
+   "evolutions": [
+    "baolanchulong"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "reply": 325160025184,
+   "kind": "job",
+   "job": "鍛造",
+   "early": [
+    "sencailingdie"
+   ],
+   "late": [
+    "shuerfu"
+   ],
+   "evolutions": [
+    "shuerfu"
+   ]
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "topic": "採集設施",
+   "text": "天賦詞條在同品質、同數值時，間隔時間 −10% 不低於 10% 機率雙倍，兩者都優於效率 +10%",
+   "reply": 325160025184
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "topic": "加工設施",
+   "text": "不必細比奇波的效率，整體效率高即可，因為產物要手動收取",
+   "reply": 325160025184
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "topic": "加工設施",
+   "text": "選派駐後顯示用時最短的奇波即可",
+   "at": 521
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "topic": "加工設施",
+   "text": "天賦詞條在單件耗時長、不批量做的產物（如裝備）選加工時間減少，批量加工選返還基礎材料",
+   "at": 651
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "facility": "gongmingshitai",
+   "text": "高品質的星結卡也要做一些，不必為了省材料只做低品質的",
+   "at": 479
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "facility": "gongmingshitai",
+   "text": "定期到家園商店兌換做未開封的記憶要用的追憶的思緒，等能做出金色品質時再大量使用",
+   "at": 703
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "facility": "nongchang",
+   "text": "天賦詞條選成熟時間減少，遠優於效率評分",
+   "reply": 325160025184
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "facility": "nongchang",
+   "text": "種子先把月麻、棉花買到上限，再買一些麥子",
+   "at": 965
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "facility": "nongchang",
+   "text": "種子倉庫裡把高品質的種子和棉花排在前面",
+   "at": 977
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "facility": "muchang",
+   "text": "盡量放有三種產物的奇波；先看要升級的裝備用哪些材料，再放產出它們的奇波，沒有想法就每種都放",
+   "at": 1076
+  },
+  {
+   "source": "chunfengmanma-2026-11-26-home",
+   "kind": "advice",
+   "topic": "大地圖的設施",
+   "text": "先解鎖增加採礦、伐木與元素祭壇產能的設施",
+   "at": 1272
   }
  ]
 }

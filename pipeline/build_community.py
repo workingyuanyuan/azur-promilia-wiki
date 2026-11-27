@@ -1,6 +1,6 @@
 """Write the community section (社群攻略, /community/) from records/community/.
 
-Pages: community/index, community/tier-list, community/teams, community/damage. Every rating, team
+Pages: community/index, community/tier-list, community/teams, community/damage, community/housing. Every rating, team
 and damage figure names its creator and links where it is shown: the video at the second, or the
 creator's comment under the video (a chart posted as a picture, an answer to a viewer). The site never merges ratings: each
 source keeps its own tiers, and rows follow the order of the character list, not a rank.
@@ -65,6 +65,9 @@ def cite(s, claim, text=None):
 
 
 ELEMENTS = ['火', '水', '風', '雷', '冰', '木', '地', '光', '暗', '無']
+# Claims about the home (家園) and the works of its Kibo, in the order of the source's chart.
+HOME = ('facility', 'job', 'advice')
+JOBS = ['伐木', '採礦', '元素', '照料', '燃火', '手工', '澆水', '耕作', '鍛造']
 
 
 def character_order(chars):
@@ -80,11 +83,16 @@ def main():
     lingzi = {l['slug']: l for l in load('lingzi.json')}
     pages = {p.stem for p in (DOCS / 'characters').glob('*.md')}
     kibo_pages = {p.stem for p in (DOCS / 'kibo').glob('*.md')}
+    facilities = {f['id']: f for f in load('housing.json')['facilities']}
     for c in claims:  # every name resolves against the site's name records
-        for slug in [c['subject'], *c.get('second', []), *c.get('third', []), *c.get('team', [])]:
+        for slug in [*([c['subject']] if c['kind'] not in HOME else []), *c.get('second', []), *c.get('third', []), *c.get('team', [])]:
             if slug not in chars:
                 raise SystemExit(f'records/community/claims.json: unknown character {slug}')
-        for slug in c.get('kibo', []):
+        if c.get('facility') and c['facility'] not in facilities:
+            raise SystemExit(f"records/community/claims.json: unknown home facility {c['facility']}")
+        if c.get('job') and c['job'] not in JOBS:
+            raise SystemExit(f"records/community/claims.json: unknown work {c['job']}")
+        for slug in [*c.get('kibo', []), *c.get('early', []), *c.get('late', [])]:
             if slug not in kibo:
                 raise SystemExit(f'records/community/claims.json: unknown Kibo {slug}')
         if c.get('lingzi') and c['lingzi'] not in lingzi:
@@ -107,8 +115,10 @@ def main():
     damage_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] == 'damage' for c in claims)]
     write('community/tier-list.md', tier_page(tier_sources, claims, chars, name))
     write('community/teams.md', teams_page(team_sources, claims, chars, name))
+    home_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] in HOME for c in claims)]
     write('community/damage.md', damage_page(damage_sources, claims, chars, lingzi, name, kibo_name))
-    write('community/index.md', index_page(sources, tier_sources, team_sources, damage_sources, claims, chars))
+    write('community/housing.md', housing_page(home_sources, claims, facilities, kibo_name))
+    write('community/index.md', index_page(sources, tier_sources, team_sources, damage_sources, home_sources, claims, chars))
 
 
 def write(path, text):
@@ -249,7 +259,51 @@ def damage_page(srcs, claims, chars, lingzi, name, kibo_name):
 
 # ---------------------------------------------------------------- section index
 
-def index_page(sources, tier_sources, team_sources, damage_sources, claims, chars):
+def housing_page(srcs, claims, facilities, kibo_name):
+    ours = [c for c in claims if c['kind'] in HOME and any(c['source'] == s['id'] for s in srcs)]
+    by_id = {s['id']: s for s in srcs}
+    # Advice in the order of the fact page: gathering, then processing, then the rest.
+    order = ['採集設施', *[k for k, f in facilities.items() if f['group'] == '採集'],
+             '加工設施', *[k for k, f in facilities.items() if f['group'] == '加工'], '大地圖的設施']
+    section = {'kuangchang': '礦場', 'muchang': '牧場', 'nongchang': '農場'}
+
+    def kibos(c, when):
+        return '、'.join(kibo_name(k) + ('及其進化型' if k in c.get('evolutions', []) else '') for k in c[when])
+
+    def fac(fid):
+        f = facilities[fid]
+        return f"[{f['name_tw']}](/systems/housing/#{section.get(fid) or f['group'] + '設施'})"
+    body = []
+    for s in srcs:
+        mine = [c for c in ours if c['source'] == s['id']]
+        tiers = [c for c in mine if c['kind'] == 'facility']
+        jobs = [c for c in mine if c['kind'] == 'job']
+        if tiers:
+            body += ['## 設施的建設先後', '',
+                     f"- {cite(s, tiers[0])}把家園設施分 {len(s['scale'])} 級（{'、'.join(s['scale'])}），排的是建設先後，不是重要程度。", '',
+                     table(['類別', '設施', f"建設先後（{cite(s, tiers[0])}）", '圖上的建議'],
+                           [[c['group'], fac(c['facility']), c['tier'], c.get('note', '—')] for c in tiers])]
+        if jobs:
+            body += ['## 各工作的奇波', '',
+                     f"- {cite(s, jobs[0])}的奇波推薦只看數值，比的是效率，不是工種評分；前期指 25 級前，後期指開全圖後。", '',
+                     table(['工作', f"前期（{cite(s, jobs[0])}）", '後期'],
+                           [[f"[{c['job']}](/kibo/work/#{c['job']})", kibos(c, 'early'), kibos(c, 'late')]
+                            for c in sorted(jobs, key=lambda c: JOBS.index(c['job']))])]
+    advice = [c for c in ours if c['kind'] == 'advice']
+    advice.sort(key=lambda c: (order.index(c.get('facility') or c['topic']), c.get('at', 0)))
+    if advice:
+        body += ['## 各設施的建議', '']
+        body += [f"- {fac(c['facility']) if c.get('facility') else c['topic']}：{cite(by_id[c['source']], c)}建議{c['text']}。" for c in advice]
+        body.append('')
+    body += ['## 來源的條件', '', table(['創作者', '條件'], [[f"[{s['creator']}]({s['url']})", s['conditions']] for s in srcs])]
+    head = front('家園配置', f"《藍色星原：旅謠》公測 1.0 的玩家家園攻略：{creators(srcs)}排的設施建設先後與各工作推薦的奇波。",
+                 applies(srcs),
+                 '設施的 T0 到 T2 是建設先後，不是重要程度；奇波推薦比的是效率，不是工種評分。',
+                 srcs, ['家园配置', '家園攻略', '家园攻略', '家園 優先級', '家园设施优先级', '家園 奇波推薦', '家园奇波推荐'])
+    return head + '\n' + '\n'.join(body)
+
+
+def index_page(sources, tier_sources, team_sources, damage_sources, home_sources, claims, chars):
     srcs = list(sources.values())
     n_tier = len({c['subject'] for c in claims if c['kind'] == 'tier'})
     n_team = len({c['subject'] for c in claims if c['kind'] == 'team'})
@@ -258,9 +312,10 @@ def index_page(sources, tier_sources, team_sources, damage_sources, claims, char
         ['[強度榜](/community/tier-list/)', f"{creators(tier_sources)}的 {len(tier_sources)} 份公測 1.0 強度榜，{n_tier} 名角色在各榜的梯度"],
         ['[配隊](/community/teams/)', f"{creators(team_sources)}為 {n_team} 名主力排的三人隊伍"],
         ['[傷害計算](/community/damage/)', f"{creators(damage_sources)}為 {n_damage} 名主力的隊伍算出的總傷害、DPS 與靈子差距"],
+        ['[家園配置](/community/housing/)', f"{creators(home_sources)}排的家園設施建設先後與各工作推薦的奇波"],
     ])
     rows = [[s['creator'], s['platform'], f"[{s['title']}]({s['url']})", s['published'], s['version']] for s in srcs]
-    head = front('社群攻略', f"《藍色星原：旅謠》玩家發表的強度榜、配隊與傷害計算：{len(srcs)} 位 Bilibili 創作者的公測 1.0 攻略。",
+    head = front('社群攻略', f"《藍色星原：旅謠》玩家發表的強度榜、配隊、傷害計算與家園配置：{len({s['creator'] for s in srcs})} 位 Bilibili 創作者的公測 1.0 攻略。",
                  applies(srcs),
                  '每項評價都是具名創作者的看法，各有自己的梯度與評估條件，不是遊戲資料。',
                  srcs, ['攻略', 'Azur Promilia guides'])

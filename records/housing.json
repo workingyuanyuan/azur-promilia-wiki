@@ -1,0 +1,691 @@
+{
+ "_about": "The home (家園): its facilities, the Kibo work each takes, and what each produces. Gathering outputs, pasture products and the rarity of each product: the 获取方式 and 稀有度 fields of the item pages on BWIKI (third test, revisions of 2026-09-24/25), read 2026-11-27. Which work each facility takes: the table of 666bj on NGA (tid 47985685, 2026-11-26), whose facilities match the chart of 春風滿馬 (BV1yky2zKEAu, pinned comment 325160025184); the larger version of a processing facility (紡織鋪, 製革鋪, 熔煉鋪, 料理鋪, 工作室) takes the same work as the basic one, as BWIKI's building records of June 2026 pair them. Processing outputs (`text`): that chart and the narration of the video. `mines`: the launch split of the mines, from 666bj alone. Names: the mainland name converted (OpenCC s2tw). 臺 is written 台 and 鍊金 煉金, as the Taiwan service writes 台 (台港澳, 台服) and Taiwan writes 煉金.",
+ "facilities": [
+  {
+   "id": "linguoyuan",
+   "name_cn": "林果园",
+   "name_tw": "林果園",
+   "group": "採集",
+   "work": [
+    "伐木"
+   ],
+   "outputs": [
+    {
+     "name_tw": "軟木",
+     "name_cn": "软木",
+     "source": {
+      "title": "软木",
+      "revid": 21183,
+      "timestamp": "2026-09-24T13:53:51Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "硬木",
+     "name_cn": "硬木",
+     "source": {
+      "title": "硬木",
+      "revid": 21305,
+      "timestamp": "2026-09-24T13:55:42Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "纖維",
+     "name_cn": "纤维",
+     "source": {
+      "title": "纤维",
+      "revid": 21279,
+      "timestamp": "2026-09-24T13:55:18Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "斑紅菇",
+     "name_cn": "斑红菇",
+     "source": {
+      "title": "斑红菇",
+      "revid": 20830,
+      "timestamp": "2026-09-24T13:48:12Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "紅果",
+     "name_cn": "红果",
+     "source": {
+      "title": "红果",
+      "revid": 20947,
+      "timestamp": "2026-09-24T13:50:04Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "桃荔子",
+     "name_cn": "桃荔子",
+     "source": {
+      "title": "桃荔子",
+      "revid": 21230,
+      "timestamp": "2026-09-24T13:54:34Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "清月果",
+     "name_cn": "清月果",
+     "source": {
+      "title": "清月果",
+      "revid": 21144,
+      "timestamp": "2026-09-24T13:53:14Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "苦陽果",
+     "name_cn": "苦阳果",
+     "source": {
+      "title": "苦阳果",
+      "revid": 20984,
+      "timestamp": "2026-09-24T13:50:39Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "汁石",
+     "name_cn": "汁石",
+     "source": {
+      "title": "汁石",
+      "revid": 21433,
+      "timestamp": "2026-09-24T13:57:48Z"
+     },
+     "rarity": "1星"
+    }
+   ]
+  },
+  {
+   "id": "kuangchang",
+   "name_cn": "矿场",
+   "name_tw": "礦場",
+   "group": "採集",
+   "work": [
+    "採礦"
+   ],
+   "outputs": [
+    {
+     "name_tw": "風銅礦",
+     "name_cn": "风铜矿",
+     "source": {
+      "title": "风铜矿",
+      "revid": 20907,
+      "timestamp": "2026-09-24T13:49:27Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "閃錫礦",
+     "name_cn": "闪锡矿",
+     "source": {
+      "title": "闪锡矿",
+      "revid": 21187,
+      "timestamp": "2026-09-24T13:53:54Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "鏡鐵礦",
+     "name_cn": "镜铁矿",
+     "source": {
+      "title": "镜铁矿",
+      "revid": 20996,
+      "timestamp": "2026-09-24T13:50:50Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "白銀礦",
+     "name_cn": "白银矿",
+     "source": {
+      "title": "白银矿",
+      "revid": 20845,
+      "timestamp": "2026-09-24T13:48:26Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "塵石",
+     "name_cn": "尘石",
+     "source": {
+      "title": "尘石",
+      "revid": 20827,
+      "timestamp": "2026-09-24T13:48:10Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "堅巖",
+     "name_cn": "坚岩",
+     "source": {
+      "title": "坚岩",
+      "revid": 20945,
+      "timestamp": "2026-09-24T13:50:02Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "黃玉",
+     "name_cn": "黄玉",
+     "source": {
+      "title": "黄玉",
+      "revid": 20959,
+      "timestamp": "2026-09-24T13:50:15Z"
+     },
+     "rarity": "3星"
+    },
+    {
+     "name_tw": "藍晶",
+     "name_cn": "蓝晶",
+     "source": {
+      "title": "蓝晶",
+      "revid": 21938,
+      "timestamp": "2026-09-25T02:15:37Z"
+     },
+     "rarity": "3星"
+    }
+   ]
+  },
+  {
+   "id": "xinghuikuangchang",
+   "name_cn": "星辉矿场",
+   "name_tw": "星輝礦場",
+   "group": "採集",
+   "work": [
+    "採礦"
+   ],
+   "outputs": [
+    {
+     "name_tw": "細碎的星結之輝",
+     "name_cn": "细碎的星结之辉",
+     "source": {
+      "title": "细碎的星结之辉",
+      "revid": 21278,
+      "timestamp": "2026-09-24T13:55:17Z"
+     },
+     "rarity": "1星"
+    }
+   ]
+  },
+  {
+   "id": "yuansujitan",
+   "name_cn": "元素祭坛",
+   "name_tw": "元素祭壇",
+   "group": "採集",
+   "work": [
+    "元素"
+   ],
+   "text": "九種屬性的元素微粒"
+  },
+  {
+   "id": "toushidian",
+   "name_cn": "投食点",
+   "name_tw": "投食點",
+   "group": "採集",
+   "work": [
+    "照料"
+   ],
+   "outputs": [
+    {
+     "name_tw": "新鮮的獸肉",
+     "name_cn": "新鲜的兽肉",
+     "source": {
+      "title": "新鲜的兽肉",
+      "revid": 21268,
+      "timestamp": "2026-09-24T13:55:09Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "新鮮的禽肉",
+     "name_cn": "新鲜的禽肉",
+     "source": {
+      "title": "新鲜的禽肉",
+      "revid": 21266,
+      "timestamp": "2026-09-24T13:55:07Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "破損的獸皮",
+     "name_cn": "破损的兽皮",
+     "source": {
+      "title": "破损的兽皮",
+      "revid": 21064,
+      "timestamp": "2026-09-24T13:51:51Z"
+     },
+     "rarity": "1星"
+    },
+    {
+     "name_tw": "完整的獸皮",
+     "name_cn": "完整的兽皮",
+     "source": {
+      "title": "完整的兽皮",
+      "revid": 21223,
+      "timestamp": "2026-09-24T13:54:27Z"
+     },
+     "rarity": "3星"
+    }
+   ],
+   "note": "偶爾產出奇波蛋"
+  },
+  {
+   "id": "muchang",
+   "name_cn": "牧场",
+   "name_tw": "牧場",
+   "group": "採集",
+   "work": [
+    "照料"
+   ],
+   "text": "放牧的奇波各自的產物（見[牧場](#牧場)）"
+  },
+  {
+   "id": "nongchang",
+   "name_cn": "农场",
+   "name_tw": "農場",
+   "group": "採集",
+   "work": [
+    "耕作",
+    "澆水"
+   ],
+   "text": "作物：料理與布料的原料（見[農場](#農場)）"
+  },
+  {
+   "id": "ronglu",
+   "name_cn": "熔炉",
+   "name_tw": "熔爐",
+   "group": "加工",
+   "work": [
+    "燃火"
+   ],
+   "text": "炭、磚、錠"
+  },
+  {
+   "id": "fangche",
+   "name_cn": "纺车",
+   "name_tw": "紡車",
+   "group": "加工",
+   "work": [
+    "手工"
+   ],
+   "text": "布"
+  },
+  {
+   "id": "zhigetai",
+   "name_cn": "制革台",
+   "name_tw": "製革台",
+   "group": "加工",
+   "work": [
+    "手工"
+   ],
+   "text": "皮革"
+  },
+  {
+   "id": "mofang",
+   "name_cn": "磨坊",
+   "name_tw": "磨坊",
+   "group": "加工",
+   "work": [
+    "手工"
+   ],
+   "text": "食物粉末"
+  },
+  {
+   "id": "gongzuotai",
+   "name_cn": "工作台",
+   "name_tw": "工作台",
+   "group": "加工",
+   "work": [
+    "手工"
+   ],
+   "text": "木板、鞍具、探索道具、家園設施、貨品"
+  },
+  {
+   "id": "yuansushilu",
+   "name_cn": "元素石炉",
+   "name_tw": "元素石爐",
+   "group": "加工",
+   "work": [
+    "元素"
+   ],
+   "text": "元素微粒的轉化與融合"
+  },
+  {
+   "id": "gongmingshitai",
+   "name_cn": "共鸣石台",
+   "name_tw": "共鳴石台",
+   "group": "加工",
+   "work": [
+    "元素"
+   ],
+   "text": "星結卡；未開封的記憶（開出靈子）"
+  },
+  {
+   "id": "lianjintai",
+   "name_cn": "炼金台",
+   "name_tw": "煉金台",
+   "group": "加工",
+   "work": [
+    "元素"
+   ],
+   "text": "藥品"
+  },
+  {
+   "id": "pengrenguo",
+   "name_cn": "烹饪锅",
+   "name_tw": "烹飪鍋",
+   "group": "加工",
+   "work": [
+    "燃火"
+   ],
+   "text": "料理：奇波的食物與戰鬥用的料理"
+  },
+  {
+   "id": "duanzaopu",
+   "name_cn": "锻造铺",
+   "name_tw": "鍛造鋪",
+   "group": "加工",
+   "work": [
+    "鍛造"
+   ],
+   "text": "裝備"
+  },
+  {
+   "id": "fuhuazhuang",
+   "name_cn": "孵化桩",
+   "name_tw": "孵化樁",
+   "group": "加工",
+   "work": [
+    "照料"
+   ],
+   "text": "孵化奇波蛋"
+  }
+ ],
+ "mines": [
+  {
+   "name_cn": "风铜矿场",
+   "outputs": [
+    "风铜矿",
+    "尘石",
+    "黄玉"
+   ],
+   "name_tw": "風銅礦場",
+   "outputs_tw": [
+    "風銅礦",
+    "塵石",
+    "黃玉"
+   ]
+  },
+  {
+   "name_cn": "闪锡矿场",
+   "outputs": [
+    "闪锡矿",
+    "尘石",
+    "黄玉"
+   ],
+   "name_tw": "閃錫礦場",
+   "outputs_tw": [
+    "閃錫礦",
+    "塵石",
+    "黃玉"
+   ]
+  },
+  {
+   "name_cn": "镜铁矿场",
+   "outputs": [
+    "镜铁矿",
+    "坚岩",
+    "蓝晶"
+   ],
+   "name_tw": "鏡鐵礦場",
+   "outputs_tw": [
+    "鏡鐵礦",
+    "堅巖",
+    "藍晶"
+   ]
+  },
+  {
+   "name_cn": "空铁矿场",
+   "outputs": [
+    "空铁矿",
+    "坚岩",
+    "白银"
+   ],
+   "name_tw": "空鐵礦場",
+   "outputs_tw": [
+    "空鐵礦",
+    "堅巖",
+    "白銀"
+   ]
+  },
+  {
+   "name_cn": "星辉矿场",
+   "outputs": [
+    "细碎的星结之辉"
+   ],
+   "name_tw": "星輝礦場",
+   "outputs_tw": [
+    "細碎的星結之輝"
+   ]
+  }
+ ],
+ "pasture": [
+  {
+   "name_tw": "細密軟絨",
+   "name_cn": "细密软绒",
+   "source": {
+    "title": "细密软绒",
+    "revid": 21265,
+    "timestamp": "2026-09-24T13:55:06Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "獸靈之角",
+   "name_cn": "兽灵之角",
+   "source": {
+    "title": "兽灵之角",
+    "revid": 21186,
+    "timestamp": "2026-09-24T13:53:53Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "斑斕飛羽",
+   "name_cn": "斑斓飞羽",
+   "source": {
+    "title": "斑斓飞羽",
+    "revid": 20828,
+    "timestamp": "2026-09-24T13:48:10Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "鋒銳利喙",
+   "name_cn": "锋锐利喙",
+   "source": {
+    "title": "锋锐利喙",
+    "revid": 20905,
+    "timestamp": "2026-09-24T13:49:25Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "幽光鱗片",
+   "name_cn": "幽光鳞片",
+   "source": {
+    "title": "幽光鳞片",
+    "revid": 21306,
+    "timestamp": "2026-09-24T13:55:43Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "鱗光薄膜",
+   "name_cn": "鳞光薄膜",
+   "source": {
+    "title": "鳞光薄膜",
+    "revid": 21024,
+    "timestamp": "2026-09-24T13:51:15Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "移形軟殼",
+   "name_cn": "移形软壳",
+   "source": {
+    "title": "移形软壳",
+    "revid": 21307,
+    "timestamp": "2026-09-24T13:55:44Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "遺落舊蛻",
+   "name_cn": "遗落旧蜕",
+   "source": {
+    "title": "遗落旧蜕",
+    "revid": 21308,
+    "timestamp": "2026-09-24T13:55:45Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "元素凝質",
+   "name_cn": "元素凝质",
+   "source": {
+    "title": "元素凝质",
+    "revid": 21384,
+    "timestamp": "2026-09-24T13:57:00Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "本質之砂",
+   "name_cn": "本质之砂",
+   "source": {
+    "title": "本质之砂",
+    "revid": 20829,
+    "timestamp": "2026-09-24T13:48:11Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "密文輪盤",
+   "name_cn": "密文轮盘",
+   "source": {
+    "title": "密文轮盘",
+    "revid": 21025,
+    "timestamp": "2026-09-24T13:51:16Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "凝形晶核",
+   "name_cn": "凝形晶核",
+   "source": {
+    "title": "凝形晶核",
+    "revid": 21065,
+    "timestamp": "2026-09-24T13:51:52Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "磨損部件",
+   "name_cn": "磨损部件",
+   "source": {
+    "title": "磨损部件",
+    "revid": 21023,
+    "timestamp": "2026-09-24T13:51:15Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "恆定核心",
+   "name_cn": "恒定核心",
+   "source": {
+    "title": "恒定核心",
+    "revid": 20906,
+    "timestamp": "2026-09-24T13:49:26Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "苔覆土壤",
+   "name_cn": "苔覆土壤",
+   "source": {
+    "title": "苔覆土壤",
+    "revid": 21184,
+    "timestamp": "2026-09-24T13:53:51Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "空脈葉片",
+   "name_cn": "空脉叶片",
+   "source": {
+    "title": "空脉叶片",
+    "revid": 20983,
+    "timestamp": "2026-09-24T13:50:37Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "星質原液",
+   "name_cn": "星质原液",
+   "source": {
+    "title": "星质原液",
+    "revid": 21264,
+    "timestamp": "2026-09-24T13:55:05Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "順滑凝脂",
+   "name_cn": "顺滑凝脂",
+   "source": {
+    "title": "顺滑凝脂",
+    "revid": 21185,
+    "timestamp": "2026-09-24T13:53:52Z"
+   },
+   "rarity": "3星"
+  },
+  {
+   "name_tw": "新鮮的蛋",
+   "name_cn": "新鲜的蛋",
+   "source": {
+    "title": "新鲜的蛋",
+    "revid": 21271,
+    "timestamp": "2026-09-24T13:55:11Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "醇厚的奶",
+   "name_cn": "醇厚的奶",
+   "source": {
+    "title": "醇厚的奶",
+    "revid": 20865,
+    "timestamp": "2026-09-24T13:48:46Z"
+   },
+   "rarity": "1星"
+  },
+  {
+   "name_tw": "蜜汁",
+   "name_cn": "蜜汁",
+   "source": {
+    "title": "蜜汁",
+    "revid": 21032,
+    "timestamp": "2026-09-24T13:51:24Z"
+   },
+   "rarity": "1星"
+  }
+ ]
+}

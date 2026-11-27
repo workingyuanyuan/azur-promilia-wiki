@@ -1,7 +1,8 @@
 """Write the generated pages (Traditional Chinese, the root language) from records/.
 
 Pages: characters/index, characters/<slug> (for characters with restated text in
-records/text/characters/<slug>.json), kibo/index, kibo/work, kibo/elements, kibo/<slug>.
+records/text/characters/<slug>.json), kibo/index, kibo/work, kibo/elements, kibo/<slug>,
+systems/lingzi, systems/elements, systems/housing (records/housing.json).
 Simplified Chinese is written from these by scripts/to-zh-cn.py; never edit either by hand.
 
 Usage: uv run --with opencc-python-reimplemented python3 -I pipeline/build_pages.py
@@ -355,6 +356,77 @@ def elements_page():
     return head + '\n' + '\n'.join(body)
 
 
+# ---------------------------------------------------------------- the home (家園)
+
+NGA_HOME = {'title': '蓝原数据机制导论（NGA 玩家社區，666bj，2026-11-26）：PART 06 家园系统', 'url': 'https://bbs.nga.cn/read.php?tid=47985685'}
+VIDEO_HOME = {'title': '【蓝色星原】一键毕业家园！最细最全萌新家园系统全解！（Bilibili，春風滿馬，2026-11-26）',
+              'url': 'https://www.bilibili.com/video/BV1yky2zKEAu/'}
+
+
+def housing_page(kibo):
+    h = load('housing.json')
+    work = lambda f: '、'.join(f'[{w}](/kibo/work/#{w})' for w in f['work'])
+
+    def made(f):
+        out = '、'.join(o['name_tw'] for o in f.get('outputs', [])) or f.get('text', '')
+        return out + (f"；{f['note']}" if f.get('note') else '')
+    gather = [[f['name_tw'], work(f), made(f)] for f in h['facilities'] if f['group'] == '採集']
+    process = [[f['name_tw'], work(f), made(f)] for f in h['facilities'] if f['group'] == '加工']
+    mines = [[m['name_tw'], '、'.join(m['outputs_tw'])] for m in h['mines']]
+    rare = {o['name_tw'] for o in h['pasture'] if o['rarity'] == '3星'}
+    families = {}
+    for k in kibo:
+        fam = families.setdefault(k['race'].split('·')[-1], {'n': 0, 'drops': {}})
+        fam['n'] += 1
+        for d in k['drops']:
+            fam['drops'][d] = fam['drops'].get(d, 0) + 1
+    special = ['新鮮的蛋', '醇厚的奶', '蜜汁']
+    fam_rows = [[name, '、'.join(d for d in f['drops'] if d not in rare and d not in special),
+                 '、'.join(d for d in f['drops'] if d in rare) or '—', f['n']]
+                for name, f in sorted(families.items(), key=lambda x: -x[1]['n'])]
+    extra_rows = [[d, '、'.join(kibo_link(k) for k in kibo if d in k['drops'])] for d in special]
+    items = [o for f in h['facilities'] for o in f.get('outputs', [])] + h['pasture']
+    item_sources = [bwiki_source(o) for o in {o['name_cn']: o for o in items}.values()]
+    body = [
+        '## 採集設施', '', table(['設施', '奇波的工作', '產出'], gather),
+        '- 採集設施只在派駐做該工作的奇波時產出。',
+        '- 春風滿馬的影片說投食點也產蛋與奶，且要先在牧場配置奇波才會產出；第三次測試的遊戲資料與 666bj 的整理都把蛋與奶列為牧場的產物。', '',
+        '## 礦場', '',
+        '- 第三次測試的遊戲資料裡，上表的礦石都出自一座綜合採礦場。公測的礦場有五座（春風滿馬的影片與 666bj 在 NGA 的整理相同），'
+        '666bj 整理的各礦場產出如下：', '',
+        table(['礦場', '產出'], mines),
+        '## 加工設施', '', table(['設施', '奇波的工作', '產出'], process),
+        '- 加工設施的產出依春風滿馬的影片與置頂的圖（2026-11-26）；各設施做哪種工作依 666bj 在 NGA 的整理，兩者列的設施相同。',
+        '- 加工設施有較大的版本（紡織鋪、製革鋪、熔煉鋪、料理鋪、工作室），做的工作與基本版本相同。',
+        '- 春風滿馬的影片提到，加工設施沒有派駐奇波時也會加工，只是很慢。',
+        '- 孵化樁孵一顆奇波蛋要 5 小時，派駐的奇波照料評分越高越快。',
+        '- 鍛造鋪隨機產出裝備；用織造圖譜可指定產出的裝備。',
+        '- 奇波工作會消耗飽腹值，餓了會到奇波餐桌吃那裡的料理；料理由烹飪鍋做。', '',
+        '## 牧場', '',
+        '- 牧場有兩種奇波：做照料的奇波照顧牧場，放牧的奇波產出材料。放牧的奇波依族產出：', '',
+        table(['族', '產物', '偶爾產出（三星）', '奇波數'], fam_rows),
+        '- 部分奇波另外產出料理的食材：', '',
+        table(['食材', '奇波'], extra_rows),
+        '## 農場', '',
+        '- 農場的田地要搭配耕作小屋，奇波才會自動耕作：做耕作的奇波播種、收割，做澆水的奇波灌溉。',
+        '- 一開始只有旱田；家園等級提高後有良田，產量較高，可種特殊果樹。',
+        '- 作物有做料理的麥子，以及加工成布料的月麻、棉花。', '',
+        '## 大地圖的設施', '',
+        '- 在大地圖上解鎖的設施永久提高家園對應原料的產能，不必派駐奇波。', '',
+    ]
+    head = front('家園', '《藍色星原：旅謠》的家園：奇波在採集、加工、牧場與農場設施工作，產出星結卡、靈子、裝備與料理的材料。',
+                 '第三次測試的遊戲資料（BWIKI，2026-09-24 修訂）與公測 1.0 首日的兩份玩家整理（NGA、Bilibili，2026-11-26）',
+                 '採集設施只在派駐做該工作的奇波時產出；公測的礦場分成五座，各出不同的礦石。',
+                 [NGA_HOME, VIDEO_HOME, {'title': '春風滿馬置頂的家園設施與奇波圖（Bilibili，2026-11-26）',
+                                         'url': 'https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184'},
+                  {'title': 'BWIKI：奇波分類（種族與牧場產物）', 'url': BWIKI + quote('Category:奇波')},
+                  {'title': 'BWIKI：家園建築分類（2026-06 的建築資料：基本版本與較大版本的設施）', 'url': BWIKI + quote('Category:家园建筑')},
+                  *item_sources],
+                 aliases=['家园', '家園系統', '家园系统', '家園設施', '家园设施', '蓝原家园', '奇波 牧場 產出', '家園 礦場'],
+                 verified='2026-11-27')
+    return head + '\n' + '\n'.join(body)
+
+
 def main():
     chars = load('characters.json')
     kibo = load('kibo.json')
@@ -402,6 +474,7 @@ def main():
         if all(x['name_tw'] in texts for x in items):
             write('systems/lingzi.md', lingzi_page(items, texts, intro))
     write('systems/elements.md', elements_page())
+    write('systems/housing.md', housing_page(kibo))
     print('characters with pages:', len(written), 'kibo pages:', pages)
     build_community.main()
 

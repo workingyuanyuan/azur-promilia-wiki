@@ -55,6 +55,7 @@ ALLOW = {
     'systems/platforms.md': {'SERVER'},
     'index.md': {'SERVER'},
     'systems/combat.md': {'SOURCE'},
+    'systems/housing.md': {'SOURCE'},  # the mines per launch facility (666bj on NGA) and the processing outputs (one video) stand alone
     'systems/servers.md': {'SOURCE'},  # player screenshots (PTT, NGA) stand alone for the settings and the mainland rebinding  # one player test (NGA tid=47612632) stands alone
 }
 
