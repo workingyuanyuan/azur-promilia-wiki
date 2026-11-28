@@ -1,5 +1,5 @@
 {
- "about": "What readers ask about Azur Promilia (藍色星原：旅謠), from the site's question list (AGENTS.md), with the expected answer, the qualifier that is easy to miss, and the page that holds them. Answers were written by the author of the site from the sources (BWIKI game data of the test builds, the official card-pool images relayed on Bahamut, launch notices, Final Weapon), not from the site. Pass needs the answer AND the qualifier. At most 3 fetches per question.",
+ "about": "What readers ask about Azur Promilia (藍色星原：旅謠), from the site's question list (questions.md), with the expected answer, the qualifier that is easy to miss, and the page that holds them. Answers were written by the author of the site from the sources (BWIKI game data of the test builds, the official card-pool images relayed on Bahamut, launch notices, Final Weapon), not from the site. Pass needs the answer AND the qualifier. At most 3 fetches per question.",
  "questions": [
   {
    "id": "q1",
