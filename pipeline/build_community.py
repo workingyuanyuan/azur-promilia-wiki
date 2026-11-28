@@ -1,6 +1,6 @@
 """Write the community section (社群攻略, /community/) from records/community/.
 
-Pages: community/index, community/tier-list, community/teams, community/damage, community/housing. Every rating, team
+Pages: community/index, community/tier-list, community/teams, community/damage, community/housing, community/builds. Every rating, team
 and damage figure names its creator and links where it is shown: the video at the second, or the
 creator's comment under the video (a chart posted as a picture, an answer to a viewer). The site never merges ratings: each
 source keeps its own tiers, and rows follow the order of the character list, not a rank.
@@ -66,6 +66,9 @@ def cite(s, claim, text=None):
 ELEMENTS = ['火', '水', '風', '雷', '冰', '木', '地', '光', '暗', '無']
 # Claims about the home (家園) and the works of its Kibo, in the order of the source's chart.
 HOME = ('facility', 'job', 'advice')
+# Claims about how a character is built: gear, the order of raising its slots, 定弦 to pull for.
+BUILD = ('gear', 'gear_order', 'dingxian')
+GEAR_SLOTS = ['上裝', '下裝', '耳環', '戒指', '武器']
 JOBS = ['伐木', '採礦', '元素', '照料', '燃火', '手工', '澆水', '耕作', '鍛造']
 
 
@@ -83,6 +86,9 @@ def main():
     pages = {p.stem for p in (DOCS / 'characters').glob('*.md')}
     kibo_pages = {p.stem for p in (DOCS / 'kibo').glob('*.md')}
     facilities = {f['id']: f for f in load('housing.json')['facilities']}
+    gear_records = load('gear.json')
+    gear = {(i['name_tw'], i['slot']) for i in gear_records['items']}
+    gear_sets = {x['name_tw'] for x in gear_records['sets']}
     for c in claims:  # every name resolves against the site's name records
         for slug in [*([c['subject']] if c['kind'] not in HOME else []), *c.get('second', []), *c.get('third', []), *c.get('team', [])]:
             if slug not in chars:
@@ -94,6 +100,11 @@ def main():
         for slug in [*c.get('kibo', []), *c.get('early', []), *c.get('late', []), *(k for ks in c.get('member_kibo', []) for k in ks)]:
             if slug not in kibo:
                 raise SystemExit(f'records/community/claims.json: unknown Kibo {slug}')
+        for slot, piece in c.get('pieces', {}).items():
+            if (piece, slot) not in gear:
+                raise SystemExit(f'records/community/claims.json: unknown gear {piece} ({slot})')
+        if c.get('set') and c['set'] not in gear_sets:
+            raise SystemExit(f"records/community/claims.json: unknown gear set {c['set']}")
         if c.get('lingzi') and c['lingzi'] not in lingzi:
             raise SystemExit(f"records/community/claims.json: unknown 靈子 {c['lingzi']}")
         if c['source'] not in sources:
@@ -117,7 +128,9 @@ def main():
     home_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] in HOME for c in claims)]
     write('community/damage.md', damage_page(damage_sources, claims, chars, lingzi, name, kibo_name))
     write('community/housing.md', housing_page(home_sources, claims, facilities, kibo_name))
-    write('community/index.md', index_page(sources, tier_sources, team_sources, damage_sources, home_sources, claims, chars))
+    build_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] in BUILD for c in claims)]
+    write('community/builds.md', builds_page(build_sources, claims, chars, name))
+    write('community/index.md', index_page(sources, tier_sources, team_sources, damage_sources, home_sources, build_sources, claims, chars))
 
 
 def write(path, text):
@@ -317,7 +330,37 @@ def housing_page(srcs, claims, facilities, kibo_name):
     return head + '\n' + '\n'.join(body)
 
 
-def index_page(sources, tier_sources, team_sources, damage_sources, home_sources, claims, chars):
+def builds_page(srcs, claims, chars, name):
+    ours = [c for c in claims if c['kind'] in BUILD and any(c['source'] == s['id'] for s in srcs)]
+    by_id = {s['id']: s for s in srcs}
+    body = []
+    for c in character_order(chars.values()):
+        mine = [x for x in ours if x['subject'] == c['slug']]
+        if not mine:
+            continue
+        body += [f"## {c['name_tw']}", '']
+        gear = [x for x in mine if x['kind'] == 'gear']
+        if gear:
+            body.append(table(['來源', '套裝', *GEAR_SLOTS],
+                              [[cite(by_id[x['source']], x, f"{by_id[x['source']]['creator']}（{x['stage']}）"),
+                                f"[{x['set']}](/systems/gear/#套裝) 4 件", *[x['pieces'].get(slot, '—') for slot in GEAR_SLOTS]] for x in gear]))
+        for x in mine:
+            s = by_id[x['source']]
+            if x['kind'] == 'gear_order':
+                word = lambda slot: f"{slot}（{x['words'][slot]}）" if slot in x.get('words', {}) else slot
+                body.append(f"- {cite(s, x)}的培養順序：{' > '.join(' = '.join(word(slot) for slot in group) for group in x['order'])}。")
+            elif x['kind'] == 'dingxian':
+                body.append(f"- {cite(s, x)}推薦抽的定弦：{'、'.join(str(n) for n in x['picks'])}。")
+        body.append('')
+    body += ['## 來源的條件', '', table(['創作者', '條件'], [[f"[{s['creator']}]({s['url']})", s['conditions']] for s in srcs])]
+    head = front('角色養成', f"《藍色星原：旅謠》公測 1.0 的玩家養成攻略：{creators(srcs)}為主力角色選的套裝、武器、培養順序與定弦。",
+                 applies(srcs),
+                 '裝備名稱與部位依第三次測試的遊戲資料；公測 1.0 改了多數套裝的效果數值。',
+                 srcs, ['角色养成', '裝備推薦', '装备推荐', '配裝', '配装', '定弦推薦', '定弦推荐', '畢業裝備', '毕业装备'])
+    return head + '\n' + '\n'.join(body)
+
+
+def index_page(sources, tier_sources, team_sources, damage_sources, home_sources, build_sources, claims, chars):
     srcs = list(sources.values())
     n_tier = len({c['subject'] for c in claims if c['kind'] == 'tier'})
     n_team = len({c['subject'] for c in claims if c['kind'] == 'team'})
@@ -327,9 +370,10 @@ def index_page(sources, tier_sources, team_sources, damage_sources, home_sources
         ['[配隊](/community/teams/)', f"{creators(team_sources)}為 {n_team} 名主力排的三人隊伍"],
         ['[傷害計算](/community/damage/)', f"{creators(damage_sources)}為 {n_damage} 名主力的隊伍算出的總傷害、DPS 與靈子差距"],
         ['[家園配置](/community/housing/)', f"{creators(home_sources)}排的家園設施建設先後與各工作推薦的奇波"],
+        ['[角色養成](/community/builds/)', f"{creators(build_sources)}為主力角色選的套裝、武器、培養順序與定弦"],
     ])
     rows = [[s['creator'], s['platform'], f"[{s['title']}]({s['url']})", s['published'], s['version']] for s in srcs]
-    head = front('社群攻略', f"《藍色星原：旅謠》玩家發表的強度榜、配隊、傷害計算與家園配置：{len({s['creator'] for s in srcs})} 位 Bilibili 創作者的公測 1.0 攻略。",
+    head = front('社群攻略', f"《藍色星原：旅謠》玩家發表的強度榜、配隊、傷害計算、家園配置與角色養成：{len({s['creator'] for s in srcs})} 位 Bilibili 創作者的公測 1.0 攻略。",
                  applies(srcs),
                  '每項評價都是具名創作者的看法，各有自己的梯度與評估條件，不是遊戲資料。',
                  srcs, ['攻略', 'Azur Promilia guides'])

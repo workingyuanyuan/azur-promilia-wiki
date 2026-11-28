@@ -1,0 +1,16 @@
+{
+ "_about": "Set effects of gear in the public launch build (公測 1.0), from the table 9.3.4 of 666bj's guide on NGA (tid 47985685, posted 2026-11-26, an image in floor 9; the guide states it was written with AI help), read 2026-11-28 and restated as facts. 叫我棉被's chart of 長空協奏 (BV1VQ1WzRER9, 2:30) shows the same values (2 pieces 120, 4 pieces 8%, 15 s, 3 stacks). The third-test text of each set is in records/gear.json. Rendered by pipeline/build_pages.py as the section 公測的套裝效果 of systems/gear.",
+ "date": "2026-11-26",
+ "sets": [
+  {"set": "長空協奏", "two": "超限強度 +120 點", "four": "消耗印記時自身超限傷害 +8%，15 秒，最多 3 層"},
+  {"set": "星月齊音", "two": "超限會心率 +8%", "four": "入場時自身超限強度 +16%，30 秒；造成超限傷害時自身防禦穿透 +8%，15 秒"},
+  {"set": "藏鋒破勢", "two": "暴擊率 +8%", "four": "造成暴擊傷害時自身暴擊傷害 +3.5%，15 秒，最多 10 層"},
+  {"set": "昂揚巡禮", "two": "攻擊力 +10%", "four": "入場時自身攻擊力 +12%，30 秒；命中架勢破壞中的敵人時自身攻擊力 +8%，15 秒"},
+  {"set": "行旅磨鋒", "two": "攻擊力 +10%", "four": "施放星鳴技後全隊全屬性傷害 +25%，30 秒"},
+  {"set": "陷陣勇志", "two": "超限強度 +120 點", "four": "施放星決技後全隊超限傷害 +20%，30 秒"},
+  {"set": "摧鋒", "two": "架勢破壞效率 +15%", "four": "每次普攻或重擊後全隊傷害 +2.5%，30 秒，最多 6 層"},
+  {"set": "隙間銳影", "two": "架勢破壞效率 +15%", "four": "星鳴技與重擊命中時敵人架勢被破壞效率 +35%，30 秒"},
+  {"set": "愈傷的慈悲", "two": "治療加成 +20%", "four": "治療後受治療角色攻擊力 +15%，30 秒"},
+  {"set": "復奏之章", "two": "能量回復增幅 +10%", "four": "施放星鳴技後全隊星決蓄能恢復速度 +20%，30 秒"}
+ ]
+}

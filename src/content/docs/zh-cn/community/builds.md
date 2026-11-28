@@ -1,0 +1,36 @@
+---
+title: "角色养成"
+description: "《蓝色星原：旅谣》公测 1.0 的玩家养成攻略：叫我棉被为主力角色选的套装、武器、培养顺序与定弦。"
+appliesTo: "公测 1.0；1 部 Bilibili 视频（2026-11-27 发布，2026-11-28 读取）"
+caveat: "装备名称与部位依第三次测试的游戏资料；公测 1.0 改了多数套装的效果数值。"
+lastVerified: 2026-11-28
+aliases:
+  - "角色養成"
+  - "裝備推薦"
+  - "装备推荐"
+  - "配裝"
+  - "配装"
+  - "定弦推薦"
+  - "定弦推荐"
+  - "畢業裝備"
+  - "毕业装备"
+sources:
+  - title: "【蓝色星原】涂山小玉攻略！开荒T0大C 兼顾对单&对群 细节养成作业+进阶技巧（Bilibili，叫我棉被，2026-11-27）"
+    url: https://www.bilibili.com/video/BV1VQ1WzRER9/
+---
+
+## 涂山小玉
+
+| 来源 | 套装 | 上装 | 下装 | 耳环 | 戒指 | 武器 |
+| --- | --- | --- | --- | --- | --- | --- |
+| [叫我棉被（首选）](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=150) | [长空协奏](/zh-cn/systems/gear/#套装) 4 件 | 星云同声 | 心之回响 | 翠华响 | 琉璃卷云 | 云啸风吟 |
+| [叫我棉被（过渡）](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=158) | [长空协奏](/zh-cn/systems/gear/#套装) 4 件 | 流光之音 | 流光和鸣 | 望月之芳 | 青流华 | 逐风惊岚 |
+
+- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=166)的培养顺序：戒指（手饰） > 武器 = 耳环（头饰） > 上装 = 下装。
+- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=388)推荐抽的定弦：1、2、6。
+
+## 来源的条件
+
+| 创作者 | 条件 |
+| --- | --- |
+| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/) | 涂山小玉一人的攻略：开荒期的操作、灵子、装备、奇波与配队；部分画面取自第三次测试（视频简介） |

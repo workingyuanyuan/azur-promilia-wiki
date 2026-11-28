@@ -55,7 +55,9 @@ ALLOW = {
     'systems/platforms.md': {'SERVER'},
     'index.md': {'SERVER'},
     'systems/combat.md': {'SOURCE'},
-    'systems/housing.md': {'SOURCE'},  # the mines per launch facility (666bj on NGA) and the processing outputs (one video) stand alone
+    'systems/housing.md': {'SOURCE'},
+    'systems/gear.md': {'SOURCE'},
+    'systems/kibo.md': {'SOURCE'},  # the factors rest on two players' guides (NGA, Bilibili)  # the launch values of the sets (666bj on NGA) and the class tags stand on players' sources  # the mines per launch facility (666bj on NGA) and the processing outputs (one video) stand alone
     'systems/servers.md': {'SOURCE'},  # player screenshots (PTT, NGA) stand alone for the settings and the mainland rebinding  # one player test (NGA tid=47612632) stands alone
 }
 

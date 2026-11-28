@@ -411,19 +411,118 @@ def housing_page(kibo):
         '- 農場的田地要搭配耕作小屋，奇波才會自動耕作：做耕作的奇波播種、收割，做澆水的奇波灌溉。',
         '- 一開始只有旱田；家園等級提高後有良田，產量較高，可種特殊果樹。',
         '- 作物有做料理的麥子，以及加工成布料的月麻、棉花。', '',
+        '## 家園等級', '',
+        '- 家園等級提高後，作物的品質、可派駐奇波的數量上限、田地數量上限與奇波餐桌的食物上限都隨之提高。', '',
         '## 大地圖的設施', '',
         '- 在大地圖上解鎖的設施永久提高家園對應原料的產能，不必派駐奇波。', '',
     ]
     head = front('家園', '《藍色星原：旅謠》的家園：奇波在採集、加工、牧場與農場設施工作，產出星結卡、靈子、裝備與料理的材料。',
                  '第三次測試的遊戲資料（BWIKI，2026-09-24 修訂）與公測 1.0 首日的兩份玩家整理（NGA、Bilibili，2026-11-26）',
                  '採集設施只在派駐做該工作的奇波時產出；公測的礦場分成五座，各出不同的礦石。',
-                 [NGA_HOME, VIDEO_HOME, {'title': '春風滿馬置頂的家園設施與奇波圖（Bilibili，2026-11-26）',
+                 [{'title': '《藍色星原：旅謠》| 公測前瞻節目回顧（YouTube，藍色星原旅謠官方頻道，2026-11-20）：30:40 起的家園',
+                   'url': 'https://www.youtube.com/watch?v=1mlQZJMWxOo&t=1840s'},
+                  NGA_HOME, VIDEO_HOME, {'title': '春風滿馬置頂的家園設施與奇波圖（Bilibili，2026-11-26）',
                                          'url': 'https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184'},
                   {'title': 'BWIKI：奇波分類（種族與牧場產物）', 'url': BWIKI + quote('Category:奇波')},
                   {'title': 'BWIKI：家園建築分類（2026-06 的建築資料：基本版本與較大版本的設施）', 'url': BWIKI + quote('Category:家园建筑')},
                   *item_sources],
                  aliases=['家园', '家園系統', '家园系统', '家園設施', '家园设施', '蓝原家园', '奇波 牧場 產出', '家園 礦場'],
                  verified='2026-11-27')
+    return head + '\n' + '\n'.join(body)
+
+
+# ---------------------------------------------------------------- gear (裝備)
+
+NGA_GEAR = {'title': '蓝原数据机制导论（NGA 玩家社區，666bj，2026-11-26）：7.5 装备品级成长体系、9.3 套装效果速查表',
+            'url': 'https://bbs.nga.cn/read.php?tid=47985685'}
+VIDEO_LAOER = {'title': '【蓝色星原：旅谣】公测入坑指南（Bilibili，打遊戲的老二，2026-11-27）：17:09 起的裝備系統',
+               'url': 'https://www.bilibili.com/video/BV1Wey6z7E8p/?t=1029'}
+VIDEO_MIANBEI = {'title': '【蓝色星原】涂山小玉攻略！（Bilibili，叫我棉被，2026-11-27）：2:30 的長空協奏 4 件套畫面',
+                 'url': 'https://www.bilibili.com/video/BV1VQ1WzRER9/?t=150'}
+VIDEO_OFFICIAL = {'title': '《藍色星原：旅謠》| 公測前瞻節目回顧（YouTube，藍色星原旅謠官方頻道，2026-11-20）：31:20 起的裝備製作',
+                  'url': 'https://www.youtube.com/watch?v=1mlQZJMWxOo&t=1880s'}
+STARS = {'5星': '五星', '4星': '四星', '3星': '三星', '2星': '二星', '1星': '一星'}
+GEAR_SLOTS = ['武器', '上裝', '下裝', '耳環', '戒指']
+ROMAN = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ']
+
+
+def gear_page():
+    g = load('gear.json')
+    items, sets, launch = g['items'], g['sets'], load('gear_launch.json')
+    rarities = sorted({i['rarity'] for i in items}, reverse=True)
+    order = [x['set'] for x in launch['sets']]
+    diffs = {}
+    for r in rarities:
+        lv = {o[-1] for i in items if i['rarity'] == r for o in i['obtain'] if o.startswith('委託')}
+        if lv:
+            diffs[r] = lv
+    sets = sorted(sets, key=lambda s: order.index(s['name_tw']) if s['name_tw'] in order else len(order))
+    stat = lambda i: '；'.join(f"{s['stat']} {s['lv0']} → {s['max']}" for s in i['stats'])
+    obtain = lambda i: '、'.join(x.replace('委託-', '委託 ') for x in i['obtain'])
+    affixes = lambda i: '、'.join(f"{a['name']} {a['level']}" for a in i['affixes'])
+    slot_rows = [[s] + [sum(1 for i in items if i['slot'] == s and i['rarity'] == r) or '—' for r in rarities] for s in GEAR_SLOTS]
+    cap_rows = [[STARS.get(r, r), '、'.join(str(c) for c in sorted({i['max_level'] for i in items if i['rarity'] == r}))] for r in rarities]
+    set_rows = []
+    for s in sets:
+        pieces = [i for i in items if i['set'] == s['name_tw']]
+        by_slot = '；'.join(f"{slot}：{'、'.join(i['name_tw'] for i in pieces if i['slot'] == slot)}"
+                           for slot in GEAR_SLOTS if any(i['slot'] == slot for i in pieces))
+        set_rows.append([s['name_tw'], game_text(s['two']), game_text(s['four']), by_slot])
+    launch_rows = [[x['set'], x['two'], x['four']] for x in launch['sets']]
+    seen, affix_rows = set(), []
+    for i in items:
+        for a in i['affixes']:
+            if (a['name'], a['level']) not in seen:
+                seen.add((a['name'], a['level']))
+                affix_rows.append([a['name'], a['level'], game_text(a['text'])])
+    affix_rows.sort(key=lambda r: (r[0], r[1]))
+
+    def slot_table(slots):
+        rows = [[i['name_tw'], i['slot'], STARS.get(i['rarity'], i['rarity']), i['set'] or '—', i['class'] or '—', stat(i), affixes(i), obtain(i)]
+                for r in rarities for i in items if i['slot'] in slots and i['rarity'] == r]
+        return table(['裝備', '部位', '稀有度', '套裝', '適配職業', '主屬性（強化 0 → 滿級）', '詞條與等級', '取得'], rows)
+    weapons = [[i['name_tw'], STARS.get(i['rarity'], i['rarity']), stat(i), affixes(i), obtain(i)]
+               for r in rarities for i in items if i['slot'] == '武器' and i['rarity'] == r]
+    body = [
+        '## 部位', '',
+        table(['部位'] + [STARS.get(r, r) for r in rarities], slot_rows),
+        '- 上裝、下裝、耳環、戒指屬於套裝，穿同一套的 2 件或 4 件有套裝效果；武器不屬於任何套裝。',
+        '- 同名裝備的副詞條固定且相同；主屬性依品級而不同。',
+        f"- {'、'.join(s for s in GEAR_SLOTS if any(i['class'] for i in items if i['slot'] == s))}有的標有適配職業；666bj 的整理說任何職業都能穿，屬性照常生效。", '',
+        '## 強化上限', '',
+        table(['稀有度', '強化上限'], cap_rows),
+        '## 套裝', '',
+        table(['套裝', '2 件', '4 件', '裝備'], set_rows),
+        '## 公測的套裝效果', '',
+        f"- 公測 1.0 改了多數套裝的數值，摧鋒的 4 件效果也換了。下表是 666bj 在 NGA 整理的公測數值（{launch['date']}）；"
+        '叫我棉被影片中長空協奏的畫面與它相同（2 件 120 點、4 件 8%）。', '',
+        table(['套裝', '2 件', '4 件'], launch_rows),
+        '## 升星、強化與繼承', '',
+        table(['培養', '公測的規則（打遊戲的老二的影片、666bj 的整理，兩者相同）'], [
+            ['強化', '提高主屬性；五星裝備最高 15 級'],
+            ['升星', '消耗同名裝備，最高 6 星；1 到 6 星依序要 1、1、2、2、4、5 件，加上本體共 16 件。升星解鎖詞條、提高詞條等級'],
+            ['繼承', '同名裝備有高低不同的品級，主屬性不同；低品級裝備的強化與升星可以轉到高品級的同名裝備上'],
+        ]),
+        '- 666bj 的整理：同名詞條的等級在全身的裝備間相加。', '',
+        '## 武器', '',
+        table(['武器', '稀有度', '主屬性（強化 0 → 滿級）', '詞條與等級', '取得'], weapons),
+        '## 上裝與下裝', '', slot_table({'上裝', '下裝'}),
+        '## 耳環與戒指', '', slot_table({'耳環', '戒指'}),
+        '## 詞條', '',
+        table(['詞條', '等級', '效果'], affix_rows),
+        '## 製作', '',
+        '- 通關某一難度的裝備副本（委託，例如烈炎之佑、蒼雷之衛）後，就能在家園的鍛造鋪製作這個副本可能掉落的裝備；武器與防具在同一處製作。',
+        '- ' + '；'.join(f"{STARS[r]}裝備出自{'、'.join(sorted(lv, key=ROMAN.index))}難度的委託" for r, lv in diffs.items()) + '。', '',
+    ]
+    head = front('裝備', '裝備是角色的武器、上裝、下裝、耳環與戒指五個部位，上裝到戒指四個部位可湊成套裝。',
+                 f'第三次測試的遊戲資料（BWIKI，{len(items)} 件，2026-11-28 讀取）；公測 1.0 的套裝數值與培養規則讀自 NGA 與 Bilibili 的玩家整理（2026-11-26、27）',
+                 '「套裝」表是第三次測試的遊戲文字；公測 1.0 改了多數套裝的數值，摧鋒的 4 件效果也換了。',
+                 [VIDEO_OFFICIAL, NGA_GEAR, VIDEO_LAOER, VIDEO_MIANBEI,
+                  {'title': 'BWIKI：裝備分類（第三次測試）', 'url': BWIKI + quote('Category:装备')},
+                  *[bwiki_source(i) for i in items]],
+                 aliases=['装备', '裝備系統', '装备系统', '套裝', '套装', '裝備套裝', '武器', '詞條', '词条', '升星', '裝備 升星 幾件',
+                          '长空协奏', '蓝原 装备'],
+                 verified='2026-11-28')
     return head + '\n' + '\n'.join(body)
 
 
@@ -475,6 +574,8 @@ def main():
             write('systems/lingzi.md', lingzi_page(items, texts, intro))
     write('systems/elements.md', elements_page())
     write('systems/housing.md', housing_page(kibo))
+    if (RECORDS / 'gear.json').exists():
+        write('systems/gear.md', gear_page())
     print('characters with pages:', len(written), 'kibo pages:', pages)
     build_community.main()
 

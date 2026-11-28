@@ -1,5 +1,5 @@
 {
- "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選); `member_kibo`: the Kibo the source gives each member, main first, any one of those listed. `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared: the 靈子, its 階 (滿 where the source writes 滿階), the damage against the source's base (`ratio`, 100% for the base), and where the source gives them the team (`team`) and its DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments. `facility`: a home facility (records/housing.json) on the source's build-order chart: its group on the chart, the tier, and the chart's own advice beside it (`note`). `job`: the Kibo the source recommends for one work, early and late; `evolutions`: those the source marks 及其进化体 (and its evolved forms). `advice`: one piece of the source's advice about a facility (`facility`) or another part of the home (`topic`), restated.",
+ "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選); `member_kibo`: the Kibo the source gives each member, main first, any one of those listed. `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared: the 靈子, its 階 (滿 where the source writes 滿階), the damage against the source's base (`ratio`, 100% for the base), and where the source gives them the team (`team`) and its DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments. `facility`: a home facility (records/housing.json) on the source's build-order chart: its group on the chart, the tier, and the chart's own advice beside it (`note`). `job`: the Kibo the source recommends for one work, early and late; `evolutions`: those the source marks 及其进化体 (and its evolved forms). `advice`: one piece of the source's advice about a facility (`facility`) or another part of the home (`topic`), restated. `gear`: the gear the source puts on a main (`subject`): the set, the pieces by slot and the weapon (`pieces`, names as records/gear.json writes them), `stage` 首選 or 過渡 as the source says it. `gear_order`: the order in which the source raises the slots (`order`: groups of slots that rank equal), with the source's own slot words (`words`). `dingxian`: the 定弦 the source recommends pulling for (`picks`).",
  "claims": [
   {
    "source": "mianbei-2026-11-26",
@@ -1818,6 +1818,70 @@
     "han-youyou"
    ],
    "label": "免費隊伍"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 150,
+   "kind": "gear",
+   "subject": "tushan-xiaoyu",
+   "stage": "首選",
+   "set": "長空協奏",
+   "pieces": {
+    "上裝": "星雲同聲",
+    "下裝": "心之迴響",
+    "耳環": "翠華響",
+    "戒指": "琉璃捲雲",
+    "武器": "雲嘯風吟"
+   }
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 158,
+   "kind": "gear",
+   "subject": "tushan-xiaoyu",
+   "stage": "過渡",
+   "set": "長空協奏",
+   "pieces": {
+    "上裝": "流光之音",
+    "下裝": "流光和鳴",
+    "耳環": "望月之芳",
+    "戒指": "青流華",
+    "武器": "逐風驚嵐"
+   }
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 166,
+   "kind": "gear_order",
+   "subject": "tushan-xiaoyu",
+   "order": [
+    [
+     "戒指"
+    ],
+    [
+     "武器",
+     "耳環"
+    ],
+    [
+     "上裝",
+     "下裝"
+    ]
+   ],
+   "words": {
+    "戒指": "手飾",
+    "耳環": "頭飾"
+   }
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 388,
+   "kind": "dingxian",
+   "subject": "tushan-xiaoyu",
+   "picks": [
+    1,
+    2,
+    6
+   ]
   }
  ]
 }
