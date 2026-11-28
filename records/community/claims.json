@@ -1,5 +1,5 @@
 {
- "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選). `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared on one team: the 靈子, its 階, the team's damage against the 靈子 of the source's team row, and that DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments. `facility`: a home facility (records/housing.json) on the source's build-order chart: its group on the chart, the tier, and the chart's own advice beside it (`note`). `job`: the Kibo the source recommends for one work, early and late; `evolutions`: those the source marks 及其进化体 (and its evolved forms). `advice`: one piece of the source's advice about a facility (`facility`) or another part of the home (`topic`), restated.",
+ "_about": "One record per claim of the community section: a source (records/community/sources.json), where in it the claim is shown (`at`: the second in the video; `reply`: the id of the creator's comment under the video, whose pictures or text carry the claim), the character it is about and the value in the source's own terms. `tier`: the tier on the source's list. `team`: one row of the source's team chart for a main damage dealer (`subject`): the second teammate and the third, any one of those listed; `label` is the source's own mark of the row (主推, 備選); `member_kibo`: the Kibo the source gives each member, main first, any one of those listed. `damage`: a whole team (`team`, main first), the Kibo each member carries (`kibo`, same order; empty where the source names none), the rotation in seconds, the total damage and the damage per second, as the source writes them. `lingzi`: the main's 靈子 compared: the 靈子, its 階 (滿 where the source writes 滿階), the damage against the source's base (`ratio`, 100% for the base), and where the source gives them the team (`team`) and its DPS. `kibo`: a Kibo the source names for the main beyond the one in its team row (`note`: when). Read from the charts on screen and the creator's comments. `facility`: a home facility (records/housing.json) on the source's build-order chart: its group on the chart, the tier, and the chart's own advice beside it (`note`). `job`: the Kibo the source recommends for one work, early and late; `evolutions`: those the source marks 及其进化体 (and its evolved forms). `advice`: one piece of the source's advice about a facility (`facility`) or another part of the home (`topic`), restated.",
  "claims": [
   {
    "source": "mianbei-2026-11-26",
@@ -1615,6 +1615,209 @@
    "topic": "大地圖的設施",
    "text": "先解鎖增加採礦、伐木與元素祭壇產能的設施",
    "at": 1272
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 184,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "starborn"
+   ],
+   "label": "最推薦",
+   "member_kibo": [
+    [
+     "sencailingdie"
+    ],
+    [
+     "mokongqiu",
+     "yinbawa"
+    ],
+    [
+     "yinbawa"
+    ]
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 248,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "metsa"
+   ],
+   "member_kibo": [
+    [
+     "sencailingdie"
+    ],
+    [
+     "mokongqiu",
+     "yinbawa"
+    ],
+    [
+     "yinbawa"
+    ]
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 266,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "starborn"
+   ],
+   "third": [
+    "metsa"
+   ],
+   "member_kibo": [
+    [
+     "sencailingdie"
+    ],
+    [
+     "rongxinbulini"
+    ],
+    [
+     "yinbawa"
+    ]
+   ]
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "huazhiwu",
+   "step": "滿",
+   "ratio": "118.8%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "huazhiwu",
+   "step": 1,
+   "ratio": "100%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "menggongduijue",
+   "step": "滿",
+   "ratio": "95%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "menggongduijue",
+   "step": 1,
+   "ratio": "89%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "pobujidai",
+   "step": "滿",
+   "ratio": "85.4%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "pobujidai",
+   "step": 1,
+   "ratio": "82%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "zhezhijiqing",
+   "step": "滿",
+   "ratio": "80.6%"
+  },
+  {
+   "source": "mianbei-2026-11-27-xiaoyu",
+   "at": 144,
+   "kind": "lingzi",
+   "subject": "tushan-xiaoyu",
+   "lingzi": "zhezhijiqing",
+   "step": 1,
+   "ratio": "76.6%"
+  },
+  {
+   "source": "laoer-2026-11-27",
+   "at": 428,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "maple"
+   ],
+   "third": [
+    "metsa"
+   ],
+   "member_kibo": [
+    [
+     "sencailingdie"
+    ],
+    [
+     "yinbawa"
+    ],
+    [
+     "yinbawa"
+    ]
+   ]
+  },
+  {
+   "source": "laoer-2026-11-27",
+   "at": 440,
+   "kind": "team",
+   "subject": "tushan-xiaoyu",
+   "second": [
+    "starborn"
+   ],
+   "third": [
+    "metsa"
+   ],
+   "member_kibo": [
+    [
+     "sencailingdie"
+    ],
+    [
+     "rongxinbulini"
+    ],
+    [
+     "yinbawa"
+    ]
+   ]
+  },
+  {
+   "source": "laoer-2026-11-27",
+   "at": 543,
+   "kind": "team",
+   "subject": "terara",
+   "second": [
+    "starborn"
+   ],
+   "third": [
+    "han-youyou"
+   ],
+   "label": "免費隊伍"
   }
  ]
 }

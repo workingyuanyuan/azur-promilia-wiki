@@ -18,7 +18,6 @@ tw2s = OpenCC('tw2s')
 ROOT = Path(__file__).resolve().parent.parent
 RECORDS = ROOT / 'records'
 DOCS = ROOT / 'src' / 'content' / 'docs'
-VERIFIED = '2026-11-27'
 
 
 def load(rel):
@@ -31,7 +30,7 @@ def yaml_str(s):
 
 def front(title, description, applies, caveat, sources, aliases):
     lines = ['---', f'title: {yaml_str(title)}', f'description: {yaml_str(description)}', f'appliesTo: {yaml_str(applies)}',
-             f'caveat: {yaml_str(caveat)}', f'lastVerified: {VERIFIED}']
+             f'caveat: {yaml_str(caveat)}', f"lastVerified: {max(s['read'] for s in sources)}"]
     # The Simplified title is an alias of every page: scripts/to-zh-cn.py makes it the title there.
     aliases = [a for a in dict.fromkeys([*aliases, tw2s.convert(title)]) if a and a != title]
     if aliases:
@@ -92,7 +91,7 @@ def main():
             raise SystemExit(f"records/community/claims.json: unknown home facility {c['facility']}")
         if c.get('job') and c['job'] not in JOBS:
             raise SystemExit(f"records/community/claims.json: unknown work {c['job']}")
-        for slug in [*c.get('kibo', []), *c.get('early', []), *c.get('late', [])]:
+        for slug in [*c.get('kibo', []), *c.get('early', []), *c.get('late', []), *(k for ks in c.get('member_kibo', []) for k in ks)]:
             if slug not in kibo:
                 raise SystemExit(f'records/community/claims.json: unknown Kibo {slug}')
         if c.get('lingzi') and c['lingzi'] not in lingzi:
@@ -112,9 +111,9 @@ def main():
 
     tier_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] == 'tier' for c in claims)]
     team_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] == 'team' for c in claims)]
-    damage_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] == 'damage' for c in claims)]
+    damage_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] in ('damage', 'lingzi') for c in claims)]
     write('community/tier-list.md', tier_page(tier_sources, claims, chars, name))
-    write('community/teams.md', teams_page(team_sources, claims, chars, name))
+    write('community/teams.md', teams_page(team_sources, claims, chars, name, kibo_name))
     home_sources = [s for s in sources.values() if any(c['source'] == s['id'] and c['kind'] in HOME for c in claims)]
     write('community/damage.md', damage_page(damage_sources, claims, chars, lingzi, name, kibo_name))
     write('community/housing.md', housing_page(home_sources, claims, facilities, kibo_name))
@@ -128,13 +127,13 @@ def write(path, text):
 
 
 def creators(srcs):
-    return '、'.join(s['creator'] for s in srcs)
+    return '、'.join(dict.fromkeys(s['creator'] for s in srcs))
 
 
 def applies(srcs):
     versions = sorted({s['version'] for s in srcs})
     dates = sorted({s['published'] for s in srcs})
-    return f"{'、'.join(versions)}；{len(srcs)} 部 Bilibili 影片（{dates[0]}{' 至 ' + dates[-1] if len(dates) > 1 else ''} 發布，{VERIFIED} 讀取）"
+    return f"{'、'.join(versions)}；{len(srcs)} 部 Bilibili 影片（{dates[0]}{' 至 ' + dates[-1] if len(dates) > 1 else ''} 發布，{'、'.join(sorted({s['read'] for s in srcs}))} 讀取）"
 
 
 # ---------------------------------------------------------------- tier lists
@@ -177,16 +176,17 @@ def lineups(c):
     return {frozenset((a, b)) for a in c['second'] for b in c['third']}
 
 
-def teams_page(srcs, claims, chars, name):
+def teams_page(srcs, claims, chars, name, kibo_name):
     teams = [c for c in claims if c['kind'] == 'team' and any(c['source'] == s['id'] for s in srcs)]
     mains = [c for c in character_order(chars.values()) if any(t['subject'] == c['slug'] for t in teams)]
     # A lineup two sources or more both list, main damage dealer and both teammates the same.
     both = []
     for m in mains:
-        by_source = {}
+        by_source = {}  # by creator: two videos of one creator count as one source
+        creator_of = {s['id']: s['creator'] for s in srcs}
         for t in teams:
             if t['subject'] == m['slug']:
-                by_source.setdefault(t['source'], set()).update(lineups(t))
+                by_source.setdefault(creator_of[t['source']], set()).update(lineups(t))
         common = {pair for pair in set().union(*by_source.values()) if sum(pair in v for v in by_source.values()) >= 2}
         for pair in sorted(common, key=lambda p: sorted(chars[x]['name_tw'] for x in p)):
             # Second teammate first, as the first source to list the pair has them.
@@ -197,11 +197,17 @@ def teams_page(srcs, claims, chars, name):
     body = ['## 兩份以上都列出的隊伍', '', table(['主力', '隊友', '列出的創作者'], both)]
     for m in mains:
         rows = []
+        mine = [t for t in teams if t['subject'] == m['slug']]
+        with_kibo = any(t.get('member_kibo') for t in mine)
         for s in srcs:
-            for t in (t for t in teams if t['subject'] == m['slug'] and t['source'] == s['id']):
+            for t in (t for t in mine if t['source'] == s['id']):
                 who = cite(s, t) + (f"（{t['label']}）" if t.get('label') else '')
-                rows.append([who, '、'.join(name(x) for x in t['second']), '、'.join(name(x) for x in t['third'])])
-        body += [f"## {m['name_tw']}", '', table(['創作者', '2 號隊友', '3 號隊友（擇一）'], rows)]
+                row = [who, '、'.join(name(x) for x in t['second']), '、'.join(name(x) for x in t['third'])]
+                if with_kibo:
+                    row.append('；'.join('或'.join(kibo_name(k) for k in ks) for ks in t['member_kibo']) if t.get('member_kibo') else '—')
+                rows.append(row)
+        head_row = ['創作者', '2 號隊友', '3 號隊友（擇一）'] + (['奇波（主力；2 號；3 號）'] if with_kibo else [])
+        body += [f"## {m['name_tw']}", '', table(head_row, rows)]
     body += ['## 各來源的條件', '', table(['創作者', '評估條件'],
                                     [[f"[{s['creator']}]({s['url']})", s['conditions']] for s in srcs])]
     head = front('配隊', f"《藍色星原：旅謠》公測 1.0 的玩家配隊：{creators(srcs)}為 {len(mains)} 名主力排的三人隊伍。",
@@ -212,10 +218,11 @@ def teams_page(srcs, claims, chars, name):
 
 
 def sources_of(srcs, teams, main, pair):
-    out = []
+    out, seen = [], set()
     for s in srcs:
         hit = next((t for t in teams if t['source'] == s['id'] and t['subject'] == main and pair in lineups(t)), None)
-        if hit:
+        if hit and s['creator'] not in seen:
+            seen.add(s['creator'])
             out.append(cite(s, hit))
     return out
 
@@ -239,16 +246,23 @@ def damage_page(srcs, claims, chars, lingzi, name, kibo_name):
     if notes:
         body += [*notes, '']
     for m in mains:
-        lz = [c for c in ours if c['kind'] == 'lingzi' and c['subject'] == m['slug']]
-        if not lz:
+        lz_all = [c for c in ours if c['kind'] == 'lingzi' and c['subject'] == m['slug']]
+        if not lz_all:
             continue
-        s = by_id[lz[0]['source']]
-        base = next((c for c in lz if c['ratio'].startswith('100.0')), lz[0])
-        team = '、'.join(name(x) for x in base['team'])
-        body += [f"## {m['name_tw']}的靈子", '',
-                 f"- {cite(s, base)}在{team}的隊伍中比較主力的靈子，以{lingzi[base['lingzi']]['name_tw']} {base['step']} 階的隊伍傷害為 100%。", '',
-                 table(['靈子', '稀有度', '階', f"隊伍傷害比（{cite(s, base)}）", '軸內 DPS'],
-                       [[lingzi[c['lingzi']]['name_tw'], lingzi[c['lingzi']]['rarity'], c['step'], c['ratio'], c['dps']] for c in lz])]
+        body += [f"## {m['name_tw']}的靈子", '']
+        for s in (s for s in srcs if any(c['source'] == s['id'] for c in lz_all)):
+            lz = [c for c in lz_all if c['source'] == s['id']]
+            base = next((c for c in lz if c['ratio'] in ('100%', '100.0%')), lz[0])
+            base_name = f"{lingzi[base['lingzi']]['name_tw']} {base['step']} 階"
+            if base.get('team'):
+                team = '、'.join(name(x) for x in base['team'])
+                body += [f"- {cite(s, base)}在{team}的隊伍中比較主力的靈子，以{base_name}的隊伍傷害為 100%。", '',
+                         table(['靈子', '稀有度', '階', f"隊伍傷害比（{cite(s, base)}）", '軸內 DPS'],
+                               [[lingzi[c['lingzi']]['name_tw'], lingzi[c['lingzi']]['rarity'], c['step'], c['ratio'], c['dps']] for c in lz])]
+            else:
+                body += [f"- {cite(s, base)}比較{m['name_tw']}帶各靈子的傷害，以{base_name}為 100%。", '',
+                         table(['靈子', '稀有度', '階', f"傷害比（{cite(s, base)}）"],
+                               [[lingzi[c['lingzi']]['name_tw'], lingzi[c['lingzi']]['rarity'], c['step'], c['ratio']] for c in lz])]
     body += ['## 各來源的條件', '', table(['創作者', '評估條件'], [[f"[{s['creator']}]({s['url']})", s['conditions']] for s in srcs])]
     head = front('傷害計算', f"《藍色星原：旅謠》公測 1.0 的玩家傷害計算：{creators(srcs)}為 {len(mains)} 名主力的隊伍算出的總傷害、DPS 與靈子差距。",
                  applies(srcs),

@@ -86,6 +86,33 @@
     "T2"
    ],
    "focus": "家園設施的建設先後與各工作的奇波"
+  },
+  {
+   "id": "mianbei-2026-11-27-xiaoyu",
+   "creator": "叫我棉被",
+   "platform": "Bilibili",
+   "title": "【蓝色星原】涂山小玉攻略！开荒T0大C 兼顾对单&对群 细节养成作业+进阶技巧",
+   "url": "https://www.bilibili.com/video/BV1VQ1WzRER9/",
+   "published": "2026-11-27",
+   "read": "2026-11-28",
+   "version": "公測 1.0",
+   "conditions": "塗山小玉一人的攻略：開荒期的操作、靈子、裝備、奇波與配隊；部分畫面取自第三次測試（影片簡介）",
+   "scale": [],
+   "focus": "開荒期的塗山小玉",
+   "damage_note": "靈子以花之舞 1 階為 100%，滿階與 1 階並列"
+  },
+  {
+   "id": "laoer-2026-11-27",
+   "creator": "打遊戲的老二",
+   "platform": "Bilibili",
+   "title": "【蓝色星原：旅谣】公测入坑指南",
+   "url": "https://www.bilibili.com/video/BV1Wey6z7E8p/",
+   "published": "2026-11-27",
+   "read": "2026-11-28",
+   "version": "公測 1.0",
+   "conditions": "新手入坑指南，介紹戰鬥與配隊的思路；部分畫面取自第三次測試（影片簡介）",
+   "scale": [],
+   "focus": "新手開荒"
   }
  ]
 }
