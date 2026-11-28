@@ -123,5 +123,5 @@ sources:
 | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | 開荒期角色強度榜，依攻略組在公測環境的實戰表現排定 |
 | [春風滿馬](https://www.bilibili.com/video/BV11R17ztEXK/) | 以高難深淵的畢業水準評估：五星角色 0 定弦、四星角色 6 定弦、星臨者 4 定弦；同一梯度內不分先後 |
 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/) | 畢業練度的熱啟動爆發：角色 Lv100，五星角色 0+1，四星角色滿定弦並帶滿階四星靈子，星臨者 4 定弦，畢業金裝 4 件套；敵人為 Lv100 標準首領、防禦 1000、無屬性克制；滿能量、零印記起手；奇波技能增益按上限計，不含奇波自身的傷害、隨機因子與先天因子；公測安裝版 1.0.0.30 |
-| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/) | 塗山小玉一人的攻略：開荒期的操作、靈子、裝備、奇波與配隊；部分畫面取自第三次測試（影片簡介） |
-| [打遊戲的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/) | 新手入坑指南，介紹戰鬥與配隊的思路；部分畫面取自第三次測試（影片簡介） |
+| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/) | 塗山小玉一人的攻略：開荒期的操作、靈子、裝備、奇波與配隊；部分畫面取自第三次測試 |
+| [打遊戲的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/) | 新手入坑指南，介紹戰鬥與配隊的思路；部分畫面取自第三次測試 |

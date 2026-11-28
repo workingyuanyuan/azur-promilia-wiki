@@ -5,7 +5,8 @@ Pages in Traditional Chinese (the root). Patterns for Japanese and Korean stay f
 Checks the body only (the frontmatter may name sources). Exit code 1 when a page has a hit.
 Each hit is one of:
   SOURCE   the prose names a source; the page notes name it. Allowed only where two sources
-           disagree on something a reader acts on, or one player test stands alone (NGA).
+           disagree on something a reader acts on; a fact from one player's guide alone
+           carries a footnote, whose note line is not checked.
   HEDGE    a disclaimer: what is unknown, unannounced, not stated, or true "as of" a date.
   TIMED    time-limited content: events, sales, sign-ins, compensation, pre-downloads.
   SERVER   a second service's clock beside a date; dates are UTC+8, stated once in llms.txt.
@@ -54,11 +55,8 @@ ALLOW = {
     'systems/servers-and-time.md': {'SERVER'},
     'systems/platforms.md': {'SERVER'},
     'index.md': {'SERVER'},
-    'systems/combat.md': {'SOURCE'},
-    'systems/housing.md': {'SOURCE'},
-    'systems/gear.md': {'SOURCE'},
-    'systems/kibo.md': {'SOURCE'},  # the factors rest on two players' guides (NGA, Bilibili)  # the launch values of the sets (666bj on NGA) and the class tags stand on players' sources  # the mines per launch facility (666bj on NGA) and the processing outputs (one video) stand alone
-    'systems/servers.md': {'SOURCE'},  # player screenshots (PTT, NGA) stand alone for the settings and the mainland rebinding  # one player test (NGA tid=47612632) stands alone
+    'systems/housing.md': {'SOURCE'},  # a video and the game data disagree on what the feeding spot yields
+    'systems/kibo.md': {'SOURCE'},  # two players' guides disagree on mutation once a Kibo has 8 factors
 }
 
 
@@ -81,6 +79,8 @@ def check(path):
     jako = re.search(r'src/content/docs/(ja|ko)/', norm) is not None
     hits = []
     for n, line in enumerate(body_of(open(path, encoding='utf8').read()).split('\n'), 1):
+        if re.match(r'\[\^\w+\]:', line):
+            continue  # a footnote's note names its source on purpose
         line = re.sub(r'\]\([^)]*\)', ']', line)  # link targets are addresses, not prose
         for kind, pats in PATTERNS.items():
             if kind in allowed:

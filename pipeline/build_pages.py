@@ -158,10 +158,12 @@ def character_page(c, text, kibo_by_cn):
         def item(label):
             return '、'.join(f"{names[slot[k]]}（{k}）" if names.get(slot.get(k)) else k for k in label.split('、'))
         src = LAUNCH['sources']['wanzi']
-        body += ['## 公測改動', '', f"{src['label']}在 Bilibili 的影片（{src['date']}）比較了公測 1.0 與第三次測試：", '',
+        # One video stands alone for these rows, so the header carries a footnote that links it.
+        body += ['## 公測改動', '',
                  # The header names the direction only where a row gives a value before and after.
-                 table(['技能', '改動（第三次測試 → 公測 1.0）' if any('→' in v for _, v in changes) else '公測 1.0 的改動'],
-                       [[item(k), v] for k, v in changes])]
+                 table(['技能', ('改動（第三次測試 → 公測 1.0）' if any('→' in v for _, v in changes) else '公測 1.0 的改動') + '[^1]'],
+                       [[item(k), v] for k, v in changes]),
+                 f"[^1]: [{src['title']}]({src['url']})", '']
     if text.get('kibo'):
         body += ['## 奇波', '', text['kibo'], '']
     sources = [bwiki_source(c)]
@@ -394,13 +396,11 @@ def housing_page(kibo):
         '- 採集設施只在派駐做該工作的奇波時產出。',
         '- 春風滿馬的影片說投食點也產蛋與奶，且要先在牧場配置奇波才會產出；第三次測試的遊戲資料與 666bj 的整理都把蛋與奶列為牧場的產物。', '',
         '## 礦場', '',
-        '- 第三次測試的遊戲資料裡，上表的礦石都出自一座綜合採礦場。公測的礦場有五座（春風滿馬的影片與 666bj 在 NGA 的整理相同），'
-        '666bj 整理的各礦場產出如下：', '',
-        table(['礦場', '產出'], mines),
-        '## 加工設施', '', table(['設施', '奇波的工作', '產出'], process),
-        '- 加工設施的產出依春風滿馬的影片與置頂的圖（2026-11-26）；各設施做哪種工作依 666bj 在 NGA 的整理，兩者列的設施相同。',
+        '- 第三次測試的遊戲資料裡，上表的礦石都出自一座綜合採礦場。公測的礦場有五座，各出不同的礦石：[^1][^2]', '',
+        table(['礦場', '產出[^1]'], mines),
+        '## 加工設施', '', table(['設施', '奇波的工作[^1]', '產出[^2]'], process),
         '- 加工設施有較大的版本（紡織鋪、製革鋪、熔煉鋪、料理鋪、工作室），做的工作與基本版本相同。',
-        '- 春風滿馬的影片提到，加工設施沒有派駐奇波時也會加工，只是很慢。',
+        '- 加工設施沒有派駐奇波時也會加工，只是很慢。[^2]',
         '- 孵化樁孵一顆奇波蛋要 5 小時，派駐的奇波照料評分越高越快。',
         '- 鍛造鋪隨機產出裝備；用織造圖譜可指定產出的裝備。',
         '- 奇波工作會消耗飽腹值，餓了會到奇波餐桌吃那裡的料理；料理由烹飪鍋做。', '',
@@ -417,6 +417,9 @@ def housing_page(kibo):
         '- 家園等級提高後，作物的品質、可派駐奇波的數量上限、田地數量上限與奇波餐桌的食物上限都隨之提高。', '',
         '## 大地圖的設施', '',
         '- 在大地圖上解鎖的設施永久提高家園對應原料的產能，不必派駐奇波。', '',
+        # Facts from one player's guide alone carry a footnote that links it (../AGENTS.md, Visible page).
+        f"[^1]: [666bj，蓝原数据机制导论 PART 06 家园系统（NGA 玩家社區，簡體中文，2026-11-26）]({NGA_HOME['url']})",
+        f"[^2]: [春風滿馬，家園系統全解影片]({VIDEO_HOME['url']})與[置頂的家園設施與奇波圖]({VIDEO_HOME['url']}#reply325160025184)（Bilibili，2026-11-26）", '',
     ]
     head = front('家園', '《藍色星原：旅謠》的家園：奇波在採集、加工、牧場與農場設施工作，產出星結卡、靈子、裝備與料理的材料。',
                  '第三次測試的遊戲資料（BWIKI，2026-09-24 修訂）與公測 1.0 首日的兩份玩家整理（NGA、Bilibili，2026-11-26）',
@@ -490,22 +493,21 @@ def gear_page():
         table(['部位'] + [STARS.get(r, r) for r in rarities], slot_rows),
         '- 上裝、下裝、耳環、戒指屬於套裝，穿同一套的 2 件或 4 件有套裝效果；武器不屬於任何套裝。',
         '- 同名裝備的副詞條固定且相同；主屬性依品級而不同。',
-        f"- {'、'.join(s for s in GEAR_SLOTS if any(i['class'] for i in items if i['slot'] == s))}有的標有適配職業；666bj 的整理說任何職業都能穿，屬性照常生效。", '',
+        f"- {'、'.join(s for s in GEAR_SLOTS if any(i['class'] for i in items if i['slot'] == s))}有的標有適配職業；任何職業都能穿，屬性照常生效。[^1]", '',
         '## 強化上限', '',
         table(['稀有度', '強化上限'], cap_rows),
         '## 套裝', '',
         table(['套裝', '2 件', '4 件', '裝備'], set_rows),
         '## 公測的套裝效果', '',
-        f"- 公測 1.0 改了多數套裝的數值，摧鋒的 4 件效果也換了。下表是 666bj 在 NGA 整理的公測數值（{launch['date']}）；"
-        '叫我棉被影片中長空協奏的畫面與它相同（2 件 120 點、4 件 8%）。', '',
+        '- 公測 1.0 改了多數套裝的數值，摧鋒的 4 件效果也換了。下表是公測 1.0 的套裝數值。[^1][^2]', '',
         table(['套裝', '2 件', '4 件'], launch_rows),
         '## 升星、強化與繼承', '',
-        table(['培養', '公測的規則（打遊戲的老二的影片、666bj 的整理，兩者相同）'], [
+        table(['培養', '公測的規則[^1][^3]'], [
             ['強化', '提高主屬性；五星裝備最高 15 級'],
             ['升星', '消耗同名裝備，最高 6 星；1 到 6 星依序要 1、1、2、2、4、5 件，加上本體共 16 件。升星解鎖詞條、提高詞條等級'],
             ['繼承', '同名裝備有高低不同的品級，主屬性不同；低品級裝備的強化與升星可以轉到高品級的同名裝備上'],
         ]),
-        '- 666bj 的整理：同名詞條的等級在全身的裝備間相加。', '',
+        '- 同名詞條的等級在全身的裝備間相加。[^1]', '',
         '## 武器', '',
         table(['武器', '稀有度', '主屬性（強化 0 → 滿級）', '詞條與等級', '取得'], weapons),
         '## 上裝與下裝', '', slot_table({'上裝', '下裝'}),
@@ -515,6 +517,10 @@ def gear_page():
         '## 製作', '',
         '- 通關某一難度的裝備副本（委託，例如烈炎之佑、蒼雷之衛）後，就能在家園的鍛造鋪製作這個副本可能掉落的裝備；武器與防具在同一處製作。',
         '- ' + '；'.join(f"{STARS[r]}裝備出自{'、'.join(sorted(lv, key=ROMAN.index))}難度的委託" for r, lv in diffs.items()) + '。', '',
+        # Facts from one player's guide alone carry a footnote that links it (../AGENTS.md, Visible page).
+        f"[^1]: [666bj，蓝原数据机制导论 7.5 装备品级成长体系、9.3 套装效果速查表（NGA 玩家社區，簡體中文，2026-11-26）]({NGA_GEAR['url']})",
+        f"[^2]: [叫我棉被，涂山小玉攻略，2:30 的長空協奏 4 件套畫面（Bilibili，2026-11-27）]({VIDEO_MIANBEI['url']})",
+        f"[^3]: [打遊戲的老二，公测入坑指南，17:09 起的裝備系統（Bilibili，2026-11-27）]({VIDEO_LAOER['url']})", '',
     ]
     head = front('裝備', '裝備是角色的武器、上裝、下裝、耳環與戒指五個部位，上裝到戒指四個部位可湊成套裝。',
                  f'第三次測試的遊戲資料（BWIKI，{len(items)} 件，2026-11-28 讀取）；公測 1.0 的套裝數值與培養規則讀自 NGA 與 Bilibili 的玩家整理（2026-11-26、27）',

@@ -24,7 +24,7 @@
 //     community); the page notes link the Markdown twin, llms.txt and index.json; no text in <main>
 //     is about the site or the page; the body does not open with a paragraph after the
 //     answer line; on a page of the community section, every table row (or its header), list
-//     item and paragraph links a source (scripts/check-page-text.mjs).
+//     item and paragraph links a source; every footnote links a listed source (scripts/check-page-text.mjs).
 // 12. Prose ledger: every unit of the site's own prose has been read against
 //     scripts/prose-rubric.md and is recorded in reviews/prose-ledger.json (scripts/prose-review.mjs).
 // Being found: title, description, canonical, hreflang and sitemap (scripts/check-found.mjs).
@@ -39,7 +39,7 @@ import { SITE, LOCALES, LLMS_NOTES, localeOf, bareId, idInLocale, htmlPath, mdPa
 import { bundlePath } from '../src/lib/llms.mjs';
 import { readPages, readPending } from '../src/lib/content-index.mjs';
 import { checkFound } from './check-found.mjs';
-import { checkHeaderAndOutputs, checkSelfReference, checkOpening, checkCommunity } from './check-page-text.mjs';
+import { checkHeaderAndOutputs, checkSelfReference, checkOpening, checkCommunity, checkFootnotes } from './check-page-text.mjs';
 import { checkProse } from './prose-review.mjs';
 
 const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
@@ -327,6 +327,7 @@ for (const { id, data } of pages) {
 	});
 	checkSelfReference(doc, id, fail);
 	checkOpening(doc, id, fail);
+	checkFootnotes(doc, id, fail, (data.sources || []).map((s) => s.url.replace(/\/$/, '')));
 	// The community section: every judgment carries a link to its source.
 	if (bareId(id) === 'community' || bareId(id).startsWith('community/')) {
 		checkCommunity(doc, id, fail, (data.sources || []).map((s) => s.url.replace(/\/$/, '')));
@@ -335,6 +336,7 @@ for (const { id, data } of pages) {
 	// 5. No decoration leak into extracted text.
 	const visible = normalize(doc.body.textContent);
 	for (const [name, pattern] of [
+		['footnote back-link glyph', /↩/],
 		// Add a pattern here for every piece of text the skin draws with CSS `content`.
 		['four-point star before a section name or the site name', /\u2726/],
 	]) {
