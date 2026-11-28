@@ -158,8 +158,10 @@ def character_page(c, text, kibo_by_cn):
         def item(label):
             return '、'.join(f"{names[slot[k]]}（{k}）" if names.get(slot.get(k)) else k for k in label.split('、'))
         src = LAUNCH['sources']['wanzi']
-        body += ['## 公測改動', '', f"{src['label']}在 Bilibili 的影片（{src['date']}）列出公測 1.0 與第三次測試的差別，箭頭前是第三次測試的數值：", '',
-                 table(['技能', '公測 1.0 的改動'], [[item(k), v] for k, v in changes])]
+        body += ['## 公測改動', '', f"{src['label']}在 Bilibili 的影片（{src['date']}）比較了公測 1.0 與第三次測試：", '',
+                 # The header names the direction only where a row gives a value before and after.
+                 table(['技能', '改動（第三次測試 → 公測 1.0）' if any('→' in v for _, v in changes) else '公測 1.0 的改動'],
+                       [[item(k), v] for k, v in changes])]
     if text.get('kibo'):
         body += ['## 奇波', '', text['kibo'], '']
     sources = [bwiki_source(c)]
