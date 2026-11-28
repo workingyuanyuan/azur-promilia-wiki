@@ -233,7 +233,7 @@ def kibo_page(k, by_tw, skill_text):
     if k['line']:
         evo.insert(0, ['系列', k['line']])
     work = '、'.join(k['work']) or '無'
-    desc = f"{k['name_tw']}是《藍色星原：旅謠》的{k['element']}屬性奇波，{k['stage']}，家園工作：{work}。"
+    desc = f"{k['name_tw']}是{k['element']}屬性奇波，{k['stage']}，家園工作：{work}。"
     body = ['## 基本資料', '', table(['項目', '內容'], facts)]
     if k['passives']:
         body += ['## 特性', '', table(['特性', '效果'], [[p['name_tw'], text_for(k, p['name_tw'], skill_text)] for p in k['passives']])]
