@@ -13,8 +13,8 @@ art:
   - title: "涂山小玉立绘原图（去背前）"
     url: https://webstatic.jimi-global.com/web/static/azurpromilia.jimi-global.com/home/assets/background-BPOao-rT.png
 sources:
-  - title: "BWIKI：涂山小玉（修订 24299，2026-11-21）"
-    url: https://wiki.biligame.com/ap/index.php?title=%E6%B6%82%E5%B1%B1%E5%B0%8F%E7%8E%89&oldid=24299
+  - title: "BWIKI：涂山小玉（修订 24928，2026-11-28）"
+    url: https://wiki.biligame.com/ap/index.php?title=%E6%B6%82%E5%B1%B1%E5%B0%8F%E7%8E%89&oldid=24928
   - title: "蓝色星原公测最新强度榜！环境大变样4星整体调整？全角色加强削弱一览！（Bilibili，丸子，2026-11-26）"
     url: https://www.bilibili.com/video/BV1qwySzcEkk/
   - title: "アズールプロミリア有志Wiki：涂山小玉（日服名称，2026-11-25 读取）"
