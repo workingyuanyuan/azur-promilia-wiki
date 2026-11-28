@@ -98,7 +98,8 @@ export function checkOpening(doc, id, fail) {
  * its header row or links one in every row, and each list item and paragraph links one. A source
  * is any link that leaves the site (`sources`: the page's source URLs; a link counts when it
  * starts with one of them, so a timestamp may follow). A table row that links another page of the
- * section (the index's list of topics) passes: the judgments are on that page.
+ * section (the index's list of topics) passes, and so does a list item that is nothing but such a
+ * link: the judgments are on that page.
  */
 export function checkCommunity(doc, id, fail, sources) {
 	const content = doc.querySelector('main .sl-markdown-content');
@@ -116,6 +117,9 @@ export function checkCommunity(doc, id, fail, sources) {
 	}
 	for (const el of content.querySelectorAll('li, p')) {
 		if (el.closest('.facts, table, .answer, .agent-note') || el.matches('.answer, .agent-note') || !el.textContent.trim() || el.querySelector('img')) continue;
+		// A list item that only links other pages of the section (the index's topics) holds no judgment.
+		const links = [...el.querySelectorAll('a[href]')];
+		if (el.matches('li') && links.length && links.every((a) => /^\/(?:[^/]+\/)*community\/[^/]+\/$/.test(a.getAttribute('href'))) && el.textContent.trim() === links.map((a) => a.textContent.trim()).join('')) continue;
 		if (!cites(el)) fail(id, `community page: text names no source: ${el.textContent.replace(/\s+/g, ' ').trim().slice(0, 60)}`);
 	}
 }
