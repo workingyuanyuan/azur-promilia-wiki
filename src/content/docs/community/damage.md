@@ -22,30 +22,30 @@ sources:
 
 | 隊伍與奇波（主力在前） | 軸長（秒） | 總傷害 | 軸內 DPS | 來源 |
 | --- | --- | --- | --- | --- |
-| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[楓糖](/characters/maple/)（[摩空球](/kibo/mokongqiu/)）、[星臨者](/characters/starborn/)（[音霸蛙](/kibo/yinbawa/)） | 28.02 | 270.2萬 | 96,445 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[莉莉](/characters/lily/)（[摩空球](/kibo/mokongqiu/)）、[星臨者](/characters/starborn/)（[馱馱龍](/kibo/tuotuolong/)） | 28.53 | 251.5萬 | 88,158 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[莉莉](/characters/lily/)（[音霸蛙](/kibo/yinbawa/)）、[星臨者](/characters/starborn/)（[馱馱龍](/kibo/tuotuolong/)） | 28.53 | 240.7萬 | 84,351 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[楓糖](/characters/maple/)（[摩空球](/kibo/mokongqiu/)）、[米砂](/characters/metsa/)（[音霸蛙](/kibo/yinbawa/)） | 32.85 | 267.3萬 | 81,368 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [塗山小玉](/characters/tushan-xiaoyu/)、[莉莉](/characters/lily/)、[楓糖](/characters/maple/) | 約27 | 298萬 | 約10.9萬 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321414396977)（含先天因子特性；不含時約 280 萬） |
-| [末音](/characters/morwyn-halkon/)（[電鋸螳](/kibo/dianjutang/)）、[米蒂](/characters/mitty/)（[霆羽獸](/kibo/tingyushou/)）、[星臨者](/characters/starborn/)（[音霸蛙](/kibo/yinbawa/)） | 23.67 | 198.6萬 | 83,896 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [忒拉拉](/characters/terara/)（[炎晶甲](/kibo/yanjingjia/)）、[寒悠悠](/characters/han-youyou/)（[摩空球](/kibo/mokongqiu/)）、[星臨者](/characters/starborn/)（[音霸蛙](/kibo/yinbawa/)） | 21.60 | 161.9萬 | 74,951 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
+| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[楓糖](/characters/maple/)（[摩空球](/kibo/mokongqiu/)）、[星臨者](/characters/starborn/)（[音霸蛙](/kibo/yinbawa/)） | 28.02 | 270.2萬 | 96,445 | [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/) |
+| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[莉莉](/characters/lily/)（[摩空球](/kibo/mokongqiu/)）、[星臨者](/characters/starborn/)（[馱馱龍](/kibo/tuotuolong/)） | 28.53 | 251.5萬 | 88,158 | 瀧瀧瀧ii |
+| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[莉莉](/characters/lily/)（[音霸蛙](/kibo/yinbawa/)）、[星臨者](/characters/starborn/)（[馱馱龍](/kibo/tuotuolong/)） | 28.53 | 240.7萬 | 84,351 | 瀧瀧瀧ii |
+| [塗山小玉](/characters/tushan-xiaoyu/)（[森彩靈蝶](/kibo/sencailingdie/)）、[楓糖](/characters/maple/)（[摩空球](/kibo/mokongqiu/)）、[米砂](/characters/metsa/)（[音霸蛙](/kibo/yinbawa/)） | 32.85 | 267.3萬 | 81,368 | 瀧瀧瀧ii |
+| [塗山小玉](/characters/tushan-xiaoyu/)、[莉莉](/characters/lily/)、[楓糖](/characters/maple/) | 約27 | 298萬 | 約10.9萬 | 瀧瀧瀧ii（含先天因子特性；不含時約 280 萬） |
+| [末音](/characters/morwyn-halkon/)（[電鋸螳](/kibo/dianjutang/)）、[米蒂](/characters/mitty/)（[霆羽獸](/kibo/tingyushou/)）、[星臨者](/characters/starborn/)（[音霸蛙](/kibo/yinbawa/)） | 23.67 | 198.6萬 | 83,896 | 瀧瀧瀧ii |
+| [忒拉拉](/characters/terara/)（[炎晶甲](/kibo/yanjingjia/)）、[寒悠悠](/characters/han-youyou/)（[摩空球](/kibo/mokongqiu/)）、[星臨者](/characters/starborn/)（[音霸蛙](/kibo/yinbawa/)） | 21.60 | 161.9萬 | 74,951 | 瀧瀧瀧ii |
 
-- [忒拉拉](/characters/terara/)：[瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)寫明長線可把奇波換成[夢華九尾](/kibo/menghuajiuwei/)。
+- [忒拉拉](/characters/terara/)：瀧瀧瀧ii寫明長線可把奇波換成[夢華九尾](/kibo/menghuajiuwei/)。
 
 ## 塗山小玉的靈子
 
 - [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)在[塗山小玉](/characters/tushan-xiaoyu/)、[楓糖](/characters/maple/)、[星臨者](/characters/starborn/)的隊伍中比較主力的靈子，以花之舞 1 階的隊伍傷害為 100%。
 
-| 靈子 | 稀有度 | 階 | 隊伍傷害比（[瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)） | 軸內 DPS |
+| 靈子 | 稀有度 | 階 | 隊伍傷害比（瀧瀧瀧ii） | 軸內 DPS |
 | --- | --- | --- | --- | --- |
 | 花之舞 | SSR | 1 | 100.0% | 96,445 |
 | 猛攻對決 | SSR | 5 | 98.5% | 94,977 |
 | 猛攻對決 | SSR | 1 | 92.9% | 89,558 |
 | 摺紙寄情 | SR | 5 | 87.4% | 84,294 |
 
-- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=144)比較塗山小玉帶各靈子的傷害，以花之舞 1 階為 100%。
+- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/)比較塗山小玉帶各靈子的傷害，以花之舞 1 階為 100%。
 
-| 靈子 | 稀有度 | 階 | 傷害比（[叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=144)） |
+| 靈子 | 稀有度 | 階 | 傷害比（叫我棉被） |
 | --- | --- | --- | --- |
 | 花之舞 | SSR | 滿 | 118.8% |
 | 花之舞 | SSR | 1 | 100% |
@@ -60,7 +60,7 @@ sources:
 
 - [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)在[末音](/characters/morwyn-halkon/)、[米蒂](/characters/mitty/)、[星臨者](/characters/starborn/)的隊伍中比較主力的靈子，以廚房的秘密 1 階的隊伍傷害為 100%。
 
-| 靈子 | 稀有度 | 階 | 隊伍傷害比（[瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)） | 軸內 DPS |
+| 靈子 | 稀有度 | 階 | 隊伍傷害比（瀧瀧瀧ii） | 軸內 DPS |
 | --- | --- | --- | --- | --- |
 | 猛攻對決 | SSR | 5 | 108.0% | 90,580 |
 | 猛攻對決 | SSR | 1 | 100.6% | 84,396 |
@@ -71,7 +71,7 @@ sources:
 
 - [瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)在[忒拉拉](/characters/terara/)、[寒悠悠](/characters/han-youyou/)、[星臨者](/characters/starborn/)的隊伍中比較主力的靈子，以狩獵姿態 5 階的隊伍傷害為 100%。
 
-| 靈子 | 稀有度 | 階 | 隊伍傷害比（[瀧瀧瀧ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)） | 軸內 DPS |
+| 靈子 | 稀有度 | 階 | 隊伍傷害比（瀧瀧瀧ii） | 軸內 DPS |
 | --- | --- | --- | --- | --- |
 | 猛攻對決 | SSR | 5 | 112.8% | 84,508 |
 | 猛攻對決 | SSR | 1 | 106.8% | 80,067 |

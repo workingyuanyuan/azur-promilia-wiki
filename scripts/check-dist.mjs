@@ -24,7 +24,7 @@
 //     community); the page notes link the Markdown twin, llms.txt and index.json; no text in <main>
 //     is about the site or the page; the body does not open with a paragraph after the
 //     answer line; on a page of the community section, every table row (or its header), list
-//     item and paragraph links a source; every footnote links a listed source (scripts/check-page-text.mjs).
+//     item and paragraph links a source or names one its h2 section linked; every footnote links a listed source (scripts/check-page-text.mjs).
 // 12. Prose ledger: every unit of the site's own prose has been read against
 //     scripts/prose-rubric.md and is recorded in reviews/prose-ledger.json (scripts/prose-review.mjs).
 // Being found: title, description, canonical, hreflang and sitemap (scripts/check-found.mjs).
@@ -328,7 +328,7 @@ for (const { id, data } of pages) {
 	checkSelfReference(doc, id, fail);
 	checkOpening(doc, id, fail);
 	checkFootnotes(doc, id, fail, (data.sources || []).map((s) => s.url.replace(/\/$/, '')));
-	// The community section: every judgment carries a link to its source.
+	// The community section: every judgment links its source or names one its h2 section linked.
 	if (bareId(id) === 'community' || bareId(id).startsWith('community/')) {
 		checkCommunity(doc, id, fail, (data.sources || []).map((s) => s.url.replace(/\/$/, '')));
 	}

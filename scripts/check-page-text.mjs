@@ -94,33 +94,48 @@ export function checkOpening(doc, id, fail) {
 
 /**
  * A game wiki's community section (`community/`, root AGENTS.md "Community section"): every
- * judgment names its source. In the body (page notes aside), each table either links a source in
- * its header row or links one in every row, and each list item and paragraph links one. A source
- * is any link that leaves the site (`sources`: the page's source URLs; a link counts when it
- * starts with one of them, so a timestamp may follow). A table row that links another page of the
- * section (the index's list of topics) passes, and so does a list item that is nothing but such a
- * link: the judgments are on that page.
+ * judgment names its source. A section (h2) links each of its sources once (../COMMUNITY.md), so
+ * in the body (page notes aside) a table passes when its header row links a source or names a
+ * source linked earlier in the section, and otherwise each of its rows must; each list item and
+ * paragraph must too. A source is any link that leaves the site (`sources`: the page's source
+ * URLs; a link counts when it starts with one of them, so a timestamp may follow); its name is the
+ * link text without a closing parenthesis. A table row that links another page of the section
+ * (the index's list of topics) passes, and so does a list item that is nothing but such a link: the
+ * judgments are on that page.
  */
 export function checkCommunity(doc, id, fail, sources) {
 	const content = doc.querySelector('main .sl-markdown-content');
 	if (!content) return;
-	const cites = (el) => [...el.querySelectorAll('a[href]')].some((a) => sources.some((s) => a.getAttribute('href').startsWith(s)));
-	for (const el of content.querySelectorAll('table')) {
-		if (el.closest('.facts')) continue;
-		const head = el.querySelector('thead tr');
-		if (head && cites(head)) continue;
-		for (const row of el.querySelectorAll('tbody tr')) {
-			// A row that leads to another page of the section is a link, not a judgment.
-			const leads = [...row.querySelectorAll('a[href]')].some((a) => /^\/(?:[^/]+\/)*community\/[^/]+\/$/.test(a.getAttribute('href')));
-			if (!leads && !cites(row)) fail(id, `community page: a table row names no source: ${row.textContent.replace(/\s+/g, ' ').trim().slice(0, 60)}`);
+	const own = (el) => [...el.querySelectorAll('a[href]')].filter((a) => sources.some((s) => a.getAttribute('href').startsWith(s)));
+	const section = /^\/(?:[^/]+\/)*community\/[^/]+\/$/;
+	// The names of the sources linked so far in the current h2 section.
+	let linked = [];
+	const names = (el) => {
+		const found = own(el);
+		linked.push(...found.map((a) => a.textContent.replace(/[（(][^（()）]*[）)]$/, '').trim()).filter(Boolean));
+		return found.length > 0 || linked.some((n) => el.textContent.includes(n));
+	};
+	for (const el of content.querySelectorAll('h2, table, li, p')) {
+		if (el.matches('h2')) {
+			linked = [];
+			continue;
 		}
-	}
-	for (const el of content.querySelectorAll('li, p')) {
-		if (el.closest('.facts, table, .answer, .agent-note') || el.matches('.answer, .agent-note') || !el.textContent.trim() || el.querySelector('img')) continue;
+		if (el.closest('.facts, .answer, .agent-note') || el.matches('.answer, .agent-note')) continue;
+		if (el.matches('table')) {
+			const head = el.querySelector('thead tr');
+			if (head && names(head)) continue;
+			for (const row of el.querySelectorAll('tbody tr')) {
+				// A row that leads to another page of the section is a link, not a judgment.
+				const leads = [...row.querySelectorAll('a[href]')].some((a) => section.test(a.getAttribute('href')));
+				if (!leads && !names(row)) fail(id, `community page: a table row names no source: ${row.textContent.replace(/\s+/g, ' ').trim().slice(0, 60)}`);
+			}
+			continue;
+		}
+		if (el.closest('table') || !el.textContent.trim() || el.querySelector('img')) continue;
 		// A list item that only links other pages of the section (the index's topics) holds no judgment.
 		const links = [...el.querySelectorAll('a[href]')];
-		if (el.matches('li') && links.length && links.every((a) => /^\/(?:[^/]+\/)*community\/[^/]+\/$/.test(a.getAttribute('href'))) && el.textContent.trim() === links.map((a) => a.textContent.trim()).join('')) continue;
-		if (!cites(el)) fail(id, `community page: text names no source: ${el.textContent.replace(/\s+/g, ' ').trim().slice(0, 60)}`);
+		if (el.matches('li') && links.length && links.every((a) => section.test(a.getAttribute('href'))) && el.textContent.trim() === links.map((a) => a.textContent.trim()).join('')) continue;
+		if (!names(el)) fail(id, `community page: text names no source: ${el.textContent.replace(/\s+/g, ' ').trim().slice(0, 60)}`);
 	}
 }
 

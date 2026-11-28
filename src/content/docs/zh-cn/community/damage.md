@@ -22,30 +22,30 @@ sources:
 
 | 队伍与奇波（主力在前） | 轴长（秒） | 总伤害 | 轴内 DPS | 来源 |
 | --- | --- | --- | --- | --- |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[枫糖](/zh-cn/characters/maple/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[星临者](/zh-cn/characters/starborn/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 28.02 | 270.2万 | 96,445 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[莉莉](/zh-cn/characters/lily/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[星临者](/zh-cn/characters/starborn/)（[驮驮龙](/zh-cn/kibo/tuotuolong/)） | 28.53 | 251.5万 | 88,158 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[莉莉](/zh-cn/characters/lily/)（[音霸蛙](/zh-cn/kibo/yinbawa/)）、[星临者](/zh-cn/characters/starborn/)（[驮驮龙](/zh-cn/kibo/tuotuolong/)） | 28.53 | 240.7万 | 84,351 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[枫糖](/zh-cn/characters/maple/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[米砂](/zh-cn/characters/metsa/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 32.85 | 267.3万 | 81,368 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)、[莉莉](/zh-cn/characters/lily/)、[枫糖](/zh-cn/characters/maple/) | 约27 | 298万 | 约10.9万 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321414396977)（含先天因子特性；不含时约 280 万） |
-| [末音](/zh-cn/characters/morwyn-halkon/)（[电锯螳](/zh-cn/kibo/dianjutang/)）、[米蒂](/zh-cn/characters/mitty/)（[霆羽兽](/zh-cn/kibo/tingyushou/)）、[星临者](/zh-cn/characters/starborn/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 23.67 | 198.6万 | 83,896 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [忒拉拉](/zh-cn/characters/terara/)（[炎晶甲](/zh-cn/kibo/yanjingjia/)）、[寒悠悠](/zh-cn/characters/han-youyou/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[星临者](/zh-cn/characters/starborn/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 21.60 | 161.9万 | 74,951 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[枫糖](/zh-cn/characters/maple/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[星临者](/zh-cn/characters/starborn/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 28.02 | 270.2万 | 96,445 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/) |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[莉莉](/zh-cn/characters/lily/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[星临者](/zh-cn/characters/starborn/)（[驮驮龙](/zh-cn/kibo/tuotuolong/)） | 28.53 | 251.5万 | 88,158 | 泷泷泷ii |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[莉莉](/zh-cn/characters/lily/)（[音霸蛙](/zh-cn/kibo/yinbawa/)）、[星临者](/zh-cn/characters/starborn/)（[驮驮龙](/zh-cn/kibo/tuotuolong/)） | 28.53 | 240.7万 | 84,351 | 泷泷泷ii |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)（[森彩灵蝶](/zh-cn/kibo/sencailingdie/)）、[枫糖](/zh-cn/characters/maple/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[米砂](/zh-cn/characters/metsa/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 32.85 | 267.3万 | 81,368 | 泷泷泷ii |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)、[莉莉](/zh-cn/characters/lily/)、[枫糖](/zh-cn/characters/maple/) | 约27 | 298万 | 约10.9万 | 泷泷泷ii（含先天因子特性；不含时约 280 万） |
+| [末音](/zh-cn/characters/morwyn-halkon/)（[电锯螳](/zh-cn/kibo/dianjutang/)）、[米蒂](/zh-cn/characters/mitty/)（[霆羽兽](/zh-cn/kibo/tingyushou/)）、[星临者](/zh-cn/characters/starborn/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 23.67 | 198.6万 | 83,896 | 泷泷泷ii |
+| [忒拉拉](/zh-cn/characters/terara/)（[炎晶甲](/zh-cn/kibo/yanjingjia/)）、[寒悠悠](/zh-cn/characters/han-youyou/)（[摩空球](/zh-cn/kibo/mokongqiu/)）、[星临者](/zh-cn/characters/starborn/)（[音霸蛙](/zh-cn/kibo/yinbawa/)） | 21.60 | 161.9万 | 74,951 | 泷泷泷ii |
 
-- [忒拉拉](/zh-cn/characters/terara/)：[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)写明长线可把奇波换成[梦华九尾](/zh-cn/kibo/menghuajiuwei/)。
+- [忒拉拉](/zh-cn/characters/terara/)：泷泷泷ii写明长线可把奇波换成[梦华九尾](/zh-cn/kibo/menghuajiuwei/)。
 
 ## 涂山小玉的灵子
 
 - [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)在[涂山小玉](/zh-cn/characters/tushan-xiaoyu/)、[枫糖](/zh-cn/characters/maple/)、[星临者](/zh-cn/characters/starborn/)的队伍中比较主力的灵子，以花之舞 1 阶的队伍伤害为 100%。
 
-| 灵子 | 稀有度 | 阶 | 队伍伤害比（[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)） | 轴内 DPS |
+| 灵子 | 稀有度 | 阶 | 队伍伤害比（泷泷泷ii） | 轴内 DPS |
 | --- | --- | --- | --- | --- |
 | 花之舞 | SSR | 1 | 100.0% | 96,445 |
 | 猛攻对决 | SSR | 5 | 98.5% | 94,977 |
 | 猛攻对决 | SSR | 1 | 92.9% | 89,558 |
 | 折纸寄情 | SR | 5 | 87.4% | 84,294 |
 
-- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=144)比较涂山小玉带各灵子的伤害，以花之舞 1 阶为 100%。
+- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/)比较涂山小玉带各灵子的伤害，以花之舞 1 阶为 100%。
 
-| 灵子 | 稀有度 | 阶 | 伤害比（[叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=144)） |
+| 灵子 | 稀有度 | 阶 | 伤害比（叫我棉被） |
 | --- | --- | --- | --- |
 | 花之舞 | SSR | 满 | 118.8% |
 | 花之舞 | SSR | 1 | 100% |
@@ -60,7 +60,7 @@ sources:
 
 - [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)在[末音](/zh-cn/characters/morwyn-halkon/)、[米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/)的队伍中比较主力的灵子，以厨房的秘密 1 阶的队伍伤害为 100%。
 
-| 灵子 | 稀有度 | 阶 | 队伍伤害比（[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)） | 轴内 DPS |
+| 灵子 | 稀有度 | 阶 | 队伍伤害比（泷泷泷ii） | 轴内 DPS |
 | --- | --- | --- | --- | --- |
 | 猛攻对决 | SSR | 5 | 108.0% | 90,580 |
 | 猛攻对决 | SSR | 1 | 100.6% | 84,396 |
@@ -71,7 +71,7 @@ sources:
 
 - [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)在[忒拉拉](/zh-cn/characters/terara/)、[寒悠悠](/zh-cn/characters/han-youyou/)、[星临者](/zh-cn/characters/starborn/)的队伍中比较主力的灵子，以狩猎姿态 5 阶的队伍伤害为 100%。
 
-| 灵子 | 稀有度 | 阶 | 队伍伤害比（[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)） | 轴内 DPS |
+| 灵子 | 稀有度 | 阶 | 队伍伤害比（泷泷泷ii） | 轴内 DPS |
 | --- | --- | --- | --- | --- |
 | 猛攻对决 | SSR | 5 | 112.8% | 84,508 |
 | 猛攻对决 | SSR | 1 | 106.8% | 80,067 |

@@ -21,7 +21,7 @@ sources:
 
 ## 各角色的梯度
 
-| 角色 | 职业 | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=10) | [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=835) | [丸子](https://www.bilibili.com/video/BV1qwySzcEkk/?t=3) |
+| 角色 | 职业 | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/) | [丸子](https://www.bilibili.com/video/BV1qwySzcEkk/) |
 | --- | --- | --- | --- | --- |
 | [佩佩](/zh-cn/characters/pei-pei/) | 爆发 | T1 | T1 | T2 |
 | [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | 猛攻 | T0 | T0 | T0 |
@@ -48,15 +48,15 @@ sources:
 
 ## 几份榜的共同处
 
-- [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)：3 份榜排在最高一级（[叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=10) T0、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=835) T0、[丸子](https://www.bilibili.com/video/BV1qwySzcEkk/?t=3) T0）。
-- [星临者](/zh-cn/characters/starborn/)：2 份榜排在最高一级（[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=835) T0、[丸子](https://www.bilibili.com/video/BV1qwySzcEkk/?t=3) T0）；[叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=10)排在 T1。
-- [诺诺](/zh-cn/characters/nono/)：3 份榜排在最低一级（[叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=10) T1.5、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=835) T3、[丸子](https://www.bilibili.com/video/BV1qwySzcEkk/?t=3) T3）。
-- [西芙莉雅](/zh-cn/characters/symphoria-tarandelion/)：2 份榜排在最低一级（[叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=10) T1.5、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=835) T3）；[丸子](https://www.bilibili.com/video/BV1qwySzcEkk/?t=3)排在 T2。
+- [涂山小玉](/zh-cn/characters/tushan-xiaoyu/)：3 份榜排在最高一级（[叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) T0、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/) T0、[丸子](https://www.bilibili.com/video/BV1qwySzcEkk/) T0）。
+- [星临者](/zh-cn/characters/starborn/)：2 份榜排在最高一级（春风满马 T0、丸子 T0）；叫我棉被排在 T1。
+- [诺诺](/zh-cn/characters/nono/)：3 份榜排在最低一级（叫我棉被 T1.5、春风满马 T3、丸子 T3）。
+- [西芙莉雅](/zh-cn/characters/symphoria-tarandelion/)：2 份榜排在最低一级（叫我棉被 T1.5、春风满马 T3）；丸子排在 T2。
 
 ## 各榜的评估条件
 
 | 创作者 | 评估条件 | 梯度（高到低） |
 | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=10) | 开荒期角色强度榜，依攻略组在公测环境的实战表现排定 | T0、T0.5、T1、T1.5 |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=835) | 以高难深渊的毕业水准评估：五星角色 0 定弦、四星角色 6 定弦、星临者 4 定弦；同一梯度内不分先后 | T0、T1、T2、T3 |
-| [丸子](https://www.bilibili.com/video/BV1qwySzcEkk/?t=3) | 沿用第三次测试强度榜的评分准则；对角色后期的表现有所保留 | T0、T0.5、T1、T2、T3 |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | 开荒期角色强度榜，依攻略组在公测环境的实战表现排定 | T0、T0.5、T1、T1.5 |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/) | 以高难深渊的毕业水准评估：五星角色 0 定弦、四星角色 6 定弦、星临者 4 定弦；同一梯度内不分先后 | T0、T1、T2、T3 |
+| [丸子](https://www.bilibili.com/video/BV1qwySzcEkk/) | 沿用第三次测试强度榜的评分准则；对角色后期的表现有所保留 | T0、T0.5、T1、T2、T3 |

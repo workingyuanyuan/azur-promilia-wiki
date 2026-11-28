@@ -27,94 +27,94 @@ sources:
 
 | 主力 | 队友 | 列出的创作者 |
 | --- | --- | --- |
-| [佩佩](/zh-cn/characters/pei-pei/) | [诺诺](/zh-cn/characters/nono/)、[芃芃](/zh-cn/characters/pengpeng/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=660)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=330) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [枫糖](/zh-cn/characters/maple/)、[星临者](/zh-cn/characters/starborn/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=252)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=270)、[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [星临者](/zh-cn/characters/starborn/)、[米砂](/zh-cn/characters/metsa/) | [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=266)、[打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/?t=440) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [枫糖](/zh-cn/characters/maple/)、[米砂](/zh-cn/characters/metsa/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=252)、[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)、[打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/?t=428) |
-| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [枫糖](/zh-cn/characters/maple/)、[莉莉](/zh-cn/characters/lily/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=252)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=270)、[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321414396977) |
-| [夏儿](/zh-cn/characters/shalle/) | [阿比](/zh-cn/characters/abyy/)、[璐璐卡](/zh-cn/characters/luruka/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=552)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=444) |
-| [末音](/zh-cn/characters/morwyn-halkon/) | [米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=462)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=630)、[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) |
-| [红宝石](/zh-cn/characters/ruby/) | [寒悠悠](/zh-cn/characters/han-youyou/)、[璐璐卡](/zh-cn/characters/luruka/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=350)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=380) |
-| [红宝石](/zh-cn/characters/ruby/) | [法兰塔](/zh-cn/characters/faridah/)、[米蒂](/zh-cn/characters/mitty/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=350)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=380) |
-| [忒拉拉](/zh-cn/characters/terara/) | [寒悠悠](/zh-cn/characters/han-youyou/)、[星临者](/zh-cn/characters/starborn/) | [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=676)、[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201)、[打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/?t=543) |
-| [忒拉拉](/zh-cn/characters/terara/) | [寒悠悠](/zh-cn/characters/han-youyou/)、[艾妮丝](/zh-cn/characters/anais/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=752)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=676) |
+| [佩佩](/zh-cn/characters/pei-pei/) | [诺诺](/zh-cn/characters/nono/)、[芃芃](/zh-cn/characters/pengpeng/) | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/)、[春风满马](https://www.bilibili.com/video/BV11R17ztEXK/) |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [枫糖](/zh-cn/characters/maple/)、[星临者](/zh-cn/characters/starborn/) | 叫我棉被、春风满马、[泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/) |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [星临者](/zh-cn/characters/starborn/)、[米砂](/zh-cn/characters/metsa/) | [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/)、[打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/) |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [枫糖](/zh-cn/characters/maple/)、[米砂](/zh-cn/characters/metsa/) | 叫我棉被、泷泷泷ii、打游戏的老二 |
+| [涂山小玉](/zh-cn/characters/tushan-xiaoyu/) | [枫糖](/zh-cn/characters/maple/)、[莉莉](/zh-cn/characters/lily/) | 叫我棉被、春风满马、泷泷泷ii |
+| [夏儿](/zh-cn/characters/shalle/) | [阿比](/zh-cn/characters/abyy/)、[璐璐卡](/zh-cn/characters/luruka/) | 叫我棉被、春风满马 |
+| [末音](/zh-cn/characters/morwyn-halkon/) | [米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/) | 叫我棉被、春风满马、泷泷泷ii |
+| [红宝石](/zh-cn/characters/ruby/) | [寒悠悠](/zh-cn/characters/han-youyou/)、[璐璐卡](/zh-cn/characters/luruka/) | 叫我棉被、春风满马 |
+| [红宝石](/zh-cn/characters/ruby/) | [法兰塔](/zh-cn/characters/faridah/)、[米蒂](/zh-cn/characters/mitty/) | 叫我棉被、春风满马 |
+| [忒拉拉](/zh-cn/characters/terara/) | [寒悠悠](/zh-cn/characters/han-youyou/)、[星临者](/zh-cn/characters/starborn/) | 春风满马、泷泷泷ii、打游戏的老二 |
+| [忒拉拉](/zh-cn/characters/terara/) | [寒悠悠](/zh-cn/characters/han-youyou/)、[艾妮丝](/zh-cn/characters/anais/) | 叫我棉被、春风满马 |
 
 ## 佩佩
 
 | 创作者 | 2 号队友 | 3 号队友（择一） |
 | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=660) | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=660) | [诺诺](/zh-cn/characters/nono/) | [芃芃](/zh-cn/characters/pengpeng/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=660) | [兰香子](/zh-cn/characters/lan-xiangzi/) | [艾妮丝](/zh-cn/characters/anais/)、[卡塔露](/zh-cn/characters/kataru/)、[姬瑟贝露](/zh-cn/characters/cathbelle/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=660) | [法兰塔](/zh-cn/characters/faridah/) | [米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=330)（主推） | [诺诺](/zh-cn/characters/nono/) | [艾妮丝](/zh-cn/characters/anais/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=330)（备选） | [诺诺](/zh-cn/characters/nono/) | [芃芃](/zh-cn/characters/pengpeng/) |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
+| 叫我棉被 | [诺诺](/zh-cn/characters/nono/) | [芃芃](/zh-cn/characters/pengpeng/) |
+| 叫我棉被 | [兰香子](/zh-cn/characters/lan-xiangzi/) | [艾妮丝](/zh-cn/characters/anais/)、[卡塔露](/zh-cn/characters/kataru/)、[姬瑟贝露](/zh-cn/characters/cathbelle/) |
+| 叫我棉被 | [法兰塔](/zh-cn/characters/faridah/) | [米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/) |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [诺诺](/zh-cn/characters/nono/) | [艾妮丝](/zh-cn/characters/anais/) |
+| 春风满马（备选） | [诺诺](/zh-cn/characters/nono/) | [芃芃](/zh-cn/characters/pengpeng/) |
 
 ## 涂山小玉
 
 | 创作者 | 2 号队友 | 3 号队友（择一） | 奇波（主力；2 号；3 号） |
 | --- | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=252) | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/)、[米砂](/zh-cn/characters/metsa/)、[莉莉](/zh-cn/characters/lily/) | — |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=270)（主推） | [枫糖](/zh-cn/characters/maple/) | [莉莉](/zh-cn/characters/lily/) | — |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=270)（主推） | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/) | — |
-| [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/) | — |
-| [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) | [莉莉](/zh-cn/characters/lily/) | [星临者](/zh-cn/characters/starborn/) | — |
-| [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) | [枫糖](/zh-cn/characters/maple/) | [米砂](/zh-cn/characters/metsa/) | — |
-| [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321414396977) | [莉莉](/zh-cn/characters/lily/) | [枫糖](/zh-cn/characters/maple/) | — |
-| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=184)（最推荐） | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[摩空球](/zh-cn/kibo/mokongqiu/)或[音霸蛙](/zh-cn/kibo/yinbawa/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=248) | [枫糖](/zh-cn/characters/maple/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[摩空球](/zh-cn/kibo/mokongqiu/)或[音霸蛙](/zh-cn/kibo/yinbawa/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=266) | [星临者](/zh-cn/characters/starborn/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[绒心布里尼](/zh-cn/kibo/rongxinbulini/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
-| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/?t=428) | [枫糖](/zh-cn/characters/maple/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[音霸蛙](/zh-cn/kibo/yinbawa/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
-| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/?t=440) | [星临者](/zh-cn/characters/starborn/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[绒心布里尼](/zh-cn/kibo/rongxinbulini/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/)、[米砂](/zh-cn/characters/metsa/)、[莉莉](/zh-cn/characters/lily/) | — |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [枫糖](/zh-cn/characters/maple/) | [莉莉](/zh-cn/characters/lily/) | — |
+| 春风满马（主推） | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/) | — |
+| [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/) | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/) | — |
+| 泷泷泷ii | [莉莉](/zh-cn/characters/lily/) | [星临者](/zh-cn/characters/starborn/) | — |
+| 泷泷泷ii | [枫糖](/zh-cn/characters/maple/) | [米砂](/zh-cn/characters/metsa/) | — |
+| 泷泷泷ii | [莉莉](/zh-cn/characters/lily/) | [枫糖](/zh-cn/characters/maple/) | — |
+| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/)（最推荐） | [枫糖](/zh-cn/characters/maple/) | [星临者](/zh-cn/characters/starborn/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[摩空球](/zh-cn/kibo/mokongqiu/)或[音霸蛙](/zh-cn/kibo/yinbawa/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
+| 叫我棉被 | [枫糖](/zh-cn/characters/maple/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[摩空球](/zh-cn/kibo/mokongqiu/)或[音霸蛙](/zh-cn/kibo/yinbawa/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
+| 叫我棉被 | [星临者](/zh-cn/characters/starborn/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[绒心布里尼](/zh-cn/kibo/rongxinbulini/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
+| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/) | [枫糖](/zh-cn/characters/maple/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[音霸蛙](/zh-cn/kibo/yinbawa/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
+| 打游戏的老二 | [星临者](/zh-cn/characters/starborn/) | [米砂](/zh-cn/characters/metsa/) | [森彩灵蝶](/zh-cn/kibo/sencailingdie/)；[绒心布里尼](/zh-cn/kibo/rongxinbulini/)；[音霸蛙](/zh-cn/kibo/yinbawa/) |
 
 ## 夏儿
 
 | 创作者 | 2 号队友 | 3 号队友（择一） |
 | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=552) | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=552) | [诺诺](/zh-cn/characters/nono/) | [芃芃](/zh-cn/characters/pengpeng/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=552) | [兰香子](/zh-cn/characters/lan-xiangzi/) | [卡塔露](/zh-cn/characters/kataru/)、[艾妮丝](/zh-cn/characters/anais/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=552) | [法兰塔](/zh-cn/characters/faridah/) | [星临者](/zh-cn/characters/starborn/)、[米蒂](/zh-cn/characters/mitty/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=552) | [姬瑟贝露](/zh-cn/characters/cathbelle/) | [兰香子](/zh-cn/characters/lan-xiangzi/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=444)（主推） | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
+| 叫我棉被 | [诺诺](/zh-cn/characters/nono/) | [芃芃](/zh-cn/characters/pengpeng/) |
+| 叫我棉被 | [兰香子](/zh-cn/characters/lan-xiangzi/) | [卡塔露](/zh-cn/characters/kataru/)、[艾妮丝](/zh-cn/characters/anais/) |
+| 叫我棉被 | [法兰塔](/zh-cn/characters/faridah/) | [星临者](/zh-cn/characters/starborn/)、[米蒂](/zh-cn/characters/mitty/) |
+| 叫我棉被 | [姬瑟贝露](/zh-cn/characters/cathbelle/) | [兰香子](/zh-cn/characters/lan-xiangzi/) |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
 
 ## 末音
 
 | 创作者 | 2 号队友 | 3 号队友（择一） |
 | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=462) | [米蒂](/zh-cn/characters/mitty/) | [兰香子](/zh-cn/characters/lan-xiangzi/)、[卡塔露](/zh-cn/characters/kataru/)、[艾妮丝](/zh-cn/characters/anais/)、[星临者](/zh-cn/characters/starborn/)、[米砂](/zh-cn/characters/metsa/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=630)（主推） | [米蒂](/zh-cn/characters/mitty/) | [莉莉](/zh-cn/characters/lily/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=630)（备选） | [米蒂](/zh-cn/characters/mitty/) | [星临者](/zh-cn/characters/starborn/) |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [米蒂](/zh-cn/characters/mitty/) | [兰香子](/zh-cn/characters/lan-xiangzi/)、[卡塔露](/zh-cn/characters/kataru/)、[艾妮丝](/zh-cn/characters/anais/)、[星临者](/zh-cn/characters/starborn/)、[米砂](/zh-cn/characters/metsa/) |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [米蒂](/zh-cn/characters/mitty/) | [莉莉](/zh-cn/characters/lily/) |
+| 春风满马（备选） | [米蒂](/zh-cn/characters/mitty/) | [星临者](/zh-cn/characters/starborn/) |
 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) | [米蒂](/zh-cn/characters/mitty/) | [星临者](/zh-cn/characters/starborn/) |
 
 ## 红宝石
 
 | 创作者 | 2 号队友 | 3 号队友（择一） |
 | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=350) | [寒悠悠](/zh-cn/characters/han-youyou/) | [兰香子](/zh-cn/characters/lan-xiangzi/)、[璐璐卡](/zh-cn/characters/luruka/)、[艾妮丝](/zh-cn/characters/anais/)、[卡塔露](/zh-cn/characters/kataru/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=350) | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=350) | [姬瑟贝露](/zh-cn/characters/cathbelle/) | [兰香子](/zh-cn/characters/lan-xiangzi/) |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=350) | [法兰塔](/zh-cn/characters/faridah/) | [米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=380)（主推） | [寒悠悠](/zh-cn/characters/han-youyou/) | [璐璐卡](/zh-cn/characters/luruka/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=380)（备选） | [米蒂](/zh-cn/characters/mitty/) | [法兰塔](/zh-cn/characters/faridah/)、[姬瑟贝露](/zh-cn/characters/cathbelle/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=510)（主推） | [米蒂](/zh-cn/characters/mitty/) | [姬瑟贝露](/zh-cn/characters/cathbelle/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=590)（主推） | [米蒂](/zh-cn/characters/mitty/) | [法兰塔](/zh-cn/characters/faridah/) |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [寒悠悠](/zh-cn/characters/han-youyou/) | [兰香子](/zh-cn/characters/lan-xiangzi/)、[璐璐卡](/zh-cn/characters/luruka/)、[艾妮丝](/zh-cn/characters/anais/)、[卡塔露](/zh-cn/characters/kataru/) |
+| 叫我棉被 | [阿比](/zh-cn/characters/abyy/) | [璐璐卡](/zh-cn/characters/luruka/) |
+| 叫我棉被 | [姬瑟贝露](/zh-cn/characters/cathbelle/) | [兰香子](/zh-cn/characters/lan-xiangzi/) |
+| 叫我棉被 | [法兰塔](/zh-cn/characters/faridah/) | [米蒂](/zh-cn/characters/mitty/)、[星临者](/zh-cn/characters/starborn/) |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [寒悠悠](/zh-cn/characters/han-youyou/) | [璐璐卡](/zh-cn/characters/luruka/) |
+| 春风满马（备选） | [米蒂](/zh-cn/characters/mitty/) | [法兰塔](/zh-cn/characters/faridah/)、[姬瑟贝露](/zh-cn/characters/cathbelle/) |
+| 春风满马（主推） | [米蒂](/zh-cn/characters/mitty/) | [姬瑟贝露](/zh-cn/characters/cathbelle/) |
+| 春风满马（主推） | [米蒂](/zh-cn/characters/mitty/) | [法兰塔](/zh-cn/characters/faridah/) |
 
 ## 忒拉拉
 
 | 创作者 | 2 号队友 | 3 号队友（择一） |
 | --- | --- | --- |
-| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/?t=752) | [寒悠悠](/zh-cn/characters/han-youyou/) | [兰香子](/zh-cn/characters/lan-xiangzi/)、[艾妮丝](/zh-cn/characters/anais/)、[卡塔露](/zh-cn/characters/kataru/)、[米砂](/zh-cn/characters/metsa/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=676)（主推） | [寒悠悠](/zh-cn/characters/han-youyou/) | [星临者](/zh-cn/characters/starborn/) |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=676)（备选） | [寒悠悠](/zh-cn/characters/han-youyou/) | [艾妮丝](/zh-cn/characters/anais/) |
+| [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | [寒悠悠](/zh-cn/characters/han-youyou/) | [兰香子](/zh-cn/characters/lan-xiangzi/)、[艾妮丝](/zh-cn/characters/anais/)、[卡塔露](/zh-cn/characters/kataru/)、[米砂](/zh-cn/characters/metsa/) |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [寒悠悠](/zh-cn/characters/han-youyou/) | [星临者](/zh-cn/characters/starborn/) |
+| 春风满马（备选） | [寒悠悠](/zh-cn/characters/han-youyou/) | [艾妮丝](/zh-cn/characters/anais/) |
 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/#reply321412649201) | [寒悠悠](/zh-cn/characters/han-youyou/) | [星临者](/zh-cn/characters/starborn/) |
-| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/?t=543)（免费队伍） | [星临者](/zh-cn/characters/starborn/) | [寒悠悠](/zh-cn/characters/han-youyou/) |
+| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/)（免费队伍） | [星临者](/zh-cn/characters/starborn/) | [寒悠悠](/zh-cn/characters/han-youyou/) |
 
 ## 西芙莉雅
 
 | 创作者 | 2 号队友 | 3 号队友（择一） |
 | --- | --- | --- |
-| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/?t=810)（主推） | [莉莉](/zh-cn/characters/lily/) | [米砂](/zh-cn/characters/metsa/) |
+| [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/)（主推） | [莉莉](/zh-cn/characters/lily/) | [米砂](/zh-cn/characters/metsa/) |
 
 ## 各来源的条件
 
@@ -123,5 +123,5 @@ sources:
 | [叫我棉被](https://www.bilibili.com/video/BV1A4ymzKEmY/) | 开荒期角色强度榜，依攻略组在公测环境的实战表现排定 |
 | [春风满马](https://www.bilibili.com/video/BV11R17ztEXK/) | 以高难深渊的毕业水准评估：五星角色 0 定弦、四星角色 6 定弦、星临者 4 定弦；同一梯度内不分先后 |
 | [泷泷泷ii](https://www.bilibili.com/video/BV1KH1HzqECe/) | 毕业练度的热启动爆发：角色 Lv100，五星角色 0+1，四星角色满定弦并带满阶四星灵子，星临者 4 定弦，毕业金装 4 件套；敌人为 Lv100 标准首领、防御 1000、无属性克制；满能量、零印记起手；奇波技能增益按上限计，不含奇波自身的伤害、随机因子与先天因子；公测安装版 1.0.0.30 |
-| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/) | 涂山小玉一人的攻略：开荒期的操作、灵子、装备、奇波与配队；部分画面取自第三次测试 |
-| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/) | 新手入坑指南，介绍战斗与配队的思路；部分画面取自第三次测试 |
+| [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/) | 涂山小玉一人的攻略：开荒期的操作、灵子、装备、奇波与配队；部分画面取自第三次测试（视频简介） |
+| [打游戏的老二](https://www.bilibili.com/video/BV1Wey6z7E8p/) | 新手入坑指南，介绍战斗与配队的思路；部分画面取自第三次测试（视频简介） |

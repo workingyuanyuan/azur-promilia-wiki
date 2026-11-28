@@ -21,7 +21,7 @@ sources:
 
 - [春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)把家園設施分 3 級（T0、T1、T2），排的是建設先後，不是重要程度。
 
-| 類別 | 設施 | 建設先後（[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)） | 圖上的建議 |
+| 類別 | 設施 | 建設先後（春風滿馬） | 圖上的建議 |
 | --- | --- | --- | --- |
 | 採集 | [林果園](/systems/housing/#採集設施) | T0 | — |
 | 採集 | [礦場](/systems/housing/#礦場) | T0 | — |
@@ -46,7 +46,7 @@ sources:
 
 - [春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)的奇波推薦只看數值，比的是效率，不是工種評分；前期指 25 級前，後期指開全圖後。
 
-| 工作 | 前期（[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)） | 後期 |
+| 工作 | 前期（春風滿馬） | 後期 |
 | --- | --- | --- |
 | [伐木](/kibo/work/#伐木) | [棕木鹿](/kibo/zongmulu/)及其進化型 | [雷冠犛](/kibo/leiguanmao/) |
 | [採礦](/kibo/work/#採礦) | [巖甲蜥](/kibo/yanjiaxi/)及其進化型 | [雷冠犛](/kibo/leiguanmao/) |
@@ -60,17 +60,17 @@ sources:
 
 ## 各設施的建議
 
-- 採集設施：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)建議天賦詞條在同品質、同數值時，間隔時間 −10% 不低於 10% 機率雙倍，兩者都優於效率 +10%。
-- [牧場](/systems/housing/#牧場)：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=1076)建議盡量放有三種產物的奇波；先看要升級的裝備用哪些材料，再放產出它們的奇波，沒有想法就每種都放。
-- [農場](/systems/housing/#農場)：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)建議天賦詞條選成熟時間減少，遠優於效率評分。
-- [農場](/systems/housing/#農場)：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=965)建議種子先把月麻、棉花買到上限，再買一些麥子。
-- [農場](/systems/housing/#農場)：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=977)建議種子倉庫裡把高品質的種子和棉花排在前面。
-- 加工設施：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)建議不必細比奇波的效率，整體效率高即可，因為產物要手動收取。
-- 加工設施：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=521)建議選派駐後顯示用時最短的奇波即可。
-- 加工設施：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=651)建議天賦詞條在單件耗時長、不批量做的產物（如裝備）選加工時間減少，批量加工選返還基礎材料。
-- [共鳴石台](/systems/housing/#加工設施)：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=479)建議高品質的星結卡也要做一些，不必為了省材料只做低品質的。
-- [共鳴石台](/systems/housing/#加工設施)：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=703)建議定期到家園商店兌換做未開封的記憶要用的追憶的思緒，等能做出金色品質時再大量使用。
-- 大地圖的設施：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/?t=1272)建議先解鎖增加採礦、伐木與元素祭壇產能的設施。
+- 採集設施：[春風滿馬](https://www.bilibili.com/video/BV1yky2zKEAu/)建議天賦詞條在同品質、同數值時，間隔時間 −10% 不低於 10% 機率雙倍，兩者都優於效率 +10%。
+- [牧場](/systems/housing/#牧場)：春風滿馬建議盡量放有三種產物的奇波；先看要升級的裝備用哪些材料，再放產出它們的奇波，沒有想法就每種都放。
+- [農場](/systems/housing/#農場)：春風滿馬建議天賦詞條選成熟時間減少，遠優於效率評分。
+- [農場](/systems/housing/#農場)：春風滿馬建議種子先把月麻、棉花買到上限，再買一些麥子。
+- [農場](/systems/housing/#農場)：春風滿馬建議種子倉庫裡把高品質的種子和棉花排在前面。
+- 加工設施：春風滿馬建議不必細比奇波的效率，整體效率高即可，因為產物要手動收取。
+- 加工設施：春風滿馬建議選派駐後顯示用時最短的奇波即可。
+- 加工設施：春風滿馬建議天賦詞條在單件耗時長、不批量做的產物（如裝備）選加工時間減少，批量加工選返還基礎材料。
+- [共鳴石台](/systems/housing/#加工設施)：春風滿馬建議高品質的星結卡也要做一些，不必為了省材料只做低品質的。
+- [共鳴石台](/systems/housing/#加工設施)：春風滿馬建議定期到家園商店兌換做未開封的記憶要用的追憶的思緒，等能做出金色品質時再大量使用。
+- 大地圖的設施：春風滿馬建議先解鎖增加採礦、伐木與元素祭壇產能的設施。
 
 ## 來源的條件
 

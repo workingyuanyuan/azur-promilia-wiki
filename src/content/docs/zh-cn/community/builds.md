@@ -23,11 +23,11 @@ sources:
 
 | 来源 | 套装 | 上装 | 下装 | 耳环 | 戒指 | 武器 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [叫我棉被（首选）](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=150) | [长空协奏](/zh-cn/systems/gear/#套装) 4 件 | 星云同声 | 心之回响 | 翠华响 | 琉璃卷云 | 云啸风吟 |
-| [叫我棉被（过渡）](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=158) | [长空协奏](/zh-cn/systems/gear/#套装) 4 件 | 流光之音 | 流光和鸣 | 望月之芳 | 青流华 | 逐风惊岚 |
+| [叫我棉被（首选）](https://www.bilibili.com/video/BV1VQ1WzRER9/) | [长空协奏](/zh-cn/systems/gear/#套装) 4 件 | 星云同声 | 心之回响 | 翠华响 | 琉璃卷云 | 云啸风吟 |
+| 叫我棉被（过渡） | [长空协奏](/zh-cn/systems/gear/#套装) 4 件 | 流光之音 | 流光和鸣 | 望月之芳 | 青流华 | 逐风惊岚 |
 
-- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=166)的培养顺序：戒指（手饰） > 武器 = 耳环（头饰） > 上装 = 下装。
-- [叫我棉被](https://www.bilibili.com/video/BV1VQ1WzRER9/?t=388)推荐抽的定弦：1、2、6。
+- 叫我棉被的培养顺序：戒指（手饰） > 武器 = 耳环（头饰） > 上装 = 下装。
+- 叫我棉被推荐抽的定弦：1、2、6。
 
 ## 来源的条件
 

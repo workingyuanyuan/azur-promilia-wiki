@@ -21,7 +21,7 @@ sources:
 
 - [春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)把家园设施分 3 级（T0、T1、T2），排的是建设先后，不是重要程度。
 
-| 类别 | 设施 | 建设先后（[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)） | 图上的建议 |
+| 类别 | 设施 | 建设先后（春风满马） | 图上的建议 |
 | --- | --- | --- | --- |
 | 采集 | [林果园](/zh-cn/systems/housing/#采集设施) | T0 | — |
 | 采集 | [矿场](/zh-cn/systems/housing/#矿场) | T0 | — |
@@ -46,7 +46,7 @@ sources:
 
 - [春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)的奇波推荐只看数值，比的是效率，不是工种评分；前期指 25 级前，后期指开全图后。
 
-| 工作 | 前期（[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)） | 后期 |
+| 工作 | 前期（春风满马） | 后期 |
 | --- | --- | --- |
 | [伐木](/zh-cn/kibo/work/#伐木) | [棕木鹿](/zh-cn/kibo/zongmulu/)及其进化型 | [雷冠牦](/zh-cn/kibo/leiguanmao/) |
 | [采矿](/zh-cn/kibo/work/#采矿) | [岩甲蜥](/zh-cn/kibo/yanjiaxi/)及其进化型 | [雷冠牦](/zh-cn/kibo/leiguanmao/) |
@@ -60,17 +60,17 @@ sources:
 
 ## 各设施的建议
 
-- 采集设施：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)建议天赋词条在同质量、同数值时，间隔时间 −10% 不低于 10% 机率双倍，两者都优于效率 +10%。
-- [牧场](/zh-cn/systems/housing/#牧场)：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=1076)建议尽量放有三种产物的奇波；先看要升级的装备用哪些材料，再放产出它们的奇波，没有想法就每种都放。
-- [农场](/zh-cn/systems/housing/#农场)：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)建议天赋词条选成熟时间减少，远优于效率评分。
-- [农场](/zh-cn/systems/housing/#农场)：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=965)建议种子先把月麻、棉花买到上限，再买一些麦子。
-- [农场](/zh-cn/systems/housing/#农场)：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=977)建议种子仓库里把高质量的种子和棉花排在前面。
-- 加工设施：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/#reply325160025184)建议不必细比奇波的效率，整体效率高即可，因为产物要手动收取。
-- 加工设施：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=521)建议选派驻后显示用时最短的奇波即可。
-- 加工设施：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=651)建议天赋词条在单件耗时长、不批量做的产物（如装备）选加工时间减少，批量加工选返还基础材料。
-- [共鸣石台](/zh-cn/systems/housing/#加工设施)：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=479)建议高质量的星结卡也要做一些，不必为了省材料只做低质量的。
-- [共鸣石台](/zh-cn/systems/housing/#加工设施)：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=703)建议定期到家园商店兑换做未开封的记忆要用的追忆的思绪，等能做出金色质量时再大量使用。
-- 大地图的设施：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/?t=1272)建议先解锁增加采矿、伐木与元素祭坛产能的设施。
+- 采集设施：[春风满马](https://www.bilibili.com/video/BV1yky2zKEAu/)建议天赋词条在同质量、同数值时，间隔时间 −10% 不低于 10% 机率双倍，两者都优于效率 +10%。
+- [牧场](/zh-cn/systems/housing/#牧场)：春风满马建议尽量放有三种产物的奇波；先看要升级的装备用哪些材料，再放产出它们的奇波，没有想法就每种都放。
+- [农场](/zh-cn/systems/housing/#农场)：春风满马建议天赋词条选成熟时间减少，远优于效率评分。
+- [农场](/zh-cn/systems/housing/#农场)：春风满马建议种子先把月麻、棉花买到上限，再买一些麦子。
+- [农场](/zh-cn/systems/housing/#农场)：春风满马建议种子仓库里把高质量的种子和棉花排在前面。
+- 加工设施：春风满马建议不必细比奇波的效率，整体效率高即可，因为产物要手动收取。
+- 加工设施：春风满马建议选派驻后显示用时最短的奇波即可。
+- 加工设施：春风满马建议天赋词条在单件耗时长、不批量做的产物（如装备）选加工时间减少，批量加工选返还基础材料。
+- [共鸣石台](/zh-cn/systems/housing/#加工设施)：春风满马建议高质量的星结卡也要做一些，不必为了省材料只做低质量的。
+- [共鸣石台](/zh-cn/systems/housing/#加工设施)：春风满马建议定期到家园商店兑换做未开封的记忆要用的追忆的思绪，等能做出金色质量时再大量使用。
+- 大地图的设施：春风满马建议先解锁增加采矿、伐木与元素祭坛产能的设施。
 
 ## 来源的条件
 

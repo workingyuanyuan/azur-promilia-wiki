@@ -1,14 +1,15 @@
 """Write the community section (社群攻略, /community/) from records/community/.
 
 Pages: community/index, community/tier-list, community/teams, community/damage, community/housing, community/builds. Every rating, team
-and damage figure names its creator and links where it is shown: the video at the second, or the
-creator's comment under the video (a chart posted as a picture, an answer to a viewer). The site never merges ratings: each
+and damage figure names its creator; each section links each source once (once_per_section): the
+video, or the creator's comment under it (a chart posted as a picture, an answer to a viewer). The site never merges ratings: each
 source keeps its own tiers, and rows follow the order of the character list, not a rank.
 A comparison is written only where at least two sources say the same thing.
 Called from pipeline/build_pages.py; Simplified Chinese is written by scripts/to-zh-cn.py.
 """
 
 import json
+import re
 from pathlib import Path
 
 from opencc import OpenCC
@@ -133,7 +134,35 @@ def main():
     write('community/index.md', index_page(sources, tier_sources, team_sources, damage_sources, home_sources, build_sources, claims, chars))
 
 
+def once_per_section(text):
+    """Each h2 section links each of its sources once, at its first mention (COMMUNITY.md): to the
+    creator's comment when every link of the section to that video goes to that comment, else to
+    the video. Later mentions keep the creator's name without a link; the records keep each
+    claim's second or comment."""
+    head, sep, body = text.partition('\n---\n')
+    link = re.compile(r'\[([^\]]+)\]\((https?://[^)\s]+)\)')
+    base = lambda u: u.split('#')[0].split('?')[0]
+    out = []
+    for part in re.split(r'(?m)^(?=## )', body):
+        targets = {}
+        for _, u in link.findall(part):
+            targets.setdefault(base(u), set()).add(u)
+        done = set()
+
+        def one(m):
+            b = base(m.group(2))
+            if b in done:
+                return m.group(1)
+            done.add(b)
+            us = targets[b]
+            u = us.pop() if len(us) == 1 and '#reply' in next(iter(us)) else b
+            return f'[{m.group(1)}]({u})'
+        out.append(link.sub(one, part))
+    return head + sep + ''.join(out)
+
+
 def write(path, text):
+    text = once_per_section(text)
     out = DOCS / path
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(text, encoding='utf-8')
